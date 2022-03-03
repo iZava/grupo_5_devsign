@@ -1,0 +1,26 @@
+{
+  "name": "grupo_5_devsign",
+  "version": "1.0.0",
+  "description": "developer store",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iZava/grupo_5_devsign.git"
+  },
+  "keywords": [
+    "store",
+    "developers"
+  ],
+  "author": "group 5",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iZava/grupo_5_devsign/issues"
+  },
+  "homepage": "https://github.com/iZava/grupo_5_devsign#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
