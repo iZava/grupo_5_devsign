@@ -1,12 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/ad9837e9c4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/public/css/styles.css">
 </head>
+
 <body>
-  Detail
+    <div class="body-container">
+
+        <!-- Header -->
+
+        <header class="header">
+            <div class="menu">
+                <div class="logo"><a href="/src/views/index.html">Devsign</a>
+                </div>
+
+                <!-- Navbar -->
+
+                <nav class="nav">
+                    <ul class="single-navbar">
+                        <li><a href="/src/views/index.html">Inicio</a></li>
+                        <li><a href="#">Tienda</a></li>
+                        <li><a href="#">Sobre nosotros</a></li>
+                    </ul>
+                </nav>
+
+                <!-- login & shopping cart -->
+
+                <section class="login-shop">
+
+                    <div class="login"><a href="/src/views/login.html" class="login-button">Iniciar sesión
+                        </a>
+                    </div>
+                    <div class="shop-cart"><a href="/src/views/productCart.html" class="shop-button">Carrito
+                        </a></div>
+                </section>
+            </div>
+        </header>
+
+        <!-- main -->
+
+        <main class="main-container">
+
+            <div class="prod-nav">
+                <img src="/public/images/img_nav.png" alt="img 1">
+                <img src="/public/images/img_nav.png" alt="img 2">
+                <img src="/public/images/img_nav.png" alt="img 3">
+                <img src="/public/images/img_nav.png" alt="img 4">
+            </div>
+
+            <div class="prod-image">
+                <img src="/public/images/img_main.png" alt="main img">
+
+            </div>
+
+            <section class="prod-detail">
+                <div class="general-description">
+                    <div class="product-rate">
+                        <label>Reseña del producto</label>
+                        <select name="option">
+                            <option value="one-star">★</option>
+                            <option value="two-stars">★★</option>
+                            <option value="three-stars">★★★</option>
+                            <option value="four-stars">★★★★</option>
+                            <option value="five-stars">★★★★★</option>
+                        </select>
+                        <p><input type="submit" value="VALORAR" name="rate-button"> </p>
+                    </div>
+
+                    <div class="description">
+                        <h4>camiseta hombre - cuello redondo</h4>
+                        <h2>$45000</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur
+                            laborum
+                            illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi
+                            doloribus
+                            voluptate tempora repellat?</p>
+
+                        <h4>referencia: HM-123456</h4>
+                        <h4>categoría: playeras</h4>
+                    </div>
+                </div>
+
+                <div class="buttons">
+                    <div class="sizes">
+                        <label>Talla</label>
+                        <select name="option">
+                            <option value="size-S">S</option>
+                            <option value="size-M">M</option>
+                            <option value="size-L">L</option>
+                            <option value="size-XL">XL</option>
+                        </select>
+                    </div>
+
+
+                    <div class="colors">
+                        <label>Color</label>
+                        <select name="option">
+                            <option class="white" value="white"></option>
+                            <option class="black" value="black"></option>
+                            <option class="yellow" value="yellow"></option>
+                            <option class="green" value="green"></option>
+                            <option class="purple" value="purple"></option>
+                            <option class="pink" value="pink"></option>
+                        </select>
+                    </div>
+
+                    <div class="number">
+                        <label>Cantidad</label>
+                        <select name="option">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="submit">
+                        <p><input type="submit" value="añadir al carrito" name="add-button"> </p>
+                    </div>
+
+                </div>
+            </section>
+
+
+        </main>
+
+        <footer class="footer-container">
+            <div class="copy">
+                <p><i class="fa-solid fa-copyright"></i> Devsign 2022 - Todos los derechos reservados.</p>
+            </div>
+        </footer>
+
+    </div>
 </body>
+
 </html>
