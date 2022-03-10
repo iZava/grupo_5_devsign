@@ -4,12 +4,16 @@ const app = express();
 
 app.use(express.static(path.join(__dirname,"../","public")));
 
-app.listen(3000, ()=>{
+app.listen(7000, ()=>{
     console.log('Servidor funcionando');
 });
 
 app.get('/', (req,res)=>{
     res.sendFile(__dirname + '/views/index.html');
+});
+
+app.get('/products', (req,res)=>{
+  res.sendFile(__dirname + '/views/products.html');
 });
 
 app.get('/login', (req,res)=>{
