@@ -4,7 +4,7 @@ const app = express();
 
 app.use(express.static(path.join(__dirname,"../","public")));
 
-app.listen(7000, ()=>{
+app.listen(4000, ()=>{
     console.log('Servidor funcionando');
 });
 
