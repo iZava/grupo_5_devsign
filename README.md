@@ -8,6 +8,7 @@
 
 
 ## _Listado de referentes:_
+- https://devwear.co/
 - Regalos y productos: Para Desarrolladores
 - Ecommerce website — Neumorphism
 - eCommerce app
