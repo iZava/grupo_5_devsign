@@ -1,120 +1,269 @@
-*{
-    margin: 5px;
-    padding: 10px;
+/* =============GENERAL =============*/
+
+* {
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
-    
-}
+  }
+  
+  body {
+    background-color: rgb(243, 243, 243);
+    font-family: "Roboto", sans-serif;
+  }
+  
+  p {
+    font-size: 16px;
+  }
+  
+  h2 {
+    font-size: 30px;
+    color: rgb(199, 43, 43);
+    padding: 8px 0px;
+  }
+  
+  h3 {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: rgb(83, 83, 83);
+    margin-bottom: 3px;
+    letter-spacing: 0.5px;
+  }
+  
+  h4 {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: rgb(83, 83, 83);
+    margin-bottom: 3px;
+  }
+  
+  /* =============HEADER =============*/
+  
+  header {
+    background-color: rgb(201, 201, 201);
+    width: 100%;
+    padding: 10px;
+    border-bottom: 2px solid rgba(63, 63, 63, 0.356);
+  }
+  
+  header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header nav .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+  }
+  
+  header nav .menu .links-menu {
+    display: flex;
+    margin-left: 15px;
+  }
+  
+  header nav .menu .links-menu a {
+    padding: 10px;
+    color: rgb(66, 66, 66);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    border-bottom: 5px solid transparent;
+    transition: border 1s ease;
+  }
+  
+  header nav .menu .links-menu a:hover {
+    border-bottom-color: rgb(199, 43, 43);
+  }
+  
+  header nav .menu .links-menu a.active {
+    border-bottom-color: rgb(199, 43, 43);
+  }
+  
+  header nav .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+  }
+  
+  header nav .buttons .login .login-button {
+    padding: 18px 18px;
+    border: none;
+    background-color: rgb(199, 43, 43);
+    color: white;
+    box-shadow: 0px 0 10px rgb(124, 124, 124);
+    border-radius: 20px;
+    margin: 0px 10px;
+    font-size: 16px;
+    transition: background-color 0.5s;
+  }
+  
+  header nav .buttons .login .login-button:hover {
+    background-color: rgb(90, 90, 90);
+  }
+  
+  header nav .buttons .shop-cart .shop-cart-button {
+    padding: 18px 18px;
+    border: none;
+    background-color: rgb(199, 43, 43);
+    color: #fafafa;
+    box-shadow: 0px 0 10px rgb(124, 124, 124);
+    border-radius: 20px;
+    font-size: 16px;
+    transition: background-color 0.5s;
+  }
+  
+  header nav .buttons .shop-cart .shop-cart-button:hover {
+    background-color: rgb(90, 90, 90);
+  }
+  
+  .logo img{
+    width: 250px;
+padding: 15px 20px;}
+  
+  /* ============= MAIN =============*/
+  
+  .main-container {
+    display: flex;
+  }
+  
+  .prod-nav {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(184, 184, 184, 0.3);
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0px 0 20px rgb(124, 124, 124);
+    padding: 12px;
+    margin: 30px 30px;
+  }
+  
+  .prod-nav img {
+    border-radius: 15px;
+    border: solid 2px grey;
+    width: 150px;
+    margin: 3px;
+  }
+  
+  .prod-image {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 30px 10px;
+  }
+  
+  .prod-image img {
+    height: 50vh;
+    text-align: center;
+    border: solid 2px grey;
+    border-radius: 20px;
+    box-shadow: 0px 0 20px rgb(124, 124, 124);
+    margin: 10px 10px;
+  }
+  
+  .prod-detail {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+  }
+  
+  .general-description {
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(211, 211, 211, 0.3);
+    border-radius: 20px;
+    padding: 20px;
+    align-items: flex-start;
+    margin: 30px 10px;
+    box-shadow: 0px 0 20px rgb(124, 124, 124);
+  }
+  
+  .general-description input {
+    font-size: 14px;
+    padding: 10px;
+    margin: 8px 5px 15px 0px;
+    background-color: rgb(199, 43, 43);
+    text-transform: uppercase;
+    color: #fafafa;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0px 0 5px rgb(124, 124, 124);
+  }
+  
+  .general-description .description p {
+    font-size: 18px;
+    padding: 0px 0px 10px 0px;
+    color: rgb(87, 87, 87);
+  }
+  
+  .general-description .description .category {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  
+  .general-description label {
+    font-size: 18px;
+    color: rgb(87, 87, 87);
+    padding: 10px 0px;
+  }
+  
+  .general-description select {
+    padding: 4px 6px;
+    margin: 5px 0px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(206, 206, 206);
+  }
+  
+  /* ============= FOOTER =============*/
+  
+  footer {
+    display: flex;
+    background-color: rgb(199, 43, 43);
+    padding: 40px;
+    justify-content: center;
+  }
+  
+  .copy {
+    color: #fafafa;
+    font-size: 16px;
+  }
+  
+  .copy p {
+    font-size: 16px;
+  }
+  
+  .copy a{
 
-
-
-.body-container{
-    border: dashed 2px rgb(156, 10, 10)
-}
-
-/* Header */
-
-.header{
-    border: dashed 2px gray
-}
-
-/* Navbar */
-
-.menu{
-    border: dashed 2px lightcoral
-}
-
-.logo{
-    border: dashed 2px lightslategrey
-}
-
-.nav{
-    border: dashed 2px lightsalmon
-}
-
-.single-navbar{
-    border: dashed 2px black
-}
-
-/* login & shopping cart */
-
-.login-shop{
-    border: dashed 2px purple
-}
-
-.login, .shop-cart {
-    border: dashed 2px blueviolet 
-}
-
-
-/* Main */
-
-.main-container{
-    border: dashed 2px gray
-}
-
-.prod-nav{
-    border: dashed 2px rgb(57, 57, 199)
-}
-
-.prod-image{
-    border: dashed 2px rgb(201, 136, 184)
-}
-
-.prod-detail{
-    border: dashed 2px rgb(48, 148, 143)
-}
-
-.description{
-    border: dashed 2px rgb(255, 136, 0)
-}
-
-.product-rate{
-    border: dashed 2px rgb(177, 36, 36) 
-}
-
-.description{
-    border: dashed 2px rgb(177, 36, 36) 
-}
-
-.buttons{
-    border: dashed 2px green
-}
-
-.sizes, .colors, .number, submit {
-    border: dashed 2px rgb(34, 218, 193)
-}
-
-
-
-
-
-
-
-/* color selector */
-
-.white{
-    background-color:white
-}
-.black{
-    background-color:black
-}
-.yellow{
-    background-color:yellow
-}
-.green{
-    background-color:green
-}
-.purple{
-    background-color:purple
-}
-.pink{
-    background-color:pink
-}
-
-.footer-container{
-    border: dashed 2px grey
-}
-
-.copy{
-    border: dashed 2px lightgreen
-}
+    color: #fafafa;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  /* color selector */
+  
+  .white {
+    background-color: white;
+  }
+  .black {
+    background-color: black;
+  }
+  .yellow {
+    background-color: yellow;
+  }
+  .green {
+    background-color: green;
+  }
+  .purple {
+    background-color: purple;
+  }
+  .pink {
+    background-color: pink;
+  }
+  
