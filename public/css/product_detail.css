@@ -1,3 +1,14 @@
+:root {
+  --red: #EF233C;
+  --white: #FFFFFF;
+  --black: #000000;
+  --light-gray: #EDF2F4;
+  --dark-gray: #8D99AE;
+  /*Fonts*/
+  --big: 2rem;
+  --small: .5rem;
+}
+
 /* =============GENERAL =============*/
 
 * {
@@ -7,7 +18,7 @@
   }
   
   body {
-    background-color: rgb(243, 243, 243);
+    background-color: var(--light-gray);
     font-family: "Roboto", sans-serif;
   }
   
@@ -17,7 +28,7 @@
   
   h2 {
     font-size: 30px;
-    color: rgb(199, 43, 43);
+    color: var(--red);
     padding: 8px 0px;
   }
   
@@ -39,9 +50,8 @@
   /* =============HEADER =============*/
   
   header {
-    background-color: rgb(201, 201, 201);
+    background-color: rgba(141, 153, 174, 0.404);
     width: 100%;
-    padding: 10px;
     border-bottom: 2px solid rgba(63, 63, 63, 0.356);
   }
   
@@ -57,7 +67,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
+    padding: 3px 10px;
   }
   
   header nav .menu .links-menu {
@@ -76,11 +86,11 @@
   }
   
   header nav .menu .links-menu a:hover {
-    border-bottom-color: rgb(199, 43, 43);
+    border-bottom-color: var(--red);
   }
   
   header nav .menu .links-menu a.active {
-    border-bottom-color: rgb(199, 43, 43);
+    border-bottom-color: var(--red);
   }
   
   header nav .buttons {
@@ -94,7 +104,7 @@
   header nav .buttons .login .login-button {
     padding: 18px 18px;
     border: none;
-    background-color: rgb(199, 43, 43);
+    background-color: var(--red);
     color: white;
     box-shadow: 0px 0 10px rgb(124, 124, 124);
     border-radius: 20px;
@@ -110,7 +120,7 @@
   header nav .buttons .shop-cart .shop-cart-button {
     padding: 18px 18px;
     border: none;
-    background-color: rgb(199, 43, 43);
+    background-color: var(--red);
     color: #fafafa;
     box-shadow: 0px 0 10px rgb(124, 124, 124);
     border-radius: 20px;
@@ -135,7 +145,7 @@ padding: 15px 20px;}
   .prod-nav {
     display: flex;
     flex-direction: column;
-    background-color: rgba(184, 184, 184, 0.3);
+    background-color: rgba(141, 153, 174, 0.404);
     border-radius: 20px;
     text-align: center;
     box-shadow: 0px 0 20px rgb(124, 124, 124);
@@ -176,7 +186,7 @@ padding: 15px 20px;}
     max-width: 80%;
     display: flex;
     flex-direction: column;
-    background-color: rgba(211, 211, 211, 0.3);
+    background-color: rgba(141, 153, 174, 0.404);
     border-radius: 20px;
     padding: 20px;
     align-items: flex-start;
@@ -188,7 +198,7 @@ padding: 15px 20px;}
     font-size: 14px;
     padding: 10px;
     margin: 8px 5px 15px 0px;
-    background-color: rgb(199, 43, 43);
+    background-color: var(--red);
     text-transform: uppercase;
     color: #fafafa;
     border: none;
@@ -218,34 +228,24 @@ padding: 15px 20px;}
     margin: 5px 0px;
     border-radius: 5px;
     border: none;
-    background-color: rgb(206, 206, 206);
+    background-color: rgb(231, 231, 231);
   }
   
   /* ============= FOOTER =============*/
   
   footer {
-    display: flex;
-    background-color: rgb(199, 43, 43);
-    padding: 40px;
-    justify-content: center;
-  }
-  
-  .copy {
-    color: #fafafa;
-    font-size: 16px;
-  }
-  
-  .copy p {
-    font-size: 16px;
-  }
-  
-  .copy a{
+    margin-top: 3rem;
+}
 
-    color: #fafafa;
-    font-size: 16px;
-    text-decoration: none;
-    font-weight: bold;
-  }
+.footer-container {
+    background-color: var(--red);
+    color: var(--white);
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    justify-content: center;
+}
   /* color selector */
   
   .white {
