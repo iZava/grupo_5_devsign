@@ -18,8 +18,9 @@
   }
   
   body {
+    font-family: 'Poppins', sans-serif;
     background-color: var(--light-gray);
-    font-family: "Roboto", sans-serif;
+    font-weight: bold;
   }
   
   p {
@@ -49,92 +50,84 @@
   
   /* =============HEADER =============*/
   
-  header {
-    background-color: rgba(141, 153, 174, 0.404);
-    width: 100%;
-    border-bottom: 2px solid rgba(63, 63, 63, 0.356);
-  }
-  
-  header nav {
-    display: flex;
-    flex-direction: row;
+  nav {
     justify-content: space-between;
-    align-items: center;
-  }
-  
-  header nav .menu {
+    padding: .5rem .5rem;
+    -webkit-box-shadow: 0px 7px 16px -8px var(--black);
+    box-shadow: 0px 7px 16px -8px var(--black);
+}
+
+nav,
+.nav-items,
+.nav-items ul {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
-    padding: 3px 10px;
-  }
-  
-  header nav .menu .links-menu {
-    display: flex;
-    margin-left: 15px;
-  }
-  
-  header nav .menu .links-menu a {
-    padding: 10px;
-    color: rgb(66, 66, 66);
-    text-transform: uppercase;
-    letter-spacing: 2px;
+}
+
+nav .nav-items,
+.nav-items ul {
+    gap: 1rem;
+}
+
+nav .nav-items ul li {
+    list-style: none;
+}
+
+nav img {
+    width: 10rem;
+}
+
+nav .nav-items ul li a {
     text-decoration: none;
-    border-bottom: 5px solid transparent;
-    transition: border 1s ease;
-  }
-  
-  header nav .menu .links-menu a:hover {
-    border-bottom-color: var(--red);
-  }
-  
-  header nav .menu .links-menu a.active {
-    border-bottom-color: var(--red);
-  }
-  
-  header nav .buttons {
+    color: var(--black);
+}
+
+.nav-items a.cart,
+.responsive-menu a.cart,
+.nav-items ul li a.red,
+.hamburguer-menu {
+    background-color: var(--red);
+    padding: .2rem .4rem;
+    color: var(--white);
+    border-radius: .5rem;
+}
+
+nav .responsive-menu {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    gap: .5rem;
+    padding: .8rem;
+}
+
+nav .hamburguer-menu,
+nav .responsive-menu a.cart {
+    display: none;
+}
+
+nav .hamburguer-menu .fa-solid {
+    color: var(--white);
+}
+
+nav .left-section {
+    display: flex;
     align-items: center;
-    padding: 15px;
-  }
-  
-  header nav .buttons .login .login-button {
-    padding: 18px 18px;
-    border: none;
-    background-color: var(--red);
-    color: white;
-    box-shadow: 0px 0 10px rgb(124, 124, 124);
-    border-radius: 20px;
-    margin: 0px 10px;
-    font-size: 16px;
-    transition: background-color 0.5s;
-  }
-  
-  header nav .buttons .login .login-button:hover {
-    background-color: rgb(90, 90, 90);
-  }
-  
-  header nav .buttons .shop-cart .shop-cart-button {
-    padding: 18px 18px;
-    border: none;
-    background-color: var(--red);
-    color: #fafafa;
-    box-shadow: 0px 0 10px rgb(124, 124, 124);
-    border-radius: 20px;
-    font-size: 16px;
-    transition: background-color 0.5s;
-  }
-  
-  header nav .buttons .shop-cart .shop-cart-button:hover {
-    background-color: rgb(90, 90, 90);
-  }
-  
-  .logo img{
-    width: 250px;
-padding: 15px 20px;}
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 50%;
+}
+
+nav form.search {
+    width: 50%;
+}
+
+nav form.search input[type=search] {
+    border-radius: .5rem;
+    height: 2rem;
+    padding: .6rem;
+    border: 1px solid var(--dark-gray);
+    width: 100%;
+}
   
   /* ============= MAIN =============*/
   
@@ -145,17 +138,17 @@ padding: 15px 20px;}
   .prod-nav {
     display: flex;
     flex-direction: column;
-    background-color: rgba(141, 153, 174, 0.404);
-    border-radius: 20px;
+    background-color: var(--light-gray);
+    border-radius: 15px;
     text-align: center;
     box-shadow: 0px 0 20px rgb(124, 124, 124);
-    padding: 12px;
+    padding: 15px;
     margin: 30px 30px;
   }
   
   .prod-nav img {
     border-radius: 15px;
-    border: solid 2px grey;
+    border: solid 1px var(--dark-gray);
     width: 150px;
     margin: 3px;
   }
@@ -170,10 +163,10 @@ padding: 15px 20px;}
   .prod-image img {
     height: 50vh;
     text-align: center;
-    border: solid 2px grey;
-    border-radius: 20px;
+    border-radius: 15px;
     box-shadow: 0px 0 20px rgb(124, 124, 124);
     margin: 10px 10px;
+    padding: 20px;
   }
   
   .prod-detail {
@@ -186,7 +179,7 @@ padding: 15px 20px;}
     max-width: 80%;
     display: flex;
     flex-direction: column;
-    background-color: rgba(141, 153, 174, 0.404);
+    background-color: var(--light-gray);
     border-radius: 20px;
     padding: 20px;
     align-items: flex-start;
@@ -228,7 +221,7 @@ padding: 15px 20px;}
     margin: 5px 0px;
     border-radius: 5px;
     border: none;
-    background-color: rgb(231, 231, 231);
+    background-color: rgba(141, 153, 174, 0.384)
   }
   
   /* ============= FOOTER =============*/
@@ -248,22 +241,4 @@ padding: 15px 20px;}
 }
   /* color selector */
   
-  .white {
-    background-color: white;
-  }
-  .black {
-    background-color: black;
-  }
-  .yellow {
-    background-color: yellow;
-  }
-  .green {
-    background-color: green;
-  }
-  .purple {
-    background-color: purple;
-  }
-  .pink {
-    background-color: pink;
-  }
   
