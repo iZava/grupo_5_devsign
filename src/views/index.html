@@ -1,51 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/home-products.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <script src="https://kit.fontawesome.com/22b1cec598.js" crossorigin="anonymous"></script>
+    <title>DevSign</title>
 </head>
+
 <body>
-  <div class="container">
-    <header>
-      <nav>
-        <img src="" alt="logo">
-        <div class="nav-items">
-          <ul>
-            <li><a href="/">Inicio</a></li>
-            <li><a href="/products">Tienda</a></li>
-            <li><a href="/register">Registro</a></li>
-            <li><a href="/login">Login</a></li>
-            <li><a href="/cart"><img src="" alt="cart"></a></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-    <section class="slider">
-      <h1>Última colección</h1>
-    </section>
-    <section class="intermediate">
-      <h1>Lleva tu estilo a otro nivel con Devsign</h1>
-      <h2>Consúltanos tu idea, ¡nosotros la estampamos!</h2>
-      <button>Cotiza tu pedido</button>
-    </section>
-    <section class="products">
-      <input type="search" name="search" id="search">
-      <div class="products-list">
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-      </div>
-    </section>
-    <footer class="footer-container">
-      <div class="copy">
-          <p><i class="fa-solid fa-copyright"></i> Devsign 2022 - Todos los derechos reservados.</p>
-      </div>
-  </footer>
-  </div>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="left-section">
+                    <a href="/"><img src="images/Logo-proyecto.png" alt="logo"></a>
+                    <form class="search" action="GET">
+                        <input type="search" name="search" id="search" placeholder="Encuentra lo que buscas">
+                    </form>
+                </div>
+                <div class="responsive-menu">
+                    <div class="hamburguer-menu">
+                        <a href=""><i class="fa-solid fa-bars"></i></a>
+                    </div>
+                    <a class="cart" href="/cart"><i class="fas fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <div class="nav-items">
+                    <ul>
+                        <li><a href="/">Inicio</a></li>
+                        <li><a href="/t-shirts">Tienda</a></li>
+                        <li><a class="red" href="/login">Iniciar sesión</a></li>
+                        <li><a href="/register">Registrate</a></li>
+                        <a class="cart" href="/cart"><i class="fas fa-solid fa-cart-shopping"></i></a>
+                    </ul>
+
+                </div>
+            </nav>
+        </header>
+        <section class="slider">
+            <img src="images/home-banner-1.jpg" alt="">
+        </section>
+        <section class="intermediate">
+            <h1>Lleva tu estilo a otro nivel con Devsign</h1>
+            <h2>Consúltanos tu idea, ¡nosotros la estampamos!</h2>
+            <button>Cotiza tu pedido</button>
+        </section>
+        <section class="products">
+            <div class="products-list">
+                <div class="card">
+                    <div class="description">
+                        <p>Camisetas</p>
+                    </div>
+                    <a href="/t-shirts"><img src="images/products/t-shirt1.jpg" alt="camiseta"></a>
+                </div>
+                <div class="card">
+                    <div class="description">
+                        <p>Mugs</p>
+                    </div>
+                    <a href="/mugs"><img src="images/products/mug1.jpg" alt="mugs"></a>
+                </div>
+                <div class="card">
+                    <div class="description">
+                        <p>Botellas</p>
+                    </div>
+                    <a href="/bottles"><img src="images/products/bottle1.jpg" alt="botellas"></a>
+                </div>
+                <div class="card">
+                    <div class="description">
+                        <p>Hoddies</p>
+                    </div>
+                    <a href="/hoddies"><img src="images/products/hoddie.jpg" alt="buzo"></a>
+                </div>
+                <div class="card">
+                    <div class="description">
+                        <p>Stickers</p>
+                    </div>
+                    <a href="/stickers"><img src="images/products/sticker1.jpg" alt="stickers"></a>
+                </div>
+                <div class="card">
+                    <div class="description">
+                        <p>Gorras</p>
+                    </div>
+                    <a href="/hat"><img src="images/products/hat1.jpg" alt="gorra"></a>
+                </div>
+            </div>
+        </section>
+        <footer class="footer-container">
+            <div class="social">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+            <div class="copy">
+                <p><i class="fa-solid fa-copyright"></i> Devsign 2022 - Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </div>
 </body>
+
 </html>

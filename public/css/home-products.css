@@ -1,0 +1,144 @@
+/*Slider*/
+
+.slider {
+    margin-top: 1rem;
+}
+
+.slider img {
+    width: 100%;
+}
+
+
+/*Intermediate*/
+
+.intermediate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem .5rem;
+    text-align: center;
+}
+
+.intermediate h1 {
+    color: var(--dark-gray);
+    font-size: var(--big);
+}
+
+.intermediate h2 {
+    color: var(--red);
+}
+
+.intermediate button {
+    background-color: var(--red);
+    border-radius: .5rem;
+    padding: .8rem;
+    color: var(--white);
+    cursor: pointer;
+    border: none;
+    margin: .8rem;
+}
+
+
+/*Products*/
+
+.products .products-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.products .products-list .card {
+    border-radius: .5rem;
+    background: var(--light-gray);
+    box-shadow: 6px 6px 12px #b2b2b2, -6px -6px 12px #ffffff;
+    padding: 1rem;
+    width: 25%;
+}
+
+.products .products-list .card img {
+    width: 100%;
+}
+
+
+/*Products pages*/
+
+.intermediate-menu ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 2rem .5rem;
+}
+
+.underlined {
+    border-bottom: 4px solid var(--red);
+}
+
+.intermediate-menu ul li {
+    list-style: none;
+}
+
+.intermediate-menu ul a {
+    text-decoration: none;
+    color: var(--dark-gray);
+    font-weight: bold;
+}
+
+
+/*Footer*/
+
+footer {
+    margin-top: 3rem;
+}
+
+.footer-container {
+    background-color: var(--red);
+    color: var(--white);
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    justify-content: center;
+}
+
+@media(max-width: 800px) {
+    nav {
+        justify-content: center;
+    }
+    nav .nav-items ul {
+        display: none;
+    }
+    nav .nav-items,
+    .nav-items ul {
+        gap: .5rem;
+    }
+    nav .hamburguer-menu,
+    nav .responsive-menu a.cart {
+        display: flex;
+        align-items: center;
+    }
+    nav .left-section {
+        width: 100%;
+    }
+    nav form.search {
+        width: 50%;
+    }
+    /*products*/
+    .products .products-list .card {
+        width: 80%;
+    }
+    /*Footer*/
+    .footer-container {
+        gap: 2rem;
+    }
+}
+
+@media(max-width: 460px) {
+    nav {
+        box-shadow: none;
+    }
+    nav form.search {
+        width: 100%;
+    }
+}
