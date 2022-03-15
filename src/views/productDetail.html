@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/ad9837e9c4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="/css/product_detail.css">
 </head>
 
@@ -20,15 +21,30 @@
 
     <header>
         <nav>
-            <div class="left-section">
-                <a href="/"><img src="images/Logo-proyecto.png" alt="logo"></a>
-                <form class="search" action="GET">
-                    <input type="search" name="search" id="search" placeholder="Encuentra lo que buscas">
-                </form>
+            <div class="menu">
+                <div class="logo">
+                    <a href="/"><img src="/images/Logo-proyecto.png" alt="logotipo devsign"></a>
+
+                </div>
+                <div class="links-menu">
+                    <a class="active" href="/">Inicio</a>
+                    <a href="/products">Tienda</a>
+                    <a href="/">Sobre nosotros</a>
+
+                </div>
             </div>
-            <div class="responsive-menu">
-                <div class="hamburguer-menu">
-                    <a href=""><i class="fa-solid fa-bars"></i></a>
+
+            <div class="buttons">
+
+                <div class="login">
+                    <a href="/login">
+                        <button class="login-button"> Iniciar sesión</button>
+                </div>
+                </a>
+
+
+                <div class="shop-cart">
+                    <a href="/cart"><button class="shop-cart-button" ><i class="fa-solid fa-cart-shopping"></i> </button></a>
                 </div>
                 <a class="cart" href="/cart"><i class="fas fa-solid fa-cart-shopping"></i></a>
             </div>
@@ -78,16 +94,12 @@
                 <div class="description">
                     <h3>camiseta hombre - cuello redondo</h3>
                     <h2>$45000</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur
-                        laborum
-                        illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi
-                        doloribus
-                        voluptate tempora repellat?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?</p>
 
-                        <div class="category">
-                    <h4>referencia:  HM-123456</h4>
-                    <h4>categoría: playeras</h4>
-                </div>
+                    <div class="category">
+                        <h4>referencia: HM-123456</h4>
+                        <h4>categoría: playeras</h4>
+                    </div>
                 </div>
                 <div class="buttons">
                     <div class="sizes">
@@ -99,8 +111,8 @@
                             <option value="size-XL">XL</option>
                         </select>
                     </div>
-    
-    
+
+
                     <div class="colors">
                         <label>Color</label>
                         <select name="option">
@@ -112,7 +124,7 @@
                             <option class="pink" value="pink">Rosa</option>
                         </select>
                     </div>
-    
+
                     <div class="number">
                         <label>Cantidad</label>
                         <select name="option">
@@ -126,7 +138,7 @@
                     <div class="submit">
                         <p><input type="submit" value="añadir al carrito" name="add-button"> </p>
                     </div>
-    
+
                 </div>
             </div>
 
@@ -136,17 +148,17 @@
     </main>
 
 
-<footer class="footer-container">
-    <div class="social">
-        <i class="fa-brands fa-facebook"></i>
-        <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-twitter"></i>
+    <footer class="footer-container">
+        <div class="social">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+        </div>
+        <div class="copy">
+            <p><i class="fa-solid fa-copyright"></i> Devsign 2022 - Todos los derechos reservados.</p>
+        </div>
+    </footer>
     </div>
-    <div class="copy">
-        <p><i class="fa-solid fa-copyright"></i> Devsign 2022 - Todos los derechos reservados.</p>
-    </div>
-</footer>
-</div>
 </body>
 
 

@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: bold;
+    outline: none;
+}
+
+:root {
+    --red: #EF233C;
+    --white: #FFFFFF;
+    --black: #000000;
+    --light-gray: #EDF2F4;
+    --dark-gray: #8D99AE;
+    /*Fonts*/
+    --big: 2rem;
+    --small: .5rem;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-gray);
+}
+
+nav {
+    justify-content: space-between;
+    padding: .5rem .5rem;
+    -webkit-box-shadow: 0px 7px 16px -8px var(--black);
+    box-shadow: 0px 7px 16px -8px var(--black);
+}
+
+nav,
+.nav-items,
+.nav-items ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+nav .nav-items,
+.nav-items ul {
+    gap: 1rem;
+}
+
+nav .nav-items ul li {
+    list-style: none;
+}
+
+nav img {
+    width: 10rem;
+}
+
+nav .nav-items ul li a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.nav-items a.cart,
+.responsive-menu a.cart,
+.nav-items ul li a.red,
+.hamburguer-menu {
+    background-color: var(--red);
+    padding: .2rem .4rem;
+    color: var(--white);
+    border-radius: .5rem;
+}
+
+nav .responsive-menu {
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    padding: .8rem;
+}
+
+nav .hamburguer-menu,
+nav .responsive-menu a.cart {
+    display: none;
+}
+
+nav .hamburguer-menu .fa-solid {
+    color: var(--white);
+}
+
+nav .left-section {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 50%;
+}
+
+nav form.search {
+    width: 50%;
+}
+
+nav form.search input[type=search] {
+    border-radius: .5rem;
+    height: 2rem;
+    padding: .6rem;
+    border: 1px solid var(--dark-gray);
+    width: 100%;
+}
+
+
+/*Footer*/
+
+footer {
+    margin-top: 3rem;
+}
+
+.footer-container {
+    background-color: var(--red);
+    color: var(--white);
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    justify-content: center;
+}
+
+@media(max-width: 800px) {
+    nav {
+        justify-content: center;
+    }
+    nav .nav-items ul {
+        display: none;
+    }
+    nav .nav-items,
+    .nav-items ul {
+        gap: .5rem;
+    }
+    nav .hamburguer-menu,
+    nav .responsive-menu a.cart {
+        display: flex;
+        align-items: center;
+    }
+    nav .left-section {
+        width: 100%;
+    }
+    nav form.search {
+        width: 50%;
+    }
+    /*Footer*/
+    .footer-container {
+        gap: 2rem;
+    }
+}
+
+@media(max-width: 460px) {
+    nav {
+        box-shadow: none;
+    }
+    nav form.search {
+        width: 100%;
+    }
+}
