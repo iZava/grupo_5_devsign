@@ -16,7 +16,12 @@
     padding: 0px;
     box-sizing: border-box;
   }
-  
+
+  .product {
+    display: flex;
+    gap: 1rem;
+  }
+
   body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--light-gray);
@@ -241,4 +246,16 @@ nav form.search input[type=search] {
 }
   /* color selector */
   
+
+  /*Media queries*/
+  @media (max-width: 1024px) {
+    .prod-nav {
+     display: none;
+    }
+    .product {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
   
