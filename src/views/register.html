@@ -18,27 +18,28 @@
     <header>
         <nav>
             <div class="left-section">
-                <a href="/"><img src="images/Logo-proyecto.png" alt="logo"></a>
-                <form class="search" action="GET">
-                    <input type="search" name="search" id="search" placeholder="Encuentra lo que buscas">
-                </form>
+              <a href="/"><img src="images/Logo-proyecto.png" alt="logo"></a>
+              <form class="search" action="GET">
+                <input type="search" name="search" id="search" placeholder="Encuentra lo que buscas">
+              </form>
             </div>
             <div class="responsive-menu">
-                <div class="hamburguer-menu">
-                    <a href=""><i class="fa-solid fa-bars"></i></a>
-                </div>
-                <a class="cart" href="/cart"><i class="fas fa-solid fa-cart-shopping"></i></a>
+              <div class="hamburguer-menu">
+                <a href="#modal-menu"><i class="fa-solid fa-bars"></i></a>
+              </div>
+              <a class="cart" href="/cart"><i class="fas fa-solid fa-cart-shopping"></i></a>
             </div>
             <div class="nav-items">
-                <ul>
-                    <li><a href="/">Inicio</a></li>
-                    <li><a href="/t-shirts">Tienda</a></li>
-                    <li><a class="red" href="/login">Iniciar sesión</a></li>
-                    <li><a href="/register">Registrate</a></li>
-                    <a class="cart" href="/cart"><i class="fas fa-solid fa-cart-shopping"></i></a>
-                </ul>
+              <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/t-shirts">Tienda</a></li>
+                <li><a class="red" href="/login">Iniciar sesión</a></li>
+                <li><a href="/register">Registrate</a></li>
+                <a class="cart" href="/cart"><i class="fas fa-solid fa-cart-shopping"></i></a>
+              </ul>
+    
             </div>
-        </nav>
+          </nav>
     </header>
     <main>
         <div class="register">
@@ -105,6 +106,14 @@
             </div>
         </div>
     </main>
+    <div id="modal-menu" class="modal">
+        <a class="close" href="#">X</a>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/t-shirts">Tienda</a></li>
+        <li><a class="red" href="/login">Iniciar sesión</a></li>
+        <li><a href="/register">Registrate</a></li>
+        <a class="cart" href="/cart"><i class="fas fa-solid fa-cart-shopping"></i></a>
+      </div>
 </body>
 
 </html>
