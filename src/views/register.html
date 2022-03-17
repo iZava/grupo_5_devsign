@@ -11,79 +11,98 @@
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <div class="navBar">
-            <div class="burger-menu">
-                <i class="fas fa-bars"></i>
-            </div>
-            <div class="main-logo">
-                <img src="images/logo-proyecto.png" alt="logo">
-            </div>
-            <div class="login">
-                <i class="fa-solid fa-user"></i>
-            </div>
-            <div class="shopping-cart">
-                <i class="fa-solid fa-cart-shopping"></i>
-            </div>
-        </div>
-    </header>
-
-    <main>
-        <div id="register">
-            <section>
-
-                <div class="logo-login">
-                    <i class="fa-solid fa-user"></i>
-                </div>
-
-                <div class="log-text">
-                    <p>Crea una cuenta para agilizar el proceso de pago en el futuro, realizar un seguimiento del historial de pedidos y recibir correos electrónicos, descuentos y ofertas especiales.</p>
-                </div>
-
-                <form action="resultado.html" method="POST">
-
-                    <div class="log-name">
-                        <i class="fa-solid fa-pencil"></i>
-                        <input type="text" name="nombre" id="nombre" placeholder="Nombre y apellido">
-                    </div>
-
-                    <div class="log-user">
-                        <i class="fa-solid fa-user"></i>
-                        <input type="text" name="log-user" id="log-user" placeholder="Nombre de usuario">
-                    </div>
-
-                    <div class="log-email">
-                        <i class="fa-solid fa-envelope"></i>
-                        <input type="email" name="email" id="email" placeholder="Correo Electrónico">
-                    </div>
-
-                    <div class="log-password">
-                        <i class="fa-solid fa-key"></i>
-                        <input type="password" name="password" id="password" placeholder="Contraseña">
-                    </div>
-
-                    <div class="log-password">
-                        <i class="fa-solid fa-key"></i>
-                        <input type="password" name="repeat-password" id="repeat-password" placeholder="Repita la Contraseña">
-                    </div>
-
+        <nav>
+            <div class="left-section">
+                <a href="/"><img src="images/Logo-proyecto.png" alt="logo"></a>
+                <form class="search" action="GET">
+                    <input type="search" name="search" id="search" placeholder="Encuentra lo que buscas">
                 </form>
-
-                <div class="Privacy-Policy">
-                    <p>Sus datos personales se utilizarán para respaldar su experiencia en este sitio web, para administrar el acceso a su cuenta y para otros fines descritos en nuestra <u><b>política de privacidad</b></u></p>
+            </div>
+            <div class="responsive-menu">
+                <div class="hamburguer-menu">
+                    <a href=""><i class="fa-solid fa-bars"></i></a>
                 </div>
-
-                <div class="register-button">
-                    <button type="button">Registrarse</button>
+                <a class="cart" href="/cart"><i class="fas fa-solid fa-cart-shopping"></i></a>
+            </div>
+            <div class="nav-items">
+                <ul>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/t-shirts">Tienda</a></li>
+                    <li><a class="red" href="/login">Iniciar sesión</a></li>
+                    <li><a href="/register">Registrate</a></li>
+                    <a class="cart" href="/cart"><i class="fas fa-solid fa-cart-shopping"></i></a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="register">
+            <div class="container-login-register">
+                <div class="tab-login">
+                    <button type="button">Iniciar sesión</button>
                 </div>
+                <div class="tab-register">
+                    <button type="button">Registro</button>
+                </div>
+            </div>
+                
+                <div class="card-register">
+                    <section>
 
-                <p class="back-login"><u>Volver a inicio de sesión</u></p>
+                        <div class="logo-login">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
 
-            </section>
+                        <div class="log-text">
+                            <p>Crea una cuenta para agilizar el proceso de pago en el futuro, realizar un seguimiento del historial de pedidos y recibir correos electrónicos, descuentos y ofertas especiales.</p>
+                        </div>
+
+                        <form action="resultado.html" method="POST">
+
+                            <div class="log-name">
+                                <i class="fa-solid fa-pencil"></i>
+                                <input type="text" name="nombre" id="nombre" placeholder="Nombre y apellido">
+                            </div>
+
+                            <div class="log-user">
+                                <i class="fa-solid fa-user"></i>
+                                <input type="text" name="log-user" id="log-user" placeholder="Nombre de usuario">
+                            </div>
+
+                            <div class="log-email">
+                                <i class="fa-solid fa-envelope"></i>
+                                <input type="email" name="email" id="email" placeholder="Correo Electrónico">
+                            </div>
+
+                            <div class="log-password">
+                                <i class="fa-solid fa-key"></i>
+                                <input type="password" name="password" id="password" placeholder="Contraseña">
+                            </div>
+
+                            <div class="log-password">
+                                <i class="fa-solid fa-key"></i>
+                                <input type="password" name="repeat-password" id="repeat-password" placeholder="Repita la Contraseña">
+                            </div>
+
+                        </form>
+
+                        <div class="Privacy-Policy">
+                            <p>Sus datos personales se utilizarán para respaldar su experiencia en este sitio web, para administrar el acceso a su cuenta y para otros fines descritos en nuestra <u>política de privacidad</u></p>
+                        </div>
+
+                        <div class="register-button">
+                            <button type="button">Registrarse</button>
+                        </div>
+
+                        <p class="back-login"><u>Volver a inicio de sesión</u></p>
+
+                </section>
+            </div>
         </div>
     </main>
 </body>
