@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang=>
 
 <head>
     <meta charset="UTF-8">
@@ -7,35 +7,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="/css/styles-login.css">
-    <enlace rel="preconectar" href="https://fonts.googleapis.com">
-        <enlace rel="preconectar" href="https://fonts.gstatic.com" crossorigin>
-            <enlace href="https: //fonts.googleapis.com/css2? familia = Poppins &family= Roboto:ital,wght@0,500;1,700 & display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
                 <title>Login</title>
 </head>
+<header>
+    <nav>
+        <div class="left-section">
+            <a href="/"><img src="images/Logo-proyecto.png" alt="logo"></a>
+            <form class="search" action="GET">
+                <input type="search" name="search" id="search" placeholder="Encuentra lo que buscas">
+            </form>
+        </div>
+        <div class="responsive-menu">
+            <div class="hamburguer-menu">
+                <a href=""><i class="fa-solid fa-bars"></i></a>
+            </div>
+            <a class="cart" href="/cart"><i class="fas fa-solid fa-cart-shopping"></i></a>
+        </div>
+        <div class="nav-items">
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/t-shirts">Tienda</a></li>
+                <li><a class="red" href="/login">Iniciar sesión</a></li>
+                <li><a href="/register">Registrate</a></li>
+                <a class="cart" href="/cart"><i class="fas fa-solid fa-cart-shopping"></i></a>
+            </ul>
 
-<body>
+        </div>
+    </nav>
+</header>
+<main>
+      
     <div class="formulario">
-        <i class="user" class="fas fa-user"></i>
-
-        <h1>Inicio de sesion</h1>
-
+<section>
+    <div class="logo-login">
+            <i class="fa-solid fa-user"></i>
+    </div>
         <form action="post"></form>
+    <div class="contenedor-usuario">
 
-        <div class="contenedor-usuario">
-            <label>Usuario</label>
-            <input type="text" placeholder="Nombre de usuario">
-        </div>
-        <div class="contenedor-contraseña">
-            <label>Constraseña</label>
-            <input type="password" placeholder="Contraseña">
-        </div>
-        <div class="recordar">¿Olvido su contraseña?</div>
-        <input type="submit" value="Iniciar sesión" class="button">
-        <div class="registrarse">
+
+        
+        <i class="fa-solid fa-user"></i>
+        <input type="text" name="log-user" id="log-user" placeholder="Nombre de usuario">
+    </div>
+    <div class="contenedor-contraseña">
+        <i class="fa-solid fa-key"></i>
+        <input type="password" name="password" id="password" placeholder="Contraseña">
+    </div>
+    
+    <div class="boton-recuerdame">
+        <p>¿Olvido su contraseña?</p>
+        <form action="resultado.html" method="POST">
+        <label for ="recuerdame">
+        <input type="radio" name="recuerdame" value >
+            recuerdame </label>
+    </form>
+    </div>
+    <input type="submit" value="Iniciar sesión" class="button">
+    <div class="registrarse">
             <a href="#">Ir a registrarse</a>
-        </div>
+            
 
-</body>
+</section>
+    </div>
+
+</main>
+
+<footer class="footer-container">
+    <div class="social">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-twitter"></i>
+    </div>
+    <div class="copy">
+        <p><i class="fa-solid fa-copyright"></i> Devsign 2022 - Todos los derechos reservados.</p>
+    </div>
+</footer>
+
 
 </html>

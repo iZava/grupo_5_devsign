@@ -1,49 +1,124 @@
 /*LOGIN MOBILE*/
 
-body{
-    margin:0 ;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color:#8D99AE;
-    height: 100vh;
+:root {
+    --red: #EF233C;
+    --white: #FFFFFF;
+    --black: #000000;
+    --light-gray: #EDF2F4;
+    --dark-gray: #8D99AE;
+    /*Fonts*/
+    --big: 2rem;
+    --small: .5rem;
 }
 
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.nav{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+nav .left-section {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 50%; }
+  
+
+   
+    
+    
+
+    .main-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+
+    .main-logo img {
+        width: 80%;
+    }
+    
+    
+
+/*------------------MAIN---------------------*/
+
+.logo-login {
+    font-size: 40px;
+    text-align: center;
+    text-shadow: -3px -3px 5px rgb(0 0 0 / 40%);
+    color: rgba(0, 0, 0, 0.7); }
+
+
+
+main section {
+    font-size: 16px;
+    margin: 10px;
+    padding: 10px 85px;
+    border-radius: 20px;
+    box-shadow: -1px -1px 2px 2px rgb(255 255 255 / 50%), 2px 2px 2px 1px rgb(0 0 0 / 20%); }
+
+
+   
+main section  input[type='text'], input[type='password']{
+        border: none; 
+        background-color:var(--red) ;
+        font-size: 14px;
+        width: 100%;
+        padding-left: 5px;  }
+    
+
+
 .formulario{
-    position: absolute;
-    padding: 0px 35px 35px;
-    top: 50%;
-    left: 50%;
-    width: 400px;
-    background-color: #EDF2F4;
-    transform: translate(-50%, -50%);
-    border-radius: 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    
 }
 .formulario i{
-    text-align: center;
     color: black;
 }
 
-.formulario h1{
-    text-align: center;
-    padding: 0 0 20px 0;
-    border-bottom: 1px solid silver;
-}
-.formulario form{
-    padding: 0 40px;
-    box-sizing: border-box;
-}
-form .username{
-    position: relative;
-    border-bottom: 2px solid white;
-    margin: 30px 0;
+
+
+.log-name, .contenedor-usuario, .log-email, .contenedor-contraseña {
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 20px;
+    display: flex;
+    color:white;
+    background-color: #EF233C;
     
- }
-
-
-.contenedor-usuario{
-    text-align: left;
 }
 
+
+
+
+.recordar p{
+    font-size: 10px;
+}
+    
+.boton-recuerdame{
+    justify-content: space-between;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+form {display: flex }
+label {
+    font-size: 10px;
+}
+
+
+/*
 input[type="text"],
 input[type="password"]{
     border: none;
@@ -54,7 +129,9 @@ input[type="password"]{
     padding: 2px 1px;
     border-radius: 10px;
     outline: none;
-}
+    padding-left: 10px;
+    margin: 5px;
+} */
 ::placeholder{
     color: white;
     text-align: center;
@@ -65,15 +142,16 @@ input[type="password"]{
 }
 
 .button{
-    border: none;
-    width: 100%;
+    margin: 5px;
+    background-color: #d90429;
     color: white;
-    font-size: 20px;
-    background-color: #D90429;
-    padding: 15px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-}
+    border-radius: 20px;
+    padding: 5px 20px;
+    border: none;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    box-shadow: -2px -2px 1px 2px rgba(255, 255, 255, 0.5), 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+    }
 
 .registrarse{
     text-align: center;
