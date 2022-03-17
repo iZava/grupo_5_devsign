@@ -239,6 +239,41 @@ nav form.search input[type=search] {
     gap: 5rem;
     justify-content: center;
 }
-  /* color selector */
+  
+ /* ============= MEDIA =============*/
+
+@media(max-width: 460px) {
+  nav {
+    box-shadow: none;
+}
+nav form.search {
+    width: 100%;
+}
+}
+
+@media(max-width: 800px){
+  nav {
+        justify-content: center;
+    }
+    nav .nav-items ul {
+        display: none;
+    }
+    nav .nav-items,
+    .nav-items ul {
+        gap: .5rem;
+    }
+    nav .hamburguer-menu,
+    nav .responsive-menu a.cart {
+        display: flex;
+        align-items: center;
+    }
+    nav .left-section {
+        width: 100%;
+    }
+    nav form.search {
+        width: 50%;
+    }
+
+}
   
   
