@@ -29,6 +29,11 @@ nav .left-section {
     gap: 1rem;
     width: 50%; }
   
+ 
+
+    .search01{
+        color:#000000
+    }
 
    
     
@@ -84,8 +89,23 @@ main section  input[type='text'], input[type='password']{
 .formulario i{
     color: black;
 }
-
-
+/*
+.container-login-register {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+.tab-login {
+    display: flex;
+    width: 140px;
+    justify-content: flex-end;
+}
+.tab-register {
+    display: flex;
+    width: 40%;
+}
+*/
 
 .log-name, .contenedor-usuario, .log-email, .contenedor-contraseña {
     margin: 5px;
@@ -104,19 +124,32 @@ main section  input[type='text'], input[type='password']{
 .recordar p{
     font-size: 10px;
 }
-    
-.boton-recuerdame{
-    justify-content: space-between;
-    justify-content: space-between;
+.contenedor-BotonRecuerdame{
     display: flex;
-    align-items: center;
-    gap: 1rem;
+    justify-content: space-between;
 }
+
+.boton-recuerdame{
+    align-content: space-between;
+    display: flex;
+    gap: 1rem;
+    
+    
+}
+.boton-recuerdame p{
+    font-size: 10px;
+   
+}
+
+
 form {display: flex }
 label {
     font-size: 10px;
 }
 
+.boton-iniciarSesion{
+    text-align: center;
+}
 
 /*
 input[type="text"],
@@ -132,11 +165,16 @@ input[type="password"]{
     padding-left: 10px;
     margin: 5px;
 } */
-::placeholder{
-    color: white;
+
+.placeholderUsuario{
+    color: rgb(255, 254, 254);
     text-align: center;
 }
-
+/*.placeholder{
+    color: rgb(255, 254, 254);
+    text-align: center;
+}
+*/
 .recordar{
     text-decoration:underline;
 }
@@ -156,3 +194,12 @@ input[type="password"]{
 .registrarse{
     text-align: center;
 }
+
+
+
+
+@media (min-width: 769px){ 
+.formulario {
+    width: 770px;
+    margin: auto;
+}}
