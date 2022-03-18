@@ -2,7 +2,7 @@
   "name": "grupo_5_devsign",
   "version": "1.0.0",
   "description": "developer store",
-  "main": "index.js",
+  "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/app.js"
