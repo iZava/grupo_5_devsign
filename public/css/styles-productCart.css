@@ -7,12 +7,20 @@
     }
 
 /* ============================================ MAIN ============================================ */
-.cart {
+.cart11 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;    
 }
 
+.cart-complete{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.cart-articles {
+    width: 100%;
+}
 .cart-detail, .cart-summary-articles {
     display: flex;
     flex-wrap: wrap;
@@ -135,4 +143,32 @@
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
     box-shadow: -2px -2px 1px 2px rgba(255, 255, 255, 0.5), 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     
+}
+
+@media (min-width: 769px){
+
+    .cart-complete {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .cart-summary-articles {
+        width:35%;
+        text-align: center;
+        height: 150px;
+    }
+
+    .cart-articles {
+        display: flex;
+        flex-wrap: wrap;
+        width: 60%;
+    }
+
+    .cart11 {
+        width: 100%;
+    }
+
+    .checkout {
+        margin-top: 20px;
+    }
 }
