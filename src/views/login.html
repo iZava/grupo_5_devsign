@@ -6,18 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="/css/styles-login.css">
+    <!-- <link rel="stylesheet" href="/css/styles-login.css"> -->
+    <link rel="stylesheet" href="/css/styles-register.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-                <title>Login</title>
+    <title>Login</title>
 </head>
 <header>
     <nav>
         <div class="left-section">
             <a href="/"><img src="images/Logo-proyecto.png" alt="logo"></a>
             <form class="search" action="GET">
-                <input type="search" name="search" id="search" placeholder="Encuentra lo que buscas">
+                <input class="search01" type="search" name="search" id="search" placeholder="Encuentra lo que buscas">
             </form>
         </div>
         <div class="responsive-menu">
@@ -39,43 +42,103 @@
     </nav>
 </header>
 <main>
-      
-    <div class="formulario">
-<section>
-    <div class="logo-login">
-            <i class="fa-solid fa-user"></i>
-    </div>
-        <form action="post"></form>
-    <div class="contenedor-usuario">
-
-
-        
-        <i class="fa-solid fa-user"></i>
-        <input type="text" name="log-user" id="log-user" placeholder="Nombre de usuario">
-    </div>
-    <div class="contenedor-contraseña">
-        <i class="fa-solid fa-key"></i>
-        <input type="password" name="password" id="password" placeholder="Contraseña">
-    </div>
-    
-    <div class="boton-recuerdame">
-        <p>¿Olvido su contraseña?</p>
-        <form action="resultado.html" method="POST">
-        <label for ="recuerdame">
-        <input type="radio" name="recuerdame" value >
-            recuerdame </label>
-    </form>
-    </div>
-    <input type="submit" value="Iniciar sesión" class="button">
-    <div class="registrarse">
-            <a href="#">Ir a registrarse</a>
+    <div class="register">
+        <div class="container-login-register">
+            <div class="tab-login">
+                <button type="button">Iniciar sesión</button>
+            </div>
+            <div class="tab-register">
+                <button type="button">Registro</button>
+            </div>
+        </div>
             
+            <div class="card-register">
+                <section>
 
-</section>
+                    <div class="logo-login">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <div class="log-text">
+                        <p>Crea una cuenta para agilizar el proceso de pago en el futuro, realizar un seguimiento del historial de pedidos y recibir correos electrónicos, descuentos y ofertas especiales.</p>
+                    </div>
+
+                    <form action="resultado.html" method="POST">
+
+                        
+
+                        <div class="log-user">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" name="log-user" id="log-user" placeholder="Nombre de usuario">
+                        </div>
+
+
+                        <div class="log-password">
+                            <i class="fa-solid fa-key"></i>
+                            <input type="password" name="password" id="password" placeholder="Contraseña">
+                        </div>
+
+                       
+                    </form>
+
+                   
+
+                    <div class="register-button">
+                        <button type="button">Iniciar sesión</button>
+                    </div>
+
+                    <p class="back-login"><u>Ir a registro</u></p>
+
+            </section>
+        </div>
+    </div>
+    <div class="formulario">
+
+        <section>
+            <div class="logo-login">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <form action="post"></form>
+            <div class="contenedor-usuario">
+
+
+
+                <i class="fa-solid fa-user"></i>
+                <input class= "placeholderUsuario" type="text" name="log-user" id="log-user" placeholder="Nombre de usuario">
+            </div>
+            <div class="contenedor-contraseña">
+                <i class="fa-solid fa-key"></i>
+                <input type="password" name="password" id="password" placeholder="Contraseña">
+            </div>
+            <div class="contenedor-BotonRecuerdame">
+                <div class="boton-recuerdame">
+
+                    <form action="resultado.html" method="POST">
+                        <label for="recuerdame">
+                            <input type="radio" name="recuerdame" value>
+                            recuerdame </label>
+                    </form>
+                    <div class="olvidoContraseña">
+                    <p>¿Olvido su contraseña?</p>
+                </div>
+                </div>
+            </div>
+            <div class="boton-iniciarSesion">
+                <input type="button" value="Iniciar sesión" class="button">
+            </div>
+            <div class="registrarse">
+                <a href="#">Ir a registrarse</a>
+
+
+        </section>
     </div>
 
 </main>
 
+<body>
+
+
+</body>
 <footer class="footer-container">
     <div class="social">
         <i class="fa-brands fa-facebook"></i>
