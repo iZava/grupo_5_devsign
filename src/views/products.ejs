@@ -1,48 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/home-products.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="https://kit.fontawesome.com/22b1cec598.js" crossorigin="anonymous"></script>
-    <title>DevSign</title>
-</head>
-
+<%- include('./partials/head') %>
 <body>
     <div class="container">
-        <header>
-            <nav>
-                <div class="left-section">
-                    <img src="images/Logo-proyecto.png" alt="logo">
-                    <form class="search" action="GET">
-                        <input type="search" name="search" id="search" placeholder="Encuentra lo que buscas">
-                    </form>
-                </div>
-                <div class="responsive-menu">
-                    <div class="hamburguer-menu">
-                      <a href="#modal-menu"><i class="fa-solid fa-bars"></i></a>
-                    </div>
-                    <a class="cart" href="/cart"><i class="fas fa-solid fa-cart-shopping"></i></a>
-                </div>
-                <div class="nav-items">
-                    <ul>
-                        <li><a href="/">Inicio</a></li>
-                        <li><a href="/products">Tienda</a></li>
-                        <li><a class="red" href="/login">Iniciar sesión</a></li>
-                        <li><a href="/register">Registrate</a></li>
-                        <a class="cart" href="/cart"><i class="fas fa-solid fa-cart-shopping"></i></a>
-                    </ul>
-
-                </div>
-            </nav>
-        </header>
+      <%- include('./partials/header') %>
         <section class="slider">
             <img src="images/home-banner-1.jpg" alt="">
         </section>
@@ -91,11 +52,7 @@
                 </div>
             </div>
         </section>
-        <footer class="footer-container">
-            <div class="copy">
-                <p><i class="fa-solid fa-copyright"></i> Devsign 2022 - Todos los derechos reservados.</p>
-            </div>
-        </footer>
+        <%- include('./partials/footer') %>
     </div>
     <div id="modal-menu" class="modal">
       <a class="close" href="#">X</a>

@@ -1,9 +1,16 @@
-const express = require('express');
-const path = require('path');
+const path = require("path");
+const express = require("express");
 const app = express();
-const PORT= process.env.PORT || 9000;
+const port = process.env.PORT || 3000;
+const mainRouter = require("./routes/indexRouter");
 
-app.use(express.static(path.join(__dirname, "../", "public")));
+app.use(express.static(path.join(__dirname, '../', "public")));
+app.set("view engine", "ejs");
+app.set("views","./src/views");
+app.use("/", mainRouter);
+
+
+/* app.use(express.static(path.join(__dirname, "../", "public")));
 
 app.listen(PORT, () => {
     console.log('Servidor funcionando');
@@ -13,7 +20,11 @@ app.get('/', (req, res) => {res.sendFile(
     path.join(__dirname, '/views/index.html'));
 });
 
-app.get('/products', (req, res) => {res.sendFile(
+ */
+
+app.listen(port, () => console.log("server working"));
+
+/* app.get('/products', (req, res) => {res.sendFile(
     path.join(__dirname, '/views/products.html'));
 });
 
@@ -32,11 +43,11 @@ app.get('/cart', (req, res) => {res.sendFile(
 
 app.get('/detail', (req, res) => {res.sendFile(
     path.join(__dirname, '/views/productDetail.html'));
-});
+}); */
 
 /*Products*/
 
-app.get('/t-shirts', (req, res) => {res.sendFile(
+/* app.get('/t-shirts', (req, res) => {res.sendFile(
     path.join(__dirname, '/views/tshirts.html'));
 });
 
@@ -62,4 +73,4 @@ app.get('/hoddies', (req, res) => {res.sendFile(
 
 app.get('/stickers', (req, res) => {res.sendFile(
     path.join(__dirname, '/views/stickers.html'));
-});
+}); */
