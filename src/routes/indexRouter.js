@@ -7,6 +7,7 @@ router.get("/detail", mainController.detail);
 router.get("/login", mainController.login);
 router.get("/register", mainController.register);
 router.get("/cart", mainController.cart);
+router.get("/product", mainController.addEditProduct);
 
 router.get("/tshirts", mainController.index);
 router.get("/bottles", mainController.index);
