@@ -6,6 +6,8 @@ router.get("/", mainController.index);
 router.get("/detail", mainController.detail);
 router.get("/login", mainController.login);
 router.get("/register", mainController.register);
+router.get("/add-edit-Product", mainController.EditProduct);
+
 router.get("/cart", mainController.cart);
 
 router.get("/tshirts", mainController.index);
@@ -15,5 +17,6 @@ router.get("/hat", mainController.index);
 router.get("/pillows", mainController.index);
 router.get("/mugs", mainController.index);
 router.get("/stickers", mainController.index);
+
 
 module.exports = router;

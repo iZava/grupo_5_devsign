@@ -4,6 +4,7 @@ const controller = {
   login: (req, res) => { res.render("login") },
   register: (req, res) => { res.render("register") },
   cart: (req, res) => { res.render("productCart") },
+  EditProduct: (req, res) => { res.render("add-edit-Product") },
 }
 
 module.exports = controller;
