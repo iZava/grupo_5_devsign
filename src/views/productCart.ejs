@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+  <body>
+    <%- include('./partials/header') %>
+      <main>
+        <section class="cart-complete">
+          <section class="cart-articles">
+            <section class="cart11">
+              <section class="cart-detail">
+                <div class="cart-image">
+                  <img src="images/products/t-shirt1.jpg" alt="camiseta">
+                </div>
+                <div class="container-value-cant-remove">
+                  <div class="item-value">
+                    <p>$45.000</p>
+                  </div>
+                  <div class="N-objects">
+                    <label for="cant">Cantidad</label>
+                    <input type="number" name="cant" min="0" step="1" value="1">
+                  </div>
+                </div <div class="cart-description">
+                <p>Camiseta estampada slayer tipo1</p>
+                <p>Color: negro</p>
+                <p>Talla: S</p>
+                </div>
+                <div class="remove-object">
+                  <i class="fa-solid fa-trash-can"></i>
+                </div>
+              </section>
+            </section>
+            <!--------------------------SEGUNDO ARTICULO---------------------->
+            <section class="cart11">
+              <section class="cart-detail">
+                <div class="cart-image">
+                  <img src="images/products/t-shirt1.jpg" alt="camiseta">
+                </div>
+                <div class="container-value-cant-remove">
+                  <div class="item-value">
+                    <p>$45.000</p>
+                  </div>
+                  <div class="N-objects">
+                    <label for="cant">Cantidad</label>
+                    <input type="number" name="cant" min="0" step="1" value="1">
+                  </div>
+                </div>
+                <div class="cart-description">
+                  <p>Camiseta estampada slayer tipo1</p>
+                  <p>Color: negro</p>
+                  <p>Talla: S</p>
+                </div>
+                <div class="remove-object">
+                  <i class="fa-solid fa-trash-can"></i>
+                </div>
+              </section>
+            </section>
+          </section>
+          <!------------------------RESUMEN DE ARTICULOS----------------------------->
+          <section class="cart-summary-articles">
+            <div class="summary-articles">
+              <p>2 Artículos</p>
+              <p>$90.000</p>
+              <p>Envío</p>
+              <p>$12.000</p>
+            </div>
+            <div class="total-items">
+              <p>Total(impuestos incluidos)</p>
+              <p>$102.000</p>
+            </div>
+            <div class="checkout">
+              <button type="button">COMPRAR</button>
+            </div>
+          </section>
+        </section>
+      </main>
+      <%- include('./partials/footer') %>
+        <div id="modal-menu" class="modal">
+          <a class="close" href="#">X</a>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/t-shirts">Tienda</a></li>
+          <li><a class="red" href="/login">Iniciar sesión</a></li>
+          <li><a href="/register">Registrate</a></li>
+          <a class="cart" href="/cart"><i class="fas fa-solid fa-cart-shopping"></i></a>
+        </div>
+  </body>
+</html>

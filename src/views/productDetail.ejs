@@ -1,56 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle de producto</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/ad9837e9c4.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/product_detail.css">
-    <link rel="stylesheet" href="/css/styles.css">
-</head>
-
+<%- include('./partials/head') %>
 <body>
-
-
     <!-- Header -->
-
-    <header>
-        <nav>
-            <div class="left-section">
-                <a href="/"><img src="images/Logo-proyecto.png" alt="logo"></a>
-                <form class="search" action="GET">
-                    <input type="search" name="search" id="search" placeholder="Encuentra lo que buscas">
-                </form>
-            </div>
-            <div class="responsive-menu">
-                <div class="hamburguer-menu">
-                  <a href="#modal-menu"><i class="fa-solid fa-bars"></i></a>
-                </div>
-                <a class="cart" href="/cart"><i class="fas fa-solid fa-cart-shopping"></i></a>
-            </div>
-            <div class="nav-items">
-                <ul>
-                    <li><a href="/">Inicio</a></li>
-                    <li><a href="/t-shirts">Tienda</a></li>
-                    <li><a class="red" href="/login">Iniciar sesión</a></li>
-                    <li><a href="/register">Registrate</a></li>
-                    <a class="cart" href="/cart"><i class="fas fa-solid fa-cart-shopping"></i></a>
-                </ul>
-
-            </div>
-        </nav>
-    </header>
-
+    <%- include('./partials/header') %>
     <!-- main -->
-
     <main class="main-container">
-
-        
         <div class="product">
             <div class="prod-nav">
                 <img src="/images/products/hoddie4.jpg" alt="img 1">
@@ -59,7 +14,7 @@
                 <img src="/images/products/hoddie4.jpg" alt="img 4">
             </div>
             <div class="prod-image">
-                <img src="/images/products/hoddie4.jpg" alt="main img">
+              <img src="/images/products/hoddie4.jpg" alt="main img">
             </div>
             <section class="prod-detail">
                 <div class="general-description">
@@ -134,19 +89,7 @@
         </div>
 
     </main>
-
-    <footer class="footer-container">
-        <div class="social">
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-twitter"></i>
-        </div>
-        <div class="copy">
-            <p><i class="fa-solid fa-copyright"></i> Devsign 2022 - Todos los derechos reservados.</p>
-        </div>
-    </footer>
-    </div>
-  </footer>
+    <%- include('./partials/footer') %>
   </div>
   <div id="modal-menu" class="modal">
     <a class="close" href="#">X</a>
