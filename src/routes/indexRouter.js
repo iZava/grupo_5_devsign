@@ -9,12 +9,6 @@ router.get("/register", mainController.register);
 router.get("/cart", mainController.cart);
 router.get("/product", mainController.addEditProduct);
 
-router.get("/tshirts", mainController.index);
-router.get("/bottles", mainController.index);
-router.get("/hoddies", mainController.index);
-router.get("/hat", mainController.index);
-router.get("/pillows", mainController.index);
-router.get("/mugs", mainController.index);
-router.get("/stickers", mainController.index);
+router.get("/products-list/:product", mainController.products);
 
 module.exports = router;
