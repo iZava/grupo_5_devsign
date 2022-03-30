@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head', {webtitle: "Productos" }) %>
+  <body>
+    <div class="container">
+      <%- include('../partials/header') %>
+        <section class="slider">
+          <img src="/images/home-banner-1.jpg" alt="">
+        </section>
+        <%- include('../partials/product-menu', {category}) %>
+        <section class="products">
+          <div class="products-list">   
+            <% for(let i=0; i < products.length; i++) { %>
+              <div class="card">
+                <a href="/products-list/<%= products[i].category %>"><img src="<%= products[i].image %>" alt="<%= products[i].category %>"></a>
+                <div class="description-legend">
+                    <p><%= products[i].title %></p>
+                    <p><%= products[i].price %></p>
+                </div>
+            </div>   
+            <% } %>
+        </section>
+      <%- include('../partials/footer') %>
+    </div>
+    <div id="modal-menu" class="modal">
+      <a class="close" href="#">X</a>
+      <li><a href="/">Inicio</a></li>
+      <li><a href="/t-shirts">Tienda</a></li>
+      <li><a class="red" href="/login">Iniciar sesión</a></li>
+      <li><a href="/register">Registrate</a></li>
+      <a class="cart" href="/cart"><i class="fas fa-solid fa-cart-shopping"></i></a>
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head', {webtitle: "Home"}) %>
+<body>
+  <div class="container">
+    <%- include('../partials/header') %>
+    <section class="slider">
+      <img src="images/home-banner-1.jpg" alt="">
+    </section>
+    <section class="intermediate">
+      <h1>Lleva tu estilo a otro nivel con Devsign</h1>
+      <h2>Consúltanos tu idea, ¡nosotros la estampamos!</h2>
+      <button>Cotiza tu pedido</button>
+    </section>
+    <section class="products">
+      <div class="products-list">
+        <% for(let i=0; i < products.length; i++) { %>
+          <div class="card">
+            <div class="description">
+              <p><%= products[i].title %></p>
+            </div>
+            <a href="/products-list/<%= products[i].category %>"><img src="<%= products[i].image %>" alt="<%= products[i].title %>"></a>
+          </div>       
+        <% } %>
+    </section>
+    <%- include('../partials/footer') %>
+  </div>
+  <div id="modal-menu" class="modal">
+    <a class="close" href="#">X</a>
+    <li><a href="/">Inicio</a></li>
+    <li><a href="/t-shirts">Tienda</a></li>
+    <li><a class="red" href="/login">Iniciar sesión</a></li>
+    <li><a href="/register">Registrate</a></li>
+    <a class="cart" href="/cart"><i class="fas fa-solid fa-cart-shopping"></i></a>
+  </div>
+</body>
+
+</html>
