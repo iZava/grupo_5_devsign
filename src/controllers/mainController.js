@@ -89,6 +89,7 @@ const controller = {
         ];
       break;
       case 'hoddies':
+        category = 'hoddies';
         products = [
           {
             title: "Hoddie",
@@ -130,6 +131,7 @@ const controller = {
         ];
       break;
       case 'mugs':
+        category = 'mugs';
         products = [
           {
             title: "Mug",
@@ -171,6 +173,7 @@ const controller = {
         ];
       break
       case 'cojines':
+        category = 'cojines';
         products = [
           {
             title: "Cojín",
@@ -212,6 +215,7 @@ const controller = {
         ];
       break
       case 'stickers':
+        category = 'stickers';
         products = [
           {
             title: "Stickers",
@@ -253,6 +257,7 @@ const controller = {
         ];
       break
       case 'gorras':
+        category = 'gorras';
         products = [
           {
             title: "Gorra",
@@ -294,6 +299,7 @@ const controller = {
         ];
       break
       case 'botellas':
+        category = 'botellas';
         products = [
           {
             title: "Botella",

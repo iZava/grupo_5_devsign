@@ -7,17 +7,7 @@
         <section class="slider">
           <img src="/images/home-banner-1.jpg" alt="">
         </section>
-        <section class="intermediate-menu">
-          <ul>
-            <li><a href="/products-list/camisetas" id="a1">Camisetas</a></li>
-            <li><a href="/products-list/hoddies" id="a2">Hoddies</a></li>
-            <li><a href="/products-list/mugs" id="a3">Mugs</a></li>
-            <li><a href="/products-list/botellas" id="a4">Botellas</a></li>
-            <li><a href="/products-list/gorras" id="a5">Gorras</a></li>
-            <li><a href="/products-list/cojines" id="a6">Cojines</a></li>
-            <li><a href="/products-list/stickers" id="a7">Stickers</a></li>
-          </ul>
-        </section>
+        <%- include('../partials/product-menu', {category}) %>
         <section class="products">
           <div class="products-list">   
             <% for(let i=0; i < products.length; i++) { %>
@@ -30,7 +20,7 @@
             </div>   
             <% } %>
         </section>
-        <%- include('../partials/footer') %>
+      <%- include('../partials/footer') %>
     </div>
     <div id="modal-menu" class="modal">
       <a class="close" href="#">X</a>
