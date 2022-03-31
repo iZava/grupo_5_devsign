@@ -80,24 +80,28 @@ main section {
     text-align: center;
     padding: 5px;
 }
-.log-name, .log-user, .log-email, .log-password {
+.register-log-name, .register-log-user, .register-log-email, .register-log-password {
     margin: 5px;
     border: 1px solid var(--red);
     border-radius: 20px;
     padding: 8px;
     display: flex;
+    width: 100%;
 }    
 
-main section input {
+.form-register{
+    flex-wrap: wrap;
+}
+
+.form-register input {
     border: none;
     background-color: var(--light-gray);
     font-size: 14px;
     width: 100%;
     padding-left: 10px;
-    
 }
 
-form i {
+.form-register i {
     text-shadow: -1px -1px 2px rgba(0, 0, 0, 0.4);
     color: rgba(0, 0, 0, 0.4);
 }
