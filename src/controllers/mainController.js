@@ -1,12 +1,4 @@
 const controller = {
-<<<<<<< HEAD
-  index: (req, res) => { res.render("index") },
-  detail: (req, res) => { res.render("productDetail") },
-  login: (req, res) => { res.render("login") },
-  register: (req, res) => { res.render("register") },
-  cart: (req, res) => { res.render("productCart") },
-  EditProduct: (req, res) => { res.render("add-edit-Product") },
-=======
   index: (req, res) => {
     const products = [
       {
@@ -706,7 +698,6 @@ const controller = {
   register: (req, res) => { res.render("products/register") },
   cart: (req, res) => { res.render("products/productCart") },
   addEditProduct: (req, res) => { res.render("users/add-edit-Product") },
->>>>>>> 8be228cd6070e6a24df9b8eef486ec5d723e112f
 }
 
 module.exports = controller;
