@@ -6,48 +6,46 @@
     <main>
       <div class="register">
         <div class="container-login-register">
-          <div class="tab-login">
-            <button type="button">Iniciar sesión</button>
-          </div>
-          <div class="tab-register">
-            <button type="button">Registro</button>
-          </div>
+            <div class="tab-login">
+                <button type="button">Iniciar sesión</button>
+            </div>
+            <div class="tab-register">
+                <button type="button">Registro</button>
+            </div>
         </div>
         <div class="card-register">
-          <section>
-            <div class="logo-login">
-              <i class="fa-solid fa-user"></i>
-            </div>
-            <div class="log-text">
-              <p>Crea una cuenta para agilizar el proceso de pago en el futuro, realizar un seguimiento del historial de
-                pedidos y recibir correos electrónicos, descuentos y ofertas especiales.</p>
-            </div>
-            <form action="resultado.html" method="POST">
-              <div class="log-user">
-                <i class="fa-solid fa-user"></i>
-                <input type="text" name="log-user" id="log-user" placeholder="Nombre de usuario">
-              </div>
-              <div class="log-password">
-                <i class="fa-solid fa-key"></i>
-                <input type="password" name="password" id="password" placeholder="Contraseña">
-              </div>
-            </form>
-            <div class="register-button">
-              <button type="button">Iniciar sesión</button>
-            </div>
-            <p class="back-login"><u>Ir a registro</u></p>
-            <div class="contenedor-BotonRecuerdame">
-              <div class="boton-recuerdame">
-                <form action="resultado.html" method="POST">
-                  <label for="recuerdame">
-                    <input type="radio" name="recuerdame" value>
-                    recuerdame </label>
-                </form>
-                <div class="olvidoContraseña">
-                  <p>¿Olvido su contraseña?</p>
+            <section>
+                <div class="logo-login">
+                    <i class="fa-solid fa-user"></i>
                 </div>
-              </div>
-            </div>
+                <div class="log-text">
+                    <p>Crea una cuenta para agilizar el proceso de pago en el futuro, realizar un seguimiento del
+                        historial de pedidos y recibir correos electrónicos, descuentos y ofertas especiales.</p>
+                </div>
+                <form action="resultado.html" method="POST">
+                    <div class="log-user">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" name="log-user" id="log-user" placeholder="Nombre de usuario">
+                    </div>
+                    <div class="log-password">
+                        <i class="fa-solid fa-key"></i>
+                        <input type="password" name="password" id="password" placeholder="Contraseña">
+                    </div>
+                </form>
+                <div class="register-button">
+                    <button type="button">Iniciar sesión</button>
+                </div>
+                <p class="back-login"><u>Ir a registro</u></p>
+                <div class="boton-recuerdame">
+                    <form class="form-recuerdame" action="resultado.html" method="POST">
+                        <label for="recuerdame">
+                            <input type="checkbox" name="recuerdame" value>
+                            <p>recuerdame</p></label>
+                    </form>
+                    <div class="olvidoContraseña">
+                        <p>¿Olvido su contraseña?</p>
+                    </div>
+                </div>
     </main>
   <%- include('../partials/footer') %>
 </body>
