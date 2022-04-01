@@ -6,7 +6,10 @@ router.get("/", mainController.index);
 router.get("/detail", mainController.detail);
 router.get("/login", mainController.login);
 router.get("/register", mainController.register);
-router.get("/add-edit-Product", mainController.addEditProduct);
+
+router.get("/addeditProduct", mainController.addEditProduct);
+router.get("/addProduct", mainController.addProduct);
+router.get("/editProduct", mainController.editProduct);
 
 router.get("/cart", mainController.cart);
 router.get("/product", mainController.addEditProduct);

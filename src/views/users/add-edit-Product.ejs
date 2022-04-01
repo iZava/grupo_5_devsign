@@ -1,68 +1,89 @@
-=<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel ="shortcut icon" href="#">
-    <title>Edit Product</title>
+<%- include('../partials/head', {webtitle: "Home"}) %>
 </head>
-<body>
-<header>
-    <h3 class ="text-center text-light">Tytorial</h3>
-    <h4 class= "text-center text-light">CRUD con  <span class= "badge badge-danger">DATATABLES</span></h4> 
-</header>
-
-<div class ="container">
-<div class="row">
-<div class = "col-lg-12">
-<button id="btnNuevo" type="button" class="btn btn-success">Nuevo</button>
-</div>
-</div>
-</div>
-
-
-<div class ="container">
-    <div class="row">
-    <div class = "col-lg-12">
-    <div class=" table-responsive">
-        <table id = "tablaPersonas" class = "table table-striped table-bordered table-condensed"
-        style="width: 100%">
-
-            <thead class="text-center">
-            <tr>
-                <th>Id</th>
-                <th>Nombre del producto</th>
-                <th>Descripcion</th>
-                <th>Imagen</th>
-                <th>Categoria</th>
-                <th>Color</th>
-                <th>Precio</th>
-            </tr>
-        </thead>
-            <tbody>
-                <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    <div class="text-center">
-                        <div class="btn-group">
-                            <button class="btn btn-primary btnEditar">Editar</button>
-                            <button class="btn btn-danger btnBorrar">Borrar</button>
-                            
-                        </div>
-                    </div>
-                </td>
-                </tr>
-            </tbody>
-        </table>
-
-    </div>
-    </div>
-    </div>
-
-
-</body>
+<%- include('../partials/header') %>
+    <body>
+        <div class ="container-btn-new">
+            <a class="btnNew" href="/addProduct">
+                <input type="button" value="Agregar producto">
+            </a>
+        </div>
+        <div class ="container-edit-products">
+            <table class = "tableProducts">
+                <thead class="head-editProduct">
+                    <tr>
+                        <th>ID</th>
+                        <th>NOMBRE DEL PRODUCTO</th>
+                        <th>DESCRIPCIÓN</th>
+                        <th>PRECIO</th>
+                        <th>CATEGORIA</th>
+                        <th>COLOR</th>
+                        <th>IMAGEN</th>
+                        <th>ACCIONES</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="ID">CA231GED</td>
+                        <td data-label="NOMBRE DEL PRODUCTO">Camiseta node.JS</td>
+                        <td data-label="DESCRIPCIÓN">Camiseta cuello en "V" estampado Node.JS en algodón</td>
+                        <td data-label="PRECIO">25.000</td>
+                        <td data-label="CATEGORIA">Camiseta</td>
+                        <td data-label="COLOR">Negro</td>
+                        <td data-label="IMAGEN">imagen1</td>
+                        <td data-label="ACCIONES"> 
+                            <div class="btnEdit">
+                                <a href="/editProduct">
+                                    <i class="fa-solid fa-pencil"></i>
+                                </a>
+                            </div>
+                            <div class="btnDelete" >
+                            <button onclick="alert('Producto borrado')"><i class="fa-solid fa-trash-can"></i></button> 
+                            </div> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="ID">CA231GED</td>
+                        <td data-label="NOMBRE DEL PRODUCTO">Camiseta node.JS</td>
+                        <td data-label="DESCRIPCIÓN">Camiseta cuello en "V" estampado Node.JS en algodón</td>
+                        <td data-label="PRECIO">25.000</td>
+                        <td data-label="CATEGORIA">Camiseta</td>
+                        <td data-label="COLOR">Negro</td>
+                        <td data-label="IMAGEN">imagen1</td>
+                        <td data-label="ACCIONES">
+                            <div class="btnEdit">
+                                <a href="/editProduct">
+                                    <i class="fa-solid fa-pencil"></i>
+                                </a>
+                            </div>
+                            <div class="btnDelete" >
+                            <button onclick="alert('Producto borrado')"><i class="fa-solid fa-trash-can"></i></button> 
+                            </div> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="ID">CA231GED</td>
+                        <td data-label="NOMBRE DEL PRODUCTO">Camiseta node.JS</td>
+                        <td data-label="DESCRIPCIÓN">Camiseta cuello en "V" estampado Node.JS en algodón</td>
+                        <td data-label="PRECIO">25.000</td>
+                        <td data-label="CATEGORIA">Camiseta</td>
+                        <td data-label="COLOR">Negro</td>
+                        <td data-label="IMAGEN">imagen1</td>
+                        <td data-label="ACCIONES">
+                            <div class="btnEdit">
+                                <a href="/editProduct">
+                                    <i class="fa-solid fa-pencil"></i>
+                                </a>
+                            </div>
+                            <div class="btnDelete" >
+                            <button onclick="alert('Producto borrado')"><i class="fa-solid fa-trash-can"></i></button> 
+                            </div> 
+                        </td>
+                    </tr>
+                </tbody>
+            </table>       
+        </div>
+            <%- include('../partials/footer') %>
+    </body>
 </html>

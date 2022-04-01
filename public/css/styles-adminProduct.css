@@ -1,0 +1,100 @@
+    .container-btn-new {
+        padding: 20px 0 10px 20px   ;
+    }
+
+    .btnNew input{
+        background-color:var(--red);
+        color: var(--white);
+        border-radius: 20px;
+        padding: 5px 20px;
+        border: none;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        box-shadow: -2px -2px 1px 2px rgba(255, 255, 255, 0.5), 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+    }
+    .container-edit-products{
+        margin: 10px;
+        box-shadow: -2px -2px 1px 2px rgba(255, 255, 255, 0.5), 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+        padding: 5px;
+    }
+    
+    .tableProducts {
+        width: 100%;
+        border-collapse: collapse;
+        
+    }
+
+    .head-editProduct th,td,tr {
+        border: 1px solid var(--dark-gray);
+        text-align: center;
+        padding: 5px;
+    }
+
+    .btnEdit, .btnDelete {
+        display: inline;
+        text-align: center;
+    }
+    .btnEdit i{
+        background-color: var(--red);
+        padding: 6px 8px;
+        color: var(--white);
+        border-radius: .5rem;
+        border: 1px solid var(--red);
+        cursor: pointer;
+
+    }
+
+    .btnDelete button{
+        background-color: var(--light-gray);
+        font-size: 16px;
+        padding: 2px 8px;
+        color: var(--red);
+        border-radius: .5rem;
+        border: 1px solid var(--red);
+        cursor: pointer;        
+    }
+
+    .edit-back-product{
+        font-size: 12px;
+        padding: 5px;
+        text-align: center;
+    }
+
+    @media (max-width: 769px){
+    
+        .container-edit-products{
+            padding-top: 20px;
+        }
+        
+        .tableProducts {
+            border: none;
+            margin: auto;
+            width: 90%;
+        }
+
+        .head-editProduct {
+            display: none;
+        }
+    
+        .tableProducts tr {
+            margin-bottom: 10px;
+            padding: 10px;
+            display: block;
+            border: none;
+            box-shadow: inset -10px -10px 10px 3px rgba(255, 255, 255, 0.5), inset 3px 3px 10px 3px rgba(0, 0, 0, 0.2);
+
+            }
+
+        .tableProducts td {
+            display: block;
+            border: none;
+            border-bottom: 1px solid var(--white);
+            text-align: right;
+        }
+
+        .tableProducts td::before {
+            content: attr(data-label);
+            float: left;
+        }
+    
+    }

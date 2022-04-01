@@ -9,7 +9,7 @@
         </section>
         <%- include('../partials/product-menu', {category}) %>
         <section class="products">
-          <div class="products-list">   
+            <div class="products-list">   
             <% for(let i=0; i < products.length; i++) { %>
               <div class="card">
                 <a href="/detail/<%= products[i].id %>"><img src="<%= products[i].image %>" alt="<%= products[i].category %>"></a>

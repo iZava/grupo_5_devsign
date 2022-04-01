@@ -698,6 +698,8 @@ const controller = {
   register: (req, res) => { res.render("products/register") },
   cart: (req, res) => { res.render("products/productCart") },
   addEditProduct: (req, res) => { res.render("users/add-edit-Product") },
+  addProduct: (req, res) => { res.render("users/addProduct") },
+  editProduct: (req, res) => { res.render("users/editProduct") },
 }
 
 module.exports = controller;
