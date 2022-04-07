@@ -1,0 +1,443 @@
+[
+  {
+    "id": 1,
+    "name": "Camisetas",
+    "image": "/images/products/t-shirt1.jpg",
+    "category": "camisetas",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Negro",
+    "price": 25000
+  },
+  {
+    "id": 2,
+    "name": "Mugs",
+    "image": "/images/products/mug1.jpg",
+    "category": "mugs",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Amarillo",
+    "price": 30000
+  },
+  {
+    "id": 3,
+    "name": "Botellas",
+    "image": "/images/products/bottle1.jpg",
+    "category": "botellas",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Negro",
+    "price": 25000
+  },
+  {
+    "id": 4,
+    "name": "Hoddies",
+    "image": "/images/products/hoddie.jpg",
+    "category": "hoddies",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Blanco",
+    "price": 30000
+  },
+  {
+    "id": 5,
+    "name": "Stickers",
+    "image": "/images/products/sticker1.jpg",
+    "category": "stickers",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Azul",
+    "price": 25000
+  },
+  {
+    "id": 6,
+    "name": "Gorras",
+    "image": "/images/products/hat1.jpg",
+    "category": "gorras",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Gris",
+    "price": 30000
+  },
+  {
+    "id": 7,
+    "name": "Cojines",
+    "image": "/images/products/pillow1.jpg",
+    "category": "cojines",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Blanco",
+    "price": 25000
+  },
+  {
+    "id": 8,
+    "name": "Camiseta",
+    "imagen": "/images/products/t-shirt1.jpg",
+    "category": "camisetas",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Blanco",
+    "price": 30000
+  },
+  {
+    "id": 9,
+    "name": "Camiseta",
+    "imagen": "/images/products/t-shirt2.jpg",
+    "category": "camisetas",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Gris",
+    "price": 25000
+  },
+  {
+    "id": 10,
+    "name": "Camiseta",
+    "imagen": "/images/products/t-shirt3.jpg",
+    "category": "camisetas",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Negro",
+    "price": 30000
+  },
+  {
+    "id": 11,
+    "name": "Camiseta",
+    "imagen": "/images/products/t-shirt4.jpg",
+    "category": "camisetas",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Gris",
+    "price": 25000
+  },
+  {
+    "id": 11,
+    "name": "Camiseta",
+    "imagen": "/images/products/t-shirt5.jpg",
+    "category": "camisetas",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Blanco",
+    "price": 30000
+  },
+  {
+    "id": 12,
+    "name": "Camiseta",
+    "imagen": "/images/products/t-shirt1.jpg",
+    "category": "camisetas",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Negro",
+    "price": 25000
+  },
+  {
+    "id": 13,
+    "name": "Hoddie",
+    "imagen": "/images/products/hoddie.jpg",
+    "category": "hoddies",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Gris",
+    "price": 30000
+  },
+  {
+    "id": 14,
+    "name": "Hoddie",
+    "imagen": "/images/products/hoddie2.jpg",
+    "category": "hoddies",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Blanco",
+    "price": 30000
+  },
+  {
+    "id": 15,
+    "name": "Hoddie",
+    "imagen": "/images/products/hoddie3.jpg",
+    "category": "hoddies",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Gris",
+    "price": 25000
+  },
+  {
+    "id": 16,
+    "name": "Hoddie",
+    "imagen": "/images/products/hoddie4.jpg",
+    "category": "hoddies",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Gris",
+    "price": 30000
+  },
+  {
+    "id": 17,
+    "name": "Hoddies",
+    "imagen": "/images/products/hoddie.jpg",
+    "category": "hoddies",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Gris",
+    "price": 25000
+  },
+  {
+    "id": 18,
+    "name": "Hoddie",
+    "imagen": "/images/products/hoddie2.jpg",
+    "category": "hoddies",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Blanco",
+    "price": 30000
+  },
+  {
+    "id": 19,
+    "name": "Mug",
+    "imagen": "/images/products/mug1.jpg",
+    "category": "mugs",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Negro",
+    "price": 25000
+  },
+  {
+    "id": 20,
+    "name": "Mug",
+    "imagen": "/images/products/mug2.jpg",
+    "category": "mugs",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Blanco",
+    "price": 30000
+  },
+  {
+    "id": 21,
+    "name": "Mug",
+    "imagen": "/images/products/mug3.jpg",
+    "category": "mugs",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Gris",
+    "price": 25000
+  },
+  {
+    "id": 22,
+    "name": "Mug",
+    "imagen": "/images/products/mug4.jpg",
+    "category": "mugs",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Blanco",
+    "price": 30000
+  },
+  {
+    "id": 23,
+    "name": "Mug",
+    "imagen": "/images/products/mug1.jpg",
+    "category": "mugs",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Negro",
+    "price": 25000
+  },
+  {
+    "id": 24,
+    "name": "Mug",
+    "imagen": "/images/products/mug2.jpg",
+    "category": "mugs",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Azul",
+    "price": 30000
+  },
+  {
+    "id": 25,
+    "name": "Cojín",
+    "imagen": "/images/products/pillow1.jpg",
+    "category": "cojines",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Blanco",
+    "price": 25000
+  },
+  {
+    "id": 26,
+    "name": "Cojín",
+    "imagen": "/images/products/pillow2.jpg",
+    "category": "cojines",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Blanco",
+    "price": 30000
+  },
+  {
+    "id": 27,
+    "name": "Cojín",
+    "imagen": "/images/products/pillow3.jpg",
+    "category": "cojines",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Blanco",
+    "price": 25000
+  },
+  {
+    "id": 28,
+    "name": "Cojín",
+    "imagen": "/images/products/pillow4.jpg",
+    "category": "cojines",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Blanco",
+    "price": 30000
+  },
+  {
+    "id": 29,
+    "name": "Cojín",
+    "imagen": "/images/products/pillow1.jpg",
+    "category": "cojines",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Blanco",
+    "price": 25000
+  },
+  {
+    "id": 30,
+    "name": "Cojín",
+    "imagen": "/images/products/pillow2.jpg",
+    "category": "cojines",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Blanco",
+    "price": 30000
+  },
+  {
+    "id": 31,
+    "name": "Stickers",
+    "imagen": "/images/products/sticker1.jpg",
+    "category": "stickers",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Blanco",
+    "price": 30000
+  },
+  {
+    "id": 32,
+    "name": "Stickers",
+    "imagen": "/images/products/sticker2.jpg",
+    "category": "stickers",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Blanco",
+    "price": 30000
+  },
+  {
+    "id": 33,
+    "name": "Stickers",
+    "imagen": "/images/products/sticker3.jpg",
+    "category": "stickers",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Blanco",
+    "price": 30000
+  },
+  {
+    "id": 34,
+    "name": "Stickers",
+    "imagen": "/images/products/sticker1.jpg",
+    "category": "stickers",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Blanco",
+    "price": 30000
+  },
+  {
+    "id": 35,
+    "name": "Stickers",
+    "imagen": "/images/products/sticker2.jpg",
+    "category": "stickers",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Blanco",
+    "price": 30000
+  },
+  {
+    "id": 36,
+    "name": "Stickers",
+    "imagen": "/images/products/sticker3.jpg",
+    "category": "stickers",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Blanco",
+    "price": 30000
+  },
+  {
+    "id": 37,
+    "name": "Gorra",
+    "imagen": "/images/products/hat1.jpg",
+    "category": "gorras",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Blanco",
+    "price": 30000
+  },
+  {
+    "id": 38,
+    "name": "Gorra",
+    "imagen": "/images/products/hat2.jpg",
+    "category": "gorras",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Blanco",
+    "price": 30000
+  },
+  {
+    "id": 39,
+    "name": "Gorra",
+    "imagen": "/images/products/hat3.jpg",
+    "category": "gorras",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Blanco",
+    "price": 30000
+  },
+  {
+    "id": 40,
+    "name": "Gorra",
+    "imagen": "/images/products/hat1.jpg",
+    "category": "gorras",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Blanco",
+    "price": 30000
+  },
+  {
+    "id": 41,
+    "name": "Gorra",
+    "imagen": "/images/products/hat2.jpg",
+    "category": "gorras",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Blanco",
+    "price": 30000
+  },
+  {
+    "id": 43,
+    "name": "Gorra",
+    "imagen": "/images/products/hat3.jpg",
+    "category": "gorras",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Blanco",
+    "price": 30000
+  },
+  {
+    "id": 44,
+    "name": "Botella",
+    "imagen": "/images/products/bottle1.jpg",
+    "category": "botellas",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Blanco",
+    "price": 30000
+  },
+  {
+    "id": 45,
+    "name": "Botella",
+    "imagen": "/images/products/bottle2.jpg",
+    "category": "botellas",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Blanco",
+    "price": 30000
+  },
+  {
+    "id": 46,
+    "name": "Botella",
+    "imagen": "/images/products/bottle3.jpg",
+    "category": "botellas",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Blanco",
+    "price": 30000
+  },
+  {
+    "id": 47,
+    "name": "Botella",
+    "imagen": "/images/products/bottle4.jpg",
+    "category": "botellas",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Blanco",
+    "price": 30000
+  },
+  {
+    "id": 48,
+    "name": "Botella",
+    "imagen": "/images/products/bottle5.jpg",
+    "category": "botellas",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Blanco",
+    "price": 30000
+  },
+  {
+    "id": 49,
+    "name": "Botella",
+    "imagen": "/images/products/bottle1.jpg",
+    "category": "botellas",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
+    "color": "Blanco",
+    "price": 30000
+  }
+]
