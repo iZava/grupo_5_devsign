@@ -2,11 +2,22 @@ const path = require("path");
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 3000;
-const mainRouter = require("./routes/indexRouter");
 
-app.use(express.static(path.join(__dirname, '../', "public")));
+// ******Static files******
+app.use(express.static(path.join(__dirname, "../", "public")));
+
+// ******Settings******
 app.set("view engine", "ejs");
-app.set("views","./src/views");
-app.use("/", mainRouter);
+app.set("views", "./src/views");
 
+// *******Routes*******
+const productsRouter = require("./routes/productsRouter");
+const usersRouter = require("./routes/usersRouter");
+const indexRouter = require("./routes/indexRouter");
+
+app.use("/", productsRouter);
+app.use("/", usersRouter);
+app.use("/", indexRouter);
+
+// ******Start server******
 app.listen(port, () => console.log("server working"));
