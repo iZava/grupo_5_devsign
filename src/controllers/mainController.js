@@ -11,7 +11,7 @@ const controller = {
   index: (req, res) => {
     const productsDB = readDB();
     const products = productsDB.filter(product => product.main == true);
-    res.render("products/index", { products });
+    res.render("index", { products });
   },
   products: (req, res) => {
     const product = req.params.product;
@@ -64,12 +64,12 @@ const controller = {
     const product = products.find(product => product.id == id);
     res.render("products/productDetail", { product })
   },
-  login: (req, res) => { res.render("products/login") },
-  register: (req, res) => { res.render("products/register") },
+  login: (req, res) => { res.render("users/login") },
+  register: (req, res) => { res.render("users/register") },
   cart: (req, res) => { res.render("products/productCart") },
-  addEditProduct: (req, res) => { res.render("users/add-edit-Product") },
-  addProduct: (req, res) => { res.render("users/addProduct") },
-  editProduct: (req, res) => { res.render("users/editProduct") },
+  addEditProduct: (req, res) => { res.render("products/add-edit-Product") },
+  addProduct: (req, res) => { res.render("products/addProduct") },
+  editProduct: (req, res) => { res.render("products/editProduct") },
 }
 
 module.exports = controller;
