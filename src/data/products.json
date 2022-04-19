@@ -450,7 +450,7 @@
   {
     "id": 50,
     "name": "Gorra GO",
-    "image": "/images/products/bottle1.jpg",
+    "image": "/images/products/default_image.png",
     "category": "gorras",
     "description": "Gorra Golang",
     "color": "Blanco",
@@ -459,7 +459,7 @@
   {
     "id": 51,
     "name": "Mug React",
-    "image": "/images/products/bottle1.jpg",
+    "image": "/images/products/default_image.png",
     "category": "mugs",
     "description": "Mug React",
     "color": "Rojo",
@@ -468,10 +468,19 @@
   {
     "id": 52,
     "name": "Cojin",
-    "image": "/images/products/bottle1.jpg",
+    "image": "/images/products/default_image.png",
     "category": "cojines",
     "description": "Cojin llama dev",
     "color": "Gris",
     "price": "60000"
+  },
+  {
+    "id": 53,
+    "name": "Remera Canchera",
+    "image": "/images/products/default_image.png",
+    "category": "camisetas",
+    "description": "Nuevo producto ingresado",
+    "color": "Blanco",
+    "price": "20000"
   }
 ]
