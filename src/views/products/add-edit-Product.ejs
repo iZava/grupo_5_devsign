@@ -1,89 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../partials/head', {webtitle: "Home"}) %>
-</head>
-<%- include('../partials/header') %>
+<%- include('../partials/head', {webtitle: "Home" }) %>
+  </head>
+  <%- include('../partials/header') %>
+
     <body>
-        <div class ="container-btn-new">
-            <a class="btnNew" href="/products/addProduct">
-                <input type="button" value="Agregar producto">
-            </a>
-        </div>
-        <div class ="container-edit-products">
-            <table class = "tableProducts">
-                <thead class="head-editProduct">
-                    <tr>
-                        <th>ID</th>
-                        <th>NOMBRE DEL PRODUCTO</th>
-                        <th>DESCRIPCIÓN</th>
-                        <th>PRECIO</th>
-                        <th>CATEGORIA</th>
-                        <th>COLOR</th>
-                        <th>IMAGEN</th>
-                        <th>ACCIONES</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td data-label="ID">CA231GED</td>
-                        <td data-label="NOMBRE DEL PRODUCTO">Camiseta node.JS</td>
-                        <td data-label="DESCRIPCIÓN">Camiseta cuello en "V" estampado Node.JS en algodón</td>
-                        <td data-label="PRECIO">25.000</td>
-                        <td data-label="CATEGORIA">Camiseta</td>
-                        <td data-label="COLOR">Negro</td>
-                        <td data-label="IMAGEN">imagen1</td>
-                        <td data-label="ACCIONES"> 
-                            <div class="btnEdit">
-                                <a href="/editProduct">
-                                    <i class="fa-solid fa-pencil"></i>
-                                </a>
-                            </div>
-                            <div class="btnDelete" >
-                            <button onclick="alert('Producto borrado')"><i class="fa-solid fa-trash-can"></i></button> 
-                            </div> 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td data-label="ID">CA231GED</td>
-                        <td data-label="NOMBRE DEL PRODUCTO">Camiseta node.JS</td>
-                        <td data-label="DESCRIPCIÓN">Camiseta cuello en "V" estampado Node.JS en algodón</td>
-                        <td data-label="PRECIO">25.000</td>
-                        <td data-label="CATEGORIA">Camiseta</td>
-                        <td data-label="COLOR">Negro</td>
-                        <td data-label="IMAGEN">imagen1</td>
-                        <td data-label="ACCIONES">
-                            <div class="btnEdit">
-                                <a href="/editProduct">
-                                    <i class="fa-solid fa-pencil"></i>
-                                </a>
-                            </div>
-                            <div class="btnDelete" >
-                            <button onclick="alert('Producto borrado')"><i class="fa-solid fa-trash-can"></i></button> 
-                            </div> 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td data-label="ID">CA231GED</td>
-                        <td data-label="NOMBRE DEL PRODUCTO">Camiseta node.JS</td>
-                        <td data-label="DESCRIPCIÓN">Camiseta cuello en "V" estampado Node.JS en algodón</td>
-                        <td data-label="PRECIO">25.000</td>
-                        <td data-label="CATEGORIA">Camiseta</td>
-                        <td data-label="COLOR">Negro</td>
-                        <td data-label="IMAGEN">imagen1</td>
-                        <td data-label="ACCIONES">
-                            <div class="btnEdit">
-                                <a href="/editProduct">
-                                    <i class="fa-solid fa-pencil"></i>
-                                </a>
-                            </div>
-                            <div class="btnDelete" >
-                            <button onclick="alert('Producto borrado')"><i class="fa-solid fa-trash-can"></i></button> 
-                            </div> 
-                        </td>
-                    </tr>
-                </tbody>
-            </table>       
-        </div>
-            <%- include('../partials/footer') %>
+      <div class="container-btn-new">
+        <a class="btnNew" href="/products/addProduct">
+          <input type="button" value="Agregar producto">
+        </a>
+      </div>
+      <div class="container-edit-products">
+        <table class="tableProducts">
+          <thead class="head-editProduct">
+            <tr>
+              <th>ID</th>
+              <th>NOMBRE DEL PRODUCTO</th>
+              <th>DESCRIPCIÓN</th>
+              <th>PRECIO</th>
+              <th>CATEGORIA</th>
+              <th>COLOR</th>
+             <!--<th>IMAGEN</th> -->
+              <th>ACCIONES</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% for(let i=0; i < products.length; i++) { %>
+              <tr>
+                <td data-label="ID">
+                  <%= products[i].id %>
+                </td>
+                <td data-label="NOMBRE DEL PRODUCTO">
+                  <%= products[i].name %>
+                </td>
+                <td data-label="DESCRIPCIÓN">
+                  <%= products[i].description %>
+                </td>
+                <td data-label="PRECIO">
+                  <%= products[i].price %>
+                </td>
+                <td data-label="CATEGORIA">
+                  <%= products[i].category %>
+                </td>
+                <td data-label="COLOR">
+                  <%= products[i].color %>
+                </td>
+                <!--<td data-label="IMAGEN">imagen1</td> -->
+                <td data-label="ACCIONES">
+                  <div class="btnEdit">
+                    <a href="/products/editProduct">
+                      <i class="fa-solid fa-pencil"></i>
+                    </a>
+                  </div>
+                  <div class="btnDelete">
+                    <button onclick="alert('Producto borrado')"><i class="fa-solid fa-trash-can"></i></button>
+                  </div>
+                </td>
+              </tr>
+              <% } %>
+          </tbody>
+        </table>
+      </div>
+      <%- include('../partials/footer') %>
     </body>
+
 </html>

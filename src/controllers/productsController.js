@@ -76,7 +76,8 @@ const controller = {
     res.render("products/productCart");
   },
   addEditProduct: (req, res) => {
-    res.render("products/add-edit-Product");
+    const products = readDB();
+    res.render("products/add-edit-Product", { products });
   },
   addProduct: (req, res) => {
     res.render("products/addProduct");

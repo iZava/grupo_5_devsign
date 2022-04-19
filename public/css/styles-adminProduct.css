@@ -30,6 +30,10 @@
         padding: 5px;
     }
 
+    .btnEdit a {
+      text-decoration: none;
+    }
+
     .btnEdit, .btnDelete {
         display: inline;
         text-align: center;
