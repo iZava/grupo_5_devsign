@@ -6,7 +6,7 @@
     "category": "camisetas",
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
     "color": "Negro",
-    "main": true, 
+    "main": true,
     "price": 25000
   },
   {
@@ -446,5 +446,35 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
     "color": "Blanco",
     "price": 30000
+  },
+  {
+    "id": 50,
+    "name": "sdgfs",
+    "description": "dasgfsd",
+    "price": "234523",
+    "category": "ewtrewtr",
+    "color": "afsa",
+    "image": "bottle1.jpg",
+    "saveProduct": "Guardar"
+  },
+  {
+    "id": "",
+    "name": "camisetas ISA",
+    "description": "camiseta pereirana",
+    "price": "45000",
+    "category": "camisetas",
+    "color": "Blanca",
+    "image": "bottle1.jpg",
+    "saveProduct": "Guardar"
+  },
+  {
+    "id": "51",
+    "name": "gdsgds",
+    "description": "gsdgsd",
+    "price": "2335325",
+    "category": "camisetas",
+    "color": "dfasf",
+    "image": "bottle1.jpg",
+    "saveProduct": "Guardar"
   }
 ]
