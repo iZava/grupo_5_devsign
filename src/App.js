@@ -15,8 +15,8 @@ const productsRouter = require("./routes/productsRouter");
 const usersRouter = require("./routes/usersRouter");
 const indexRouter = require("./routes/indexRouter");
 
-app.use("/", productsRouter);
-app.use("/", usersRouter);
+app.use("/products", productsRouter);
+app.use("/users", usersRouter);
 app.use("/", indexRouter);
 
 // ******Start server******

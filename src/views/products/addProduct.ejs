@@ -12,35 +12,38 @@
                     <div class="edit-product-text">
                         <p>NUEVO PRODUCTO.</p>
                     </div>
-                    <form action="resultado.html" method="POST" class="form-editProduct">
+                    <form action="/products/createProduct" method="POST" class="form-editProduct">
                         <div class="edit-log-id">
-                            <input type="text" name="id" id="id" placeholder="ID">
+                            <input type="text" name="id" id="id" placeholder="ID" value="hola">
                         </div>
                         <div class="edit-log-nameProduct">
-                            <input type="text" name="edit-log-nameProduct" id="edit-log-nameProduct" placeholder="Nombre del producto">
+                            <input type="text" name="nameProduct" id="nameProduct" placeholder="Nombre del producto">
                         </div>
                         <div class="edit-log-description">
-                            <input type="text" name="edit-log-description" id="edit-log-description" placeholder="Descripción">
+                            <input type="text" name="descriptionProduct" id="descriptionProduct" placeholder="Descripción">
                         </div>
                         <div class="edit-log-price">
-                            <input type="number" name="edit-log-price" id="edit-log-price" placeholder="Precio">
+                            <input type="number" name="priceProduct" id="priceProduct" placeholder="Precio">
                         </div>
                         <div class="edit-log-category"> 
-                            <input type="text" name="edit-log-category" id="edit-log-category"
+                            <input type="text" name="categoryProduct" id="categoryProduct"
                                 placeholder="Categoria">
                         </div>
                         <div class="edit-log-color"> 
-                            <input type="text" name="edit-log-color" id="edit-log-color"
+                            <input type="text" name="colorProduct" id="colorProduct"
                                 placeholder="Color">
                         </div>
                         <div class="edit-log-image"> 
-                            <input type="file" name="edit-log-image" id="edit-log-image"
+                            <input type="file" name="imageProduct" id="imageProduct"
                                 placeholder="Imagen">
+                        </div>
+                        <div>
+                            <input type="submit" name="SaveProduct" value="Guardar">
                         </div>
                     </form>
                     
                     <div class="edit-buttonSave">
-                        <button onclick="alert('Producto guardado')">Guardar</button>
+                        <!-- <button onclick="alert('Producto guardado')">Guardar</button> -->
                     </div>
                     <div class="edit-back-product">
                     <a href="/addEditProduct">Volver a productos</a>

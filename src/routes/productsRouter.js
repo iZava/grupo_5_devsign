@@ -3,8 +3,12 @@ const router = express.Router();
 const productsController = require("../controllers/productsController");
 
 router.get("/detail", productsController.detail);
+
 router.get("/addeditProduct", productsController.addEditProduct);
 router.get("/addProduct", productsController.addProduct);
+// ruta de creación de producto
+router.post("/createProduct", productsController.create);
+
 router.get("/editProduct", productsController.editProduct);
 router.get("/cart", productsController.cart);
 router.get("/product", productsController.addEditProduct);

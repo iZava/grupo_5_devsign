@@ -81,9 +81,12 @@ const controller = {
   addProduct: (req, res) => {
     res.render("products/addProduct");
   },
+  create: (req,res) => {
+    res.send(req.body);
+  },
   editProduct: (req, res) => {
     res.render("products/editProduct");
-  },
+  }
 };
 
 module.exports = controller;
