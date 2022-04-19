@@ -17,7 +17,7 @@
         <% for(let i=0; i < products.length; i++) { %>
           <div class="card">
             <div class="description">
-              <p><%= products[i].title %></p>
+              <p><%= products[i].name %></p>
             </div>
             <a href="/products/products-list/<%= products[i].category %>"><img src="<%= products[i].image %>" alt="<%= products[i].name %>"></a>
           </div>       

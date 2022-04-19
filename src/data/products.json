@@ -449,32 +449,29 @@
   },
   {
     "id": 50,
-    "name": "sdgfs",
-    "description": "dasgfsd",
-    "price": "234523",
-    "category": "ewtrewtr",
-    "color": "afsa",
-    "image": "bottle1.jpg",
-    "saveProduct": "Guardar"
+    "name": "Gorra GO",
+    "image": "/images/products/bottle1.jpg",
+    "category": "gorras",
+    "description": "Gorra Golang",
+    "color": "Blanco",
+    "price": "54000"
   },
   {
-    "id": "",
-    "name": "camisetas ISA",
-    "description": "camiseta pereirana",
-    "price": "45000",
-    "category": "camisetas",
-    "color": "Blanca",
-    "image": "bottle1.jpg",
-    "saveProduct": "Guardar"
+    "id": 51,
+    "name": "Mug React",
+    "image": "/images/products/bottle1.jpg",
+    "category": "mugs",
+    "description": "Mug React",
+    "color": "Rojo",
+    "price": "25000"
   },
   {
-    "id": "51",
-    "name": "gdsgds",
-    "description": "gsdgsd",
-    "price": "2335325",
-    "category": "camisetas",
-    "color": "dfasf",
-    "image": "bottle1.jpg",
-    "saveProduct": "Guardar"
+    "id": 52,
+    "name": "Cojin",
+    "image": "/images/products/bottle1.jpg",
+    "category": "cojines",
+    "description": "Cojin llama dev",
+    "color": "Gris",
+    "price": "60000"
   }
 ]

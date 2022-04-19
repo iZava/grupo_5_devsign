@@ -81,18 +81,22 @@ const controller = {
   addProduct: (req, res) => {
     res.render("products/addProduct");
   },
-  create: (req,res) => {
+  create: (req, res) => {
     const products = readDB();
-        const newProduct = {
-            id: products.length > 0 ? products[ products.length - 1 ].id + 1 : 1,
-            ...req.body,
-            image:  "bottle1.jpg"
-        }
+    const newProduct = {
+      id: products.length > 0 ? products[products.length - 1].id + 1 : 1,
+      name: req.body.name,
+      image: "/images/products/bottle1.jpg",
+      category: req.body.category,
+      description: req.body.description,
+      color: req.body.color,
+      price: req.body.price
+    }
 
-        products.push(newProduct );
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2))
+    products.push(newProduct);
+    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2))
 
-        return res.redirect("/")
+    return res.redirect("/products/addeditProduct")
   },
   editProduct: (req, res) => {
     res.render("products/editProduct");
