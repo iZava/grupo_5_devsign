@@ -13,6 +13,9 @@ router.post("/createProduct", productsController.create);
 router.get("/editProduct/:id", productsController.editProduct);
 router.put("/editProduct/:id", productsController.update);
 
+//ruta para eliminar producto
+router.delete("/delete/:id", productsController.delete);
+
 router.get("/cart", productsController.cart);
 router.get("/product", productsController.addEditProduct);
 router.get("/products-list/:product", productsController.products);

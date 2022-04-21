@@ -473,14 +473,5 @@
     "description": "Cojin llama dev",
     "color": "Gris",
     "price": "60000"
-  },
-  {
-    "id": 53,
-    "name": "Remera Canchera",
-    "image": "/images/products/default_image.png",
-    "category": "camisetas",
-    "description": "Nuevo producto ingresado",
-    "color": "Blanco",
-    "price": "20000"
   }
 ]

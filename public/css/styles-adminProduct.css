@@ -31,7 +31,7 @@
     }
 
     .btnEdit a {
-      text-decoration: none;
+        text-decoration: none;
     }
 
     .btnEdit, .btnDelete {
@@ -45,17 +45,19 @@
         border-radius: .5rem;
         border: 1px solid var(--red);
         cursor: pointer;
-
     }
 
-    .btnDelete button{
+    .btnDelete{
         background-color: var(--light-gray);
         font-size: 16px;
         padding: 2px 8px;
-        color: var(--red);
         border-radius: .5rem;
         border: 1px solid var(--red);
         cursor: pointer;        
+    }
+
+    .btnDelete i{
+        color: var(--red);
     }
 
     .edit-back-product{

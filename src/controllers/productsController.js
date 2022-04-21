@@ -122,7 +122,18 @@ const controller = {
 		});
 		fs.writeFileSync(productsFilePath, JSON.stringify(productsMap, null, 2))
 		return res.redirect("/products/addeditProduct");
+  },
+
+  delete: (req, res) => {
+		const id = req.params.id;
+		let products = readDB();
+		const productDelete = products.findIndex(product => product.id == id);
+    
+    products.splice(productDelete,1);
+
+    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2))
+		return res.redirect("/products/addeditProduct");
   }
-};
+}
 
 module.exports = controller;

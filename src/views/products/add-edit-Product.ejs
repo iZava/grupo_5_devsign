@@ -3,7 +3,6 @@
 <%- include('../partials/head', {webtitle: "Home" }) %>
   </head>
   <%- include('../partials/header') %>
-
     <body>
       <div class="container-btn-new">
         <a class="btnNew" href="/products/addProduct">
@@ -25,7 +24,8 @@
             </tr>
           </thead>
           <tbody>
-            <% for(let i=0; i < products.length; i++) { %>
+            <% for(let i=0; i < products.length; i++) {%>
+            <form method="POST" action="/products/delete/<%= products[i].id %>?_method=DELETE">
               <tr>
                 <td data-label="ID">
                   <%= products[i].id %>
@@ -52,11 +52,12 @@
                       <i class="fa-solid fa-pencil"></i>
                     </a>
                   </div>
-                  <div class="btnDelete">
-                    <button onclick="alert('Producto borrado')"><i class="fa-solid fa-trash-can"></i></button>
-                  </div>
+                  <button type="submit" class="btnDelete">
+                    <i class="fa-solid fa-trash-can"></i>
+                  </button>
                 </td>
               </tr>
+            </form>
               <% } %>
           </tbody>
         </table>
