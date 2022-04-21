@@ -5,11 +5,14 @@ const productsController = require("../controllers/productsController");
 router.get("/detail", productsController.detail);
 
 router.get("/addeditProduct", productsController.addEditProduct);
-router.get("/addProduct", productsController.addProduct);
 // ruta de creación de producto
+router.get("/addProduct", productsController.addProduct);
 router.post("/createProduct", productsController.create);
 
-router.get("/editProduct", productsController.editProduct);
+// rutas de edición de productos
+router.get("/editProduct/:id", productsController.editProduct);
+router.put("/editProduct/:id", productsController.update);
+
 router.get("/cart", productsController.cart);
 router.get("/product", productsController.addEditProduct);
 router.get("/products-list/:product", productsController.products);

@@ -1,13 +1,13 @@
 [
   {
     "id": 1,
-    "name": "Camisetas",
-    "image": "/images/products/t-shirt1.jpg",
+    "name": "Camisetas L",
+    "image": "default-image.png",
     "category": "camisetas",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
-    "color": "Negro",
+    "description": "camiseta cuello en V",
+    "color": "Rojo",
     "main": true,
-    "price": 25000
+    "price": "60000"
   },
   {
     "id": 2,
@@ -22,22 +22,22 @@
   {
     "id": 3,
     "name": "Botellas",
-    "image": "/images/products/bottle1.jpg",
+    "image": "default-image.png",
     "category": "botellas",
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
     "color": "Negro",
     "main": true,
-    "price": 25000
+    "price": "35000"
   },
   {
     "id": 4,
     "name": "Hoddies",
-    "image": "/images/products/hoddie.jpg",
+    "image": "default-image.png",
     "category": "hoddies",
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
     "color": "Blanco",
     "main": true,
-    "price": 30000
+    "price": "40000"
   },
   {
     "id": 5,

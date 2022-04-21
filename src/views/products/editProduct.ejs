@@ -4,6 +4,7 @@
 <body>
   <%- include('../partials/header') %>
     <main>
+            <% if(product) { %>        
             <div class="editProduct">
                 <section>
                     <div class="logo-editProduct">
@@ -12,42 +13,55 @@
                     <div class="edit-product-text">
                         <p>EDICIÓN DE PRODUCTO.</p>
                     </div>
-                    <form action="resultado.html" method="POST" class="form-editProduct">
+                    <form action="/products/editProduct/<%= product.id %>?_method=PUT" method="POST" class="form-editProduct">
                         <div class="edit-log-id">
-                            <input type="text" name="id" id="id" placeholder="ID">
+                            <input type="text" name="id" id="id" placeholder="ID" disabled="true" value="<%= product.id %>">
                         </div>
                         <div class="edit-log-nameProduct">
-                            <input type="text" name="edit-log-nameProduct" id="edit-log-nameProduct" placeholder="Nombre del producto">
+                        <input type="text" name="name" id="name" placeholder="Nombre del producto" value="<%= product.name %>">
                         </div>
                         <div class="edit-log-description">
-                            <input type="text" name="edit-log-description" id="edit-log-description" placeholder="Descripción">
+                        <input type="text" name="description" id="description" placeholder="Descripción" value="<%= product.description %>">
                         </div>
                         <div class="edit-log-price">
-                            <input type="number" name="edit-log-price" id="edit-log-price" placeholder="Precio">
+                        <input type="number" name="price" id="price" placeholder="Precio" value="<%= product.price %>">
                         </div>
-                        <div class="edit-log-category"> 
-                            <input type="text" name="edit-log-category" id="edit-log-category"
-                                placeholder="Categoria">
+                        <div class="edit-log-category">
+                        <select name="category" id="category" class="form-input" required>
+                            <option <%= product.category == 'camisetas' ? "selected" : '' %> value="camisetas"> Camisetas </option>
+                            <option <%= product.category == 'hoddies' ? "selected" : '' %> value="hoddies">Hoddies</option>
+                            <option <%= product.category == 'mugs' ? "selected" : '' %> value="mugs">Mugs</option>
+                            <option <%= product.category == 'cojines' ? "selected" : '' %> value="cojines">Cojines</option>
+                            <option <%= product.category == 'botellas' ? "selected" : '' %> value="botellas">Botellas</option>
+                            <option <%= product.category == 'stickers' ? "selected" : '' %> value="stickers">Stickers</option>
+                            <option <%= product.category == 'gorras' ? "selected" : '' %> value="gorras">Gorras</option>
+                        </select>
                         </div>
-                        <div class="edit-log-color"> 
-                            <input type="text" name="edit-log-color" id="edit-log-color"
-                                placeholder="Color">
+                        <div class="edit-log-color">
+                        <select name="color" id="color" class="form-input" required>
+                            <option value="">Elige un color</option>
+                            <option <%= product.color == 'Blanco' ? "selected" : '' %> value="Blanco"> Blanco </option>
+                            <option <%= product.color == 'Gris' ? "selected" : '' %> value="Gris"> Gris </option>
+                            <option <%= product.color == 'Negro' ? "selected" : '' %> value="Negro"> Negro </option>
+                            <option <%= product.color == 'Rojo' ? "selected" : '' %> value="Rojo"> Rojo </option>
+                            <option <%= product.color == 'Azul' ? "selected" : '' %> value="Azul"> Azul </option>
+                            <option <%= product.color == 'Amarillo' ? "selected" : '' %> value="Amarillo"> Amarillo </option>
+                            <option <%= product.color == 'Rosa' ? "selected" : '' %> value="Rosa"> Rosa </option>
+                        </select>
                         </div>
-                        <div class="edit-log-image"> 
-                            <input type="file" name="edit-log-image" id="edit-log-image"
-                                placeholder="Imagen">
+                        <div class="edit-log-image">
+                        <input type="file" name="image" id="image" placeholder="Imagen">
+                        </div>
+                        <div class="edit-buttonSave">
+                        <button type="submit">Guardar</button>
                         </div>
                     </form>
-                    
-                    <div class="edit-buttonSave">
-                        <button onclick="alert('Producto guardado')">Guardar</button>
-                    </div>
                     <div class="edit-back-product">
                         <a href="/products/addEditProduct">Volver a productos</a>
                     </div>
                 </section>
             </div>
-        </div>
+        <% } %>
     </main>
     <div id="modal-menu" class="modal">
         <a class="close" href="#">X</a>

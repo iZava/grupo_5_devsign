@@ -100,7 +100,28 @@ const controller = {
     return res.redirect("/products/addeditProduct")
   },
   editProduct: (req, res) => {
-    res.render("products/editProduct");
+    const id = req.params.id;
+    const products = readDB();
+    const product = products.find((product) => product.id == id);
+    res.render("products/editProduct", { product });
+  },
+
+  update: (req,res) => {
+    const id = req.params.id;
+		const products = readDB();
+		const productsMap = products.map(product => {
+			if(product.id == id){
+				product.name = req.body.name,
+				product.description = req.body.description,
+				product.price = req.body.price,
+				product.category = req.body.category,
+				product.color = req.body.color,
+				product.image = req.file?.filename ?? "default-image.png"
+			}
+			return product;
+		});
+		fs.writeFileSync(productsFilePath, JSON.stringify(productsMap, null, 2))
+		return res.redirect("/products/addeditProduct");
   }
 };
 
