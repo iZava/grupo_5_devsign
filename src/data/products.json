@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Camisetas L",
-    "image": "default-image.png",
+    "image": "/images/products/default_image.png",
     "category": "camisetas",
     "description": "camiseta cuello en V",
     "color": "Rojo",
@@ -22,7 +22,7 @@
   {
     "id": 3,
     "name": "Botellas",
-    "image": "default-image.png",
+    "image": "/images/products/default_image.png",
     "category": "botellas",
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
     "color": "Negro",
@@ -32,7 +32,7 @@
   {
     "id": 4,
     "name": "Hoddies",
-    "image": "default-image.png",
+    "image": "/images/products/default_image.png",
     "category": "hoddies",
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea minus inventore sit aspernatur laborum illum reiciendis tempora qui! Exercitationem assumenda, et omnis labore saepe illum sequi doloribus voluptate tempora repellat?",
     "color": "Blanco",

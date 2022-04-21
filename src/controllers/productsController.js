@@ -116,7 +116,7 @@ const controller = {
 				product.price = req.body.price,
 				product.category = req.body.category,
 				product.color = req.body.color,
-				product.image = req.file?.filename ?? "default-image.png"
+				product.image = req.file?.filename ?? "default_image.png"
 			}
 			return product;
 		});

@@ -49,6 +49,7 @@
                   <p>El producto no existe</p>
                   <% } %>
                     <div class="buttons">
+                      <% if(product.category == "camisetas" || product.category == "hoddies" ){ %>
                       <div class="sizes">
                         <label>Talla</label>
                         <select name="option">
@@ -70,6 +71,10 @@
                           <option class="pink" value="pink">Rosa</option>
                         </select>
                       </div>
+                      <% } else if(product.category == "gorras"){ %>
+                        <p>Talle: <em style="color: rgb(235, 94, 94);">Único regulable</em></p>
+                        <% } %>
+
 
                       <div class="number">
                         <label>Cantidad</label>
