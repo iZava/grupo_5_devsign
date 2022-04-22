@@ -87,7 +87,7 @@ const controller = {
     const newProduct = {
       id: products.length > 0 ? products[products.length - 1].id + 1 : 1,
       name: req.body.name,
-      image: "/images/products/default_image.png",
+      image: req.file?.filename ?? "default_image.png",
       category: req.body.category,
       description: req.body.description,
       color: req.body.color,

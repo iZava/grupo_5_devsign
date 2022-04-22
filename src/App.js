@@ -24,4 +24,4 @@ app.use("/users", usersRouter);
 app.use("/", indexRouter);
 
 // ******Start server******
-app.listen(port, () => console.log("server working"));
+app.listen(port, () => console.log(`Server running on port ${port}`));
