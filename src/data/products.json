@@ -396,10 +396,10 @@
   {
     "id": 53,
     "name": "Nuevo producto",
-    "image": "default_image.png",
-    "category": "hoddies",
-    "description": "Proximamente! Sin detallar.",
-    "color": "Negro",
-    "price": "0"
+    "image": "image-1650631718552-71916782.jpg",
+    "category": "camisetas",
+    "description": "Remera keepCoding. Producto editado. ",
+    "color": "Blanco",
+    "price": "40000"
   }
 ]

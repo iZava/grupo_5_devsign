@@ -13,7 +13,7 @@
                     <div class="edit-product-text">
                         <p>EDICIÓN DE PRODUCTO.</p>
                     </div>
-                    <form action="/products/editProduct/<%= product.id %>?_method=PUT" method="POST" class="form-editProduct">
+                    <form action="/products/editProduct/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="form-editProduct">
                         <div class="edit-log-id">
                             <input type="text" name="id" id="id" placeholder="ID" disabled="true" value="<%= product.id %>">
                         </div>
@@ -50,8 +50,9 @@
                         </select>
                         </div>
                         <div class="edit-log-image">
-                        <input type="file" name="image" id="image" placeholder="Imagen">
-                        </div>
+                            <label for="productImage" class="form-label"></label>
+                            <input type="file" name="image" id="productImage" class="form-input">
+                          </div>
                         <div class="edit-buttonSave">
                         <button type="submit">Guardar</button>
                         </div>
