@@ -27,4 +27,4 @@
 - https://trello.com/invite/b/YThA2rz3/4c0f6051f92eeda2ccd6af90fc40c09c/proyectointegrador
 
 ## Enlace a Heroku (DISABLED)
-- https://devsign.herokuapp.com/
+<!-- - https://devsign.herokuapp.com/ -->

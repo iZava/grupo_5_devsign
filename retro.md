@@ -1,6 +1,6 @@
 # Retrospectiva 
 
-## SPRINT 1
+## SPRINT 2
 ## 1. Comenzar a hacer.
 Definir un horario para el proyecto (Lunes y miercoles 21:30hs ARG - 19:30hs COL)
 Crear canal de recursos en discord
@@ -17,9 +17,9 @@ Sin observaciones
 ## 5. Dejar de hacer.
 Dejar de ausentarnos en las reuniones 
 
+----------------------------------------------------------------------
 
-
-## SPRINT 2
+## SPRINT 3
 ## 1 Comenzar a hacer
 Planear el sprint antes de comenzar.
 Evacuar dudas con las que lleguemos.
@@ -42,8 +42,9 @@ No pedir ayuda.
 ## 5 Dejar de hacer
 Pisarnos en los avances
 
+----------------------------------------------------------------------
 
-## SPRINT 3
+## SPRINT 4
 ## 1 Comenzar a hacer
 Repasar conceptos visto en clases antes de los weeklys.
 Establecer el día miercoles para trabajar en sincronía.
@@ -70,5 +71,24 @@ Dejar los tiempos sin holguras.
 
 ## 5 Dejar de hacer
 Postergar la planificación del sprint.
+
+----------------------------------------------------------------------
+
+## SPRINT 5
+## 1 Comenzar a hacer
+Ponerse al día con las temáticas vistas en clase
+## 2 Hacer más
+Mantener la motivación del equipo
+    - Comunicacarnos más entre nosotros fuera de las reuniones.
+    - Preguntar cómo venimos con los temas nuevos.
+    - Apoyarnos con las temáticas del curso.
+Comprometerse más con el proyecto; esto es participar más y asistir a las reuniones en la medida que sea posible.
+Pactar una entrega semanal con avances del proyecto
+## 3. Continuar haciendo.
+Cumplir con los plazos de entrega de los sprints
+## 4 Hacer menos
+Reuniones sin codear
+## 5 Dejar de hacer
+Dilatar los tiempos (no dejar todo para último momento)
 
 
