@@ -7,10 +7,10 @@
         <div class="register">
             <div class="container-login-register">
                 <div class="tab-login">
-                    <button type="button">Iniciar sesión</button>
+                    <a href="/users/login"><button type="button">Iniciar sesión</button></a>
                 </div>
                 <div class="tab-register">
-                    <button type="button">Registro</button>
+                    <a href="/users/register"><button type="button">Registro</button></a>
                 </div>
             </div>
 
@@ -26,47 +26,81 @@
                             historial de pedidos y recibir correos electrónicos, descuentos y ofertas especiales.</p>
                     </div>
 
-                    <form action="resultado.html" method="POST" class="form-register">
+                    <form action="/users/register" method="POST" class="form-register" enctype="multipart/form-data"> 
 
                         <div class="register-log-name">
                             <i class="fa-solid fa-pencil"></i>
-                            <input type="text" name="nombre" id="nombre" placeholder="Nombre y apellido">
-                        </div>
+                            <input type="text" name="nombre" id="nombre" placeholder="Nombre y apellido" value="<%= locals.oldData ? oldData.nombre : null%>" > 
+                        </div> 
+                        <% if (locals.errors && errors.nombre) { %>
+                            <div class="text-danger">
+                                <%= errors.nombre.msg %>
+                            </div>
+                            <% } %>
+                        
 
                         <div class="register-log-user">
                             <i class="fa-solid fa-user"></i>
-                            <input type="text" name="log-user" id="log-user" placeholder="Nombre de usuario">
-                        </div>
+                            <input type="text" name="logUser" id="log-user" placeholder="Nombre de usuario" value="<%= locals.oldData ? oldData.logUser : null%>" > 
+                        </div> 
+                        <% if (locals.errors && errors.logUser) { %>
+                            <div class="text-danger">
+                                <%= errors.logUser.msg %>
+                            </div>
+                            <% } %>
+                        
 
                         <div class="register-log-email">
                             <i class="fa-solid fa-envelope"></i>
-                            <input type="email" name="email" id="email" placeholder="Correo Electrónico">
-                        </div>
+                            <input type="text" name="email" id="email" placeholder="Correo Electrónico" value="<%= locals.oldData ? oldData.email : null%>" > 
+                        </div> 
+                        <% if (locals.errors && errors.email) { %>
+                            <div class="text-danger">
+                                <%= errors.email.msg %>
+                            </div>
+                            <% } %>
 
                         <div class="register-log-password">
                             <i class="fa-solid fa-key"></i>
                             <input type="password" name="password" id="password" placeholder="Contraseña">
                         </div>
+                        <% if (locals.errors && errors.password) { %>
+                            <div class="text-danger">
+                                <%= errors.password.msg %>
+                            </div>
+                            <% } %>
 
                         <div class="register-log-password">
                             <i class="fa-solid fa-key"></i>
-                            <input type="password" name="repeat-password" id="repeat-password"
-                                placeholder="Repita la Contraseña">
+                            <input type="password" name="repeat_password" id="repeat-password"
+                            placeholder="Repita la Contraseña">
+                    </div>
+                    <% if (locals.errors && errors.repeat_password) { %>
+                        <div class="text-danger">
+                            <%= errors.repeat_password.msg %>
                         </div>
+                        <% } %>
 
+                        <div class="register-log-image">
+                            <label for="userImage" class="form-label"></label>
+                            <input type="file" name="image" id="userImage" class="form-input"> 
+                          </div>
+                          <% if (locals.errors && errors.image) { %>
+                            <div class="text-danger">
+                                <%= errors.image.msg %>
+                            </div>
+                            <% } %>
+                            <div class="register-button">
+                                <button type="submit">Registrarse</button>
+                            </div>
                     </form>
-
                     <div class="Privacy-Policy">
                         <p>Sus datos personales se utilizarán para respaldar su experiencia en este sitio web, para
                             administrar el acceso a su cuenta y para otros fines descritos en nuestra <u>política de
                                 privacidad</u></p>
                     </div>
 
-                    <div class="register-button">
-                        <button type="button">Registrarse</button>
-                    </div>
-
-                    <p class="back-login"><u>Volver a inicio de sesión</u></p>
+                    <a href="/users/login"><p class="back-login"><u>Volver a inicio de sesión</u></p></a> 
 
                 </section>
             </div>
