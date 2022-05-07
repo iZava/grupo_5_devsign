@@ -16,7 +16,7 @@ const validations = [
         let file = req.file;
         let acceptedExtensions = [".jpg", ".jpeg", ".png", ".JPG", ".JPEG", ".PNG"];
         if (!file) {
-            throw new Error("Debes subir una imagen");
+            req.file = "user_01.png";
         } else { 
         let fileExtension = path.extname(file.originalname);
         if (!acceptedExtensions.includes(fileExtension)) {
@@ -28,3 +28,5 @@ const validations = [
 ];
 
     module.exports = validations;
+
+    // if (!file || !acceptedExtensions.includes(path.extname(file.originalname))) //! Validación alternativa

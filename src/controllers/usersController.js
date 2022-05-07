@@ -1,4 +1,6 @@
-const { validationResult } = require("express-validator"); 
+const { validationResult } = require("express-validator");
+
+const User = require("../models/Users");
 
 const controller = {
   login: (req, res) => {
@@ -14,7 +16,14 @@ const controller = {
     } else {
       res.redirect("/users/login");
     }
-  }, 
+
+    const userToCreate = {
+      ...req.body,
+      image: req.file?.filename ?? "user_01.png",
+    };
+
+    User.create(userToCreate);
+  },
   register: (req, res) => {
     res.render("users/register");
   },
