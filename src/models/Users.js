@@ -1,11 +1,6 @@
 const path = require("path");
 const fs = require("fs");
 
-// const fileName = path.join(__dirname, "../data/users.json");
-
-// function readDB() {
-//   return JSON.parse(fs.readFileSync(fileName, "utf-8"));
-// };
 
 const User = {
   fileName: path.join(__dirname, "../data/users.json"),
@@ -20,24 +15,30 @@ const User = {
     if (lastUser) {
     return lastUser.id + 1
     } else
-    return 1 //! if no users, start with 1
+    return 1 //if no users, start with 1
     },
 
   findAll: function () {
     return this.getData();
-  },  //!Buscar a todos los usuarios
+  },  //Buscar a todos los usuarios
 
   findById: function (id) {
     const users = this.findAll();
     const userFound = users.find(user => user.id === id);
     return userFound;
-    }, //!Buscar a un usuario por su id
+    }, //Buscar a un usuario por su id
 
     findByEmail: function (email) {
         const users = this.findAll();
         const userFound = users.find(user => user.email === email);
         return userFound;
-    }, //!Buscar a un usuario por su email
+    }, //Buscar a un usuario por su email
+
+    findByField: function (field, text) {
+        const users = this.findAll();
+        const userFound = users.find(user => user[field] === text);
+        return userFound;
+    }, //Buscar a un usuario por un campo especifico
 
     create: function (user) {
         const users = this.findAll();
@@ -48,14 +49,14 @@ const User = {
         users.push(newUser);
         fs.writeFileSync(this.fileName, JSON.stringify(users, null, ' '));
         return newUser;
-    }, //!Crear un usuario
+    }, //Crear un usuario
 
     delete: function (id) {
         const users = this.findAll();
         const finalUsers = users.filter(user => user.id !== id);
         fs.writeFileSync(this.fileName , JSON.stringify(finalUsers, null, ' '));
         return finalUsers;
-    }, //!Eliminar un usuario
+    }, //Eliminar un usuario
 
 };
 
