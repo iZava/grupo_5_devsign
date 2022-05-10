@@ -22,6 +22,27 @@ body {
   background-color: var(--light-gray);
 }
 
+.locals img {
+  width: 1.6%;
+  box-shadow: #8D99AE 0 0 0.8rem;
+  border-radius: 50%;
+} 
+
+.locals {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+}
+.locals h3 {
+  display: inline-block;
+  color: var(--red);
+  padding-right: 0.5rem;
+  text-transform: capitalize ;
+
+}
+
 nav {
   justify-content: space-between;
   padding: .5rem .5rem;

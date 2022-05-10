@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head', {webtitle: "Usuario"}) %>
+  <body>
+    <%- include('../partials/header') %>
+    <h2>Tu usuario:</h2>
+    <div class="user">
+      <h3><%= user.logUser %></h3>
+      <p><%= user.email %></p> <br>
+      <img
+        src="/images/users/<%= user.image %>"
+        alt="imágen de perfil"
+        width="200px"
+      />
+    </div>
+      <%- include('../partials/footer') %>
+  </body>
+</html>

@@ -1,14 +1,24 @@
-const path = require("path");
 const express = require("express");
+const session = require("express-session");
+const path = require("path");
 const methodOverride =  require('method-override');
 const app = express();
 const port = process.env.PORT || 3000;
 
 // ******Static files******
 app.use(express.static(path.join(__dirname, "../", "public")));
+
+// ******Middlewares******
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride('_method'));
+app.use (session({secret: "This is a secret", 
+resave: false,
+saveUninitialized: false }));
+
+// ******App middlewares******
+const userLogged = require("./middlewares/userLogged"); 
+app.use(userLogged);
 
 // ******Settings******
 app.set("view engine", "ejs");

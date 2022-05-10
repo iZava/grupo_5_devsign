@@ -4,11 +4,41 @@ const bcryptjs = require("bcryptjs");
 const User = require("../models/Users");
 
 const controller = {
+  loginProcess: (req, res) => {
+    const userToLogin = User.findByField("logUser", req.body.logUser);
+    if (userToLogin) {
+      const passwordOk = bcryptjs.compareSync(
+        req.body.password,
+        userToLogin.password
+      );
+      if (passwordOk) {
+        delete userToLogin.password && delete userToLogin.repeat_password;
+        req.session.user = userToLogin;
+        return res.redirect("/");
+      } else {
+        return res.render("users/login", {
+          errors: {
+            password: {
+              msg: "La contraseña es incorrecta",
+            },
+          },
+        });
+      }
+    }
+    return res.render("users/login", {
+      errors: {
+        logUser: {
+          msg: "El usuario no está registrado",
+        },
+      },
+    });
+  },
+
   login: (req, res) => {
     res.render("users/login");
   },
 
-  processRegister: (req, res) => {
+  registerProcess: (req, res) => {
     const validation = validationResult(req);
     if (validation.errors.length > 0) {
       return res.render("users/register", {
@@ -16,17 +46,29 @@ const controller = {
         oldData: req.body,
       });
     }
-    const userinDB = User.findByField("email", req.body.email);
-    if (userinDB) {
+
+    const emailinDB = User.findByField("email", req.body.email);
+    if (emailinDB) {
       return res.render("users/register", {
         errors: {
-          email:{
-            msg: "El email ya esta registrado"
-          }
+          email: {
+            msg: "El email ya esta registrado",
+          },
         },
         oldData: req.body,
       });
-    
+    }
+
+    const userinDB = User.findByField("logUser", req.body.logUser);
+    if (userinDB) {
+      return res.render("users/register", {
+        errors: {
+          logUser: {
+            msg: "El usuario ya esta registrado",
+          },
+        },
+        oldData: req.body,
+      });
     }
     const userToCreate = {
       ...req.body,
@@ -43,6 +85,15 @@ const controller = {
   register: (req, res) => {
     res.render("users/register");
   },
+
+  profile: (req, res) => {
+    res.render("users/profile", { user: req.session.user });
+  }, 
+
+  logout: (req, res) => {
+    req.session.destroy();
+    res.redirect("/");
+  } 
 };
 
 module.exports = controller;

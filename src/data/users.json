@@ -91,99 +91,29 @@
  },
  {
   "id": 11,
-  "nombre": "Ignacio",
-  "logUser": "Zavalla",
-  "email": "ignaciomzavalla@gmail.com",
-  "password": "asdasd",
-  "repeat_password": "asdasd"
+  "nombre": "Deymer Espinosa",
+  "logUser": "dey",
+  "email": "deymer@algo.com",
+  "password": "$2a$10$vyByM7BZEnUes6Vklx0BeOKz07/6jBnOeP7CYsQnlJy6JHJIxvyse",
+  "repeat_password": "$2a$10$vYbog0m8tQA46xMn0HvdRepSoYMpi20TcvXrG/z9qSBzNMCZL9nCm",
+  "image": "image-1652195517799-324464236.jpg"
  },
  {
   "id": 12,
-  "nombre": "Ricardo",
-  "logUser": "Fulbito",
-  "email": "ricardito@algo.com",
-  "password": "asdasd",
-  "repeat_password": "asdasd"
+  "nombre": "Isa Rojas",
+  "logUser": "Isa",
+  "email": "isa@algo.com",
+  "password": "$2a$10$buBKykdpSoWdHmLHwaBPquJWzR04k7wVxRcgpRlTMlPh8PsjtEQxi",
+  "repeat_password": "$2a$10$hw9ff/1E06KpB00Nu42HauVVGmuqAvyiqypIn50Vc//jD5NMC4Dp2",
+  "image": "image-1652196027624-181819078.jpg"
  },
  {
   "id": 13,
-  "nombre": "Romeo Santos",
-  "logUser": "Romeito",
-  "email": "rome@algo.com",
-  "password": "asdasd",
-  "repeat_password": "asdasd",
-  "image": "image-1651943470446-932216442.png"
- },
- {
-  "id": 14,
-  "nombre": "Prueba Imagen Default",
-  "logUser": "andará???",
-  "email": "imagen_default@si.com",
-  "password": "asdasd",
-  "repeat_password": "asdasd",
-  "image": "user_01.png"
- },
- {
-  "id": 15,
-  "nombre": "asdasd",
-  "logUser": "asd",
-  "email": "ignaciomzavalla@gmail.com",
-  "password": "asdasd",
-  "repeat_password": "asdasd",
-  "image": "user_01.png"
- },
- {
-  "id": 16,
-  "nombre": "asdasd",
-  "logUser": "asdasd",
-  "email": "ignaciomzavalla@gmail.com",
-  "password": "asdasd",
-  "repeat_password": "asdasd",
-  "image": "user_01.png"
- },
- {
-  "id": 17,
-  "nombre": "Ignacio",
-  "logUser": "sss",
-  "email": "ignaciomzavalla@gmail.com",
-  "password": "$2a$10$QxMKkaLR8ksh2BWSXqH1u.nPUEwKuIVZZM/tSbLVcHFoGgd6pdOMC",
-  "repeat_password": "asdasd",
-  "image": "user_01.png"
- },
- {
-  "id": 18,
-  "nombre": "Ignacio",
-  "logUser": "as",
-  "email": "ignacio@gmail.com",
-  "password": "$2a$10$ynCtRPy7iTi5TiZpTiXt4OMWHAEydWeE1DcysoDYa1KigUcoBdadq",
-  "repeat_password": "asdasd",
-  "image": "user_01.png"
- },
- {
-  "id": 19,
-  "nombre": "bruno",
-  "logUser": "asd",
-  "email": "bruno@gmail.com",
-  "password": "$2a$10$Hmt9mb3mrbPYPH60lrUAJ.62banlnxq9wYk2pZHAtsUdo5dkhBWk2",
-  "repeat_password": "$2a$10$BFUJl/rsNc3nHPWvwVh.AuxqiokBAyHPmLxNyi5obz0qwElOmytxu",
-  "image": "user_01.png"
- },
- {
-  "id": 20,
-  "nombre": "Ignacio",
-  "logUser": "zava",
-  "email": "igancio@digitalhouse.com",
-  "password": "$2a$10$i4ZLHO6IUoV7KDBR1N2eAeWmPY/9YIzzNPdF10dNZPWVNUi7wseH.",
-  "repeat_password": "$2a$10$u5bbFGYqaa26b9KXPinBlOz72K9iTHtquDnIGrsLzUgYlZVukCKdm",
-  "image": "image-1651957424159-588109262.png"
- },
- {
-  "id": 21,
-  "nombre": "Gustavo Napoli",
-  "logUser": "Chizo",
-  "email": "chizo@larenga.net",
-  "password": "$2a$10$/QkjiObAUhTK0TfHD64une0x99KllcRtrJX3o8VgmVw/jXE8wKO.6",
-  "repeat_password": "$2a$10$qjabxwTv3au8dzKgrVmFlejKeB6gk4oakGsMc3MCfs9cAyWWOyAwS",
-  "image": "user_01.png"
+  "nombre": "Ignacio Zavalla",
+  "logUser": "Igna",
+  "email": "igna@algo.com",
+  "password": "$2a$10$9dnfQl1WcK8UwNLLkblqJ.sjfU7b/KVfemkK7pavJRY8iNIK9XDnm",
+  "repeat_password": "$2a$10$0M99kEiVxHQHIaspkx/SnOG0WqZegXhSlzwWEbGSaBKLCq4NLGRTW",
+  "image": "image-1652196103044-650482499.jpg"
  }
 ]

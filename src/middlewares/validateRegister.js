@@ -3,7 +3,7 @@ const { body } = require("express-validator");
 
 const validations = [
     body("nombre").notEmpty().withMessage("El nombre es obligatorio"),
-    body("logUser").notEmpty().withMessage("El nombre de usuario es obligatorio"),
+    body("logUser").notEmpty().withMessage("El nombre de usuario es obligatorio").isLength({ max: 8 }).withMessage("El nombre de usuario no debe tener más de 8 caracteres"),
     body("email").notEmpty().withMessage("El email es obligatorio").bail().isEmail().withMessage("Debes escribir el email en un formato válido"),
     body("password").notEmpty().withMessage("La contraseña es obligatoria").bail().isLength({ min: 6 }).withMessage("La contraseña debe tener al menos 6 caracteres"),
     body("repeat_password").notEmpty().withMessage("Debe repetir su contraseña").custom((value, { req }) => {

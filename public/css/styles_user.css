@@ -1,0 +1,29 @@
+:root {
+    --red: #EF233C;
+    --white: #FFFFFF;
+    --black: #000000;
+    --light-gray: #EDF2F4;
+    --dark-gray: #8D99AE;
+    /*Fonts*/
+    --big: 2rem;
+    --small: .5rem;
+  }
+
+  h2 {
+      margin-top: 2rem;
+    margin-left: 3rem;
+  }
+
+.user {
+    display: inline-block;
+    padding: 2rem;
+    margin: 0 0 0 3rem;
+    background-color: var(--white);
+    border-radius: .8rem ;
+    box-shadow: 0 0 1rem var(--black);
+
+}
+
+.user img {
+    border-radius: .8rem;
+}
