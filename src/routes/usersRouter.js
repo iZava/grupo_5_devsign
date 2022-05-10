@@ -21,10 +21,11 @@ router.get("/register", guestMiddleware, usersController.register);
 //register process
 router.post("/register", uploadFile.single("image"), validations, usersController.registerProcess); 
 
-module.exports = router;
-
 //profile page
 router.get("/profile", authMiddleware, usersController.profile); 
 
 //logout
 router.get("/logout", usersController.logout); 
+
+module.exports = router;
+

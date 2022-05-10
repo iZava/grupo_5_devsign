@@ -9,7 +9,7 @@
     --small: .5rem;
   }
 
-  h2 {
+  .title {
       margin-top: 2rem;
     margin-left: 3rem;
   }
