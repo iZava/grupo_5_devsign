@@ -17,22 +17,20 @@
         <a href="#modal-menu"><i class="fa-solid fa-bars"></i></a>
       </div>
       <a class="cart" href="/products/cart"><i class="fas fa-solid fa-cart-shopping"></i></a>
-      <% if (locals.isLogged) { %>
-      <a class = "btn-adminProduct1" href="/products/addeditProduct">
-        <input type="button" value="Administrar">
-      </a>
-      <% } %> 
-    </div>
-
-    <div class="nav-items">
-      <ul>
-        <% if (locals.isLogged) { %>
-        <li><a href="/">Inicio</a></li>
-        <li><a href="/products/products-list/camisetas">Tienda</a></li>
-        <a class="cart" href="/products/cart"><i class="fas fa-solid fa-cart-shopping"></i></a>
-        <a class = "btn-adminProduct2" href="/addeditProduct">
-          <input type="button" value="Administrar">
-          <li><a href="/users/logout">Cerrar sesión</a></li> 
+      </div>
+      
+      <div class="nav-items">
+        <ul>
+          <% if (locals.isLogged) { %>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/products/products-list/camisetas">Tienda</a></li>
+            <a class = "btn-adminProduct2" href="/addeditProduct">
+              <input type="button" value="Administrar">
+              <li><a href="/users/logout">Cerrar sesión</a></li> 
+              <a class="cart" href="/products/cart"><i class="fas fa-solid fa-cart-shopping"></i></a>
+              <a class = "btn-adminProduct1" href="/products/addeditProduct">
+                <input type="button" value="Administrar">
+              </a>
           <% } else { %>
             <li><a href="/">Inicio</a></li>
         <li><a href="/products/products-list/camisetas">Tienda</a></li>
