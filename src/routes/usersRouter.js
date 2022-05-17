@@ -10,7 +10,7 @@ const authMiddleware = require("../middlewares/auth");
 
 //******Routes******
 //login form
-router.get("/login", usersController.login);
+router.get("/login", guestMiddleware, usersController.login);
 
 //login process
 router.post("/login", usersController.loginProcess);
