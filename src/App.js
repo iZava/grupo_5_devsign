@@ -18,7 +18,7 @@ saveUninitialized: false }));
 
 // ******App middlewares******
 const userLogged = require("./middlewares/userLogged"); 
-app.use(userLogged);
+app.use(userLogged); //! stand by
 
 // ******Settings******
 app.set("view engine", "ejs");

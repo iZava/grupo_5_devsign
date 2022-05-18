@@ -115,5 +115,14 @@
   "password": "$2a$10$9dnfQl1WcK8UwNLLkblqJ.sjfU7b/KVfemkK7pavJRY8iNIK9XDnm",
   "repeat_password": "$2a$10$0M99kEiVxHQHIaspkx/SnOG0WqZegXhSlzwWEbGSaBKLCq4NLGRTW",
   "image": "image-1652196103044-650482499.jpg"
+ },
+ {
+  "id": 14,
+  "nombre": "Federico",
+  "logUser": "fede",
+  "email": "fede@algo.com",
+  "password": "$2a$10$u49vL7.BLGrkEr7MV0EZ0udyfA0bn8E.c55iLtYVQ..dkwe6GUw9S",
+  "repeat_password": "$2a$10$lngnN0UdLKRedZiOcQCW2OJ8fMFZwIaI0M0V1XnjrA2rnt7pw.HkK",
+  "image": "user_01.png"
  }
 ]
