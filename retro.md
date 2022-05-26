@@ -93,18 +93,23 @@ Dilatar los tiempos (no dejar todo para último momento)
 
 
 ## SPRINT 6
+
 ## 1 Comenzar a hacer
 - Reunirnos y planificar tareas al inicio del sprint
+
 ## 2 Hacer más
 - Mantener la motivación del equipo
 - Comprometerse más con el proyecto; esto es participar más y asistir a las reuniones en la medida que sea posible.
 - Pactar una entrega semanal con avances del proyecto
+- Mantener actualizado el tablero de trello.
+
 ## 3. Continuar haciendo.
 - Ponerse al día con las temáticas vistas en clase
 - Cumplir con los plazos de entrega de los sprints
 - Comunicacarnos más entre nosotros fuera de las reuniones.
 - Preguntar cómo venimos con los temas nuevos.
 - Apoyarnos con las temáticas del curso.
+
 ## 4 Hacer menos
 - Cambiar fechas de entrega
 
