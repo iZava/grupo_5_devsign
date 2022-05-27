@@ -14,9 +14,6 @@
                         <p>EDICIÓN DE PRODUCTO.</p>
                     </div>
                     <form action="/products/editProduct/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="form-editProduct">
-                        <div class="edit-log-id">
-                            <input type="text" name="id" id="id" placeholder="ID" disabled="true" value="<%= product.id %>">
-                        </div>
                         <div class="edit-log-nameProduct">
                         <input type="text" name="name" id="name" placeholder="Nombre del producto" value="<%= product.name %>">
                         </div>

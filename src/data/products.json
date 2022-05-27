@@ -401,5 +401,14 @@
     "description": "Remera keepCoding. Producto editado. ",
     "color": "Blanco",
     "price": "40000"
+  },
+  {
+    "id": 54,
+    "name": "Gorra JS",
+    "image": "default_image.png",
+    "category": "gorras",
+    "description": "Producto creado y editado el 27/5",
+    "color": "Negro",
+    "price": "35000"
   }
 ]
