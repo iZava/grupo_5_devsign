@@ -14,6 +14,9 @@ const controller = {
       if (passwordOk) {
         delete userToLogin.password && delete userToLogin.repeat_password;
         req.session.user = userToLogin;
+        if (req.body.remember) {
+          res.cookie("userName", req.body.logUser, { maxAge: 1000 * 60 * 60 * 24 * 7 });
+        }
         return res.redirect("/");
       } else {
         return res.render("users/login", {
@@ -78,8 +81,7 @@ const controller = {
     };
 
     let usercreated = User.create(userToCreate);
-      return res.redirect("/users/login");
-  
+    return res.redirect("/users/login");
   },
 
   register: (req, res) => {
@@ -88,12 +90,13 @@ const controller = {
 
   profile: (req, res) => {
     res.render("users/profile", { user: req.session.user });
-  }, 
+  },
 
   logout: (req, res) => {
+    res.clearCookie("userName");
     req.session.destroy();
     res.redirect("/");
-  } 
+  },
 };
 
 module.exports = controller;

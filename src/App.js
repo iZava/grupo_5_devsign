@@ -18,7 +18,9 @@ saveUninitialized: false }));
 
 // ******App middlewares******
 const userLogged = require("./middlewares/userLogged"); 
-app.use(userLogged); //! stand by
+app.use(userLogged);
+const cookieParser = require("cookie-parser");
+app.use(cookieParser());
 
 // ******Settings******
 app.set("view engine", "ejs");

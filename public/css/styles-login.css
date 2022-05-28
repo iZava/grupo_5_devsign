@@ -15,6 +15,9 @@
     justify-content: flex-start;
     padding-left: 20px;
 }
+.recuerdame {
+    text-align: center;
+}
 
 .register{
     
@@ -126,12 +129,7 @@ form i {
     padding: 5px;
 }
 
-.boton-recuerdame{
-    display: flex;
-    flex-wrap: wrap;
-    margin:auto
-    
-}
+
 .form-recuerdame{
     display:flex;
     width:100%;

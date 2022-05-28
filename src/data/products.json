@@ -368,12 +368,12 @@
   },
   {
     "id": 50,
-    "name": "Gorra GO",
+    "name": "Gorra Golang",
     "image": "default_image.png",
     "category": "gorras",
-    "description": "Gorra Golang",
+    "description": "Hermosa gorra, para el señor y la señora. Directo de fabrica y sin intermediarios",
     "color": "Blanco",
-    "price": "54000"
+    "price": "50000"
   },
   {
     "id": 51,
