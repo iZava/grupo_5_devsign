@@ -22,30 +22,29 @@
                         </div>
                         <div class="edit-log-price">
                         <input type="number" name="price" id="price" placeholder="Precio" value="<%= product.price %>">
-                        </div>
-                        <div class="edit-log-category">
-                        <select name="category" id="category" class="form-input" required>
-                            <option <%= product.category == 'camisetas' ? "selected" : '' %> value="camisetas"> Camisetas </option>
-                            <option <%= product.category == 'hoddies' ? "selected" : '' %> value="hoddies">Hoddies</option>
-                            <option <%= product.category == 'mugs' ? "selected" : '' %> value="mugs">Mugs</option>
-                            <option <%= product.category == 'cojines' ? "selected" : '' %> value="cojines">Cojines</option>
-                            <option <%= product.category == 'botellas' ? "selected" : '' %> value="botellas">Botellas</option>
-                            <option <%= product.category == 'stickers' ? "selected" : '' %> value="stickers">Stickers</option>
-                            <option <%= product.category == 'gorras' ? "selected" : '' %> value="gorras">Gorras</option>
-                        </select>
-                        </div>
+                        </div>                        
                         <div class="edit-log-color">
-                        <select name="color" id="color" class="form-input" required>
-                            <option value="">Elige un color</option>
-                            <option <%= product.color == 'Blanco' ? "selected" : '' %> value="Blanco"> Blanco </option>
-                            <option <%= product.color == 'Gris' ? "selected" : '' %> value="Gris"> Gris </option>
-                            <option <%= product.color == 'Negro' ? "selected" : '' %> value="Negro"> Negro </option>
-                            <option <%= product.color == 'Rojo' ? "selected" : '' %> value="Rojo"> Rojo </option>
-                            <option <%= product.color == 'Azul' ? "selected" : '' %> value="Azul"> Azul </option>
-                            <option <%= product.color == 'Amarillo' ? "selected" : '' %> value="Amarillo"> Amarillo </option>
-                            <option <%= product.color == 'Rosa' ? "selected" : '' %> value="Rosa"> Rosa </option>
-                        </select>
-                        </div>
+                            <select name="category_id" id="" class="form-input" required>
+                                <% allCategory.forEach(category => { %>
+                                <option value="<%= category.id %>"<% if (product.category_id == category.id) { %><%= 'selected' %><% }; %>><%= category.name_product_category %></option>
+                                <% }); %>
+                            </select>
+                          </div>
+                          <div class="edit-log-color">
+                            <select name="color_id" id="" class="form-input" required>
+                                <% allColor.forEach(color => { %>
+                                <option value="<%= color.id %>"<% if (product.color_id == color.id) { %><%= 'selected' %><% }; %>><%= color.name_color %></option>
+                                <% }); %>
+                            </select>
+                          </div>
+                          <div class="edit-log-color">
+                            <select name="size_id" id="" class="form-input" required>
+                                <% allSize.forEach(size => {  %>
+                                <option value="<%= size.id %>"<% if (product.size_id == size.id) { %><%= 'selected' %><% }; %>><%= size.name_size %></option>
+                                <% }); %>
+                            </select>
+                          </div>
+
                         <div class="edit-log-image">
                             <label for="productImage" class="form-label"></label>
                             <input type="file" name="image" id="productImage" class="form-input">

@@ -13,24 +13,23 @@
                     <a href="/users/register"><button type="button">Registro</button></a>
                 </div>
             </div>
-
             <div class="card-register">
                 <section>
-
+                    
                     <div class="logo-login">
                         <i class="fa-solid fa-user"></i>
                     </div>
-
-                    <div class="log-text">
-                        <p>Crea una cuenta para agilizar el proceso de pago en el futuro, realizar un seguimiento del
-                            historial de pedidos y recibir correos electrónicos, descuentos y ofertas especiales.</p>
-                    </div>
                     
-                    <form action="/users/register" method="POST" class="form-register" enctype="multipart/form-data"> 
+                    <div class="log-text">
+                        <p>EDICIÓN DE USUARIO</p>
+                        </div>
+                        
+                    <% if (users) { %>
+                    <form action="/users/editUser/<%= users.id %>?_method=PUT" method="POST" class="form-register" enctype="multipart/form-data"> 
 
                         <div class="register-log-name">
                             <i class="fa-solid fa-pencil"></i>
-                            <input type="text" name="firstName" id="firstName" placeholder="Nombre" value="<%= locals.oldData ? oldData.firstName: null%>" > 
+                            <input type="text" name="firstName" id="firstName" placeholder="Nombre" value="<%=users.firstName %>" > 
                         </div> 
                         <% if (locals.errors && errors.firstName) { %>
                             <div class="text-danger">
@@ -40,7 +39,7 @@
 
                         <div class="register-log-name">
                             <i class="fa-solid fa-pencil"></i>
-                            <input type="text" name="lastName" id="lastName" placeholder="Apelido" value="<%= locals.oldData ? oldData.lastName : null%>" > 
+                            <input type="text" name="lastName" id="lastName" placeholder="Apellido" value="<%=users.lastName %>" > 
                         </div> 
                         <% if (locals.errors && errors.lastName
                         ) { %>
@@ -51,7 +50,7 @@
 
                         <div class="register-log-user">
                             <i class="fa-solid fa-user"></i>
-                            <input type="text" name="logUser" id="logUser" placeholder="Nombre de usuario" value="<%= locals.oldData ? oldData.logUser : null%>" > 
+                            <input type="text" name="logUser" id="logUser" placeholder="Nombre de usuario" value="<%=users.logUser %>" > 
                         </div> 
                         <% if (locals.errors && errors.logUser) { %>
                             <div class="text-danger">
@@ -62,7 +61,7 @@
 
                         <div class="register-log-email">
                             <i class="fa-solid fa-envelope"></i>
-                            <input type="text" name="email" id="email" placeholder="Correo Electrónico" value="<%= locals.oldData ? oldData.email : null%>" > 
+                            <input type="text" name="email" id="email" placeholder="Correo Electrónico" value="<%=users.email %>" > 
                         </div> 
                         <% if (locals.errors && errors.email) { %>
                             <div class="text-danger">
@@ -94,12 +93,10 @@
                         <div class="register-log-password">
                             <i class="fa-solid fa-key"></i>
                             <select name="category_id" id="category_id" class="form-input">
-                                <option value="" selected>- Select Category -</option>
-                                <% if (locals.allCategory) { %>
-                                    <% allCategory.forEach(category => { %>
-                                    <option value="<%= category.id %>"><%= category.name_category %></option>
-                                    <% }); %>
-                                <% }; %>
+                                <option value="" selected>- Select Category -</option>                                
+                                <% allCategory.forEach(category => { %>
+                                    <option value="<%= category.id %>"<% if (users.category_id == category.id) { %><%= 'selected' %><% }; %>><%= category.name_category %></option>
+                                <% }); %>
                             </select>
                         </div>
 
@@ -120,9 +117,10 @@
                             </div>
                             <% } %>
                             <div class="register-button">
-                                <button type="submit">Registrarse</button>
+                                <button type="submit">Guardar</button>
                             </div>
                     </form>
+                    <% } %>
 
                     <div class="Privacy-Policy">
                         <p>Sus datos personales se utilizarán para respaldar su experiencia en este sitio web, para

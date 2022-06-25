@@ -2,7 +2,8 @@ const path = require("path");
 const { body } = require("express-validator"); 
 
 const validations = [
-    body("nombre").notEmpty().withMessage("El nombre es obligatorio"),
+    body("firstName").notEmpty().withMessage("El nombre es obligatorio"),
+    body("lastName").notEmpty().withMessage("El apellido es obligatorio"),
     body("logUser").notEmpty().withMessage("El nombre de usuario es obligatorio").isLength({ max: 8 }).withMessage("El nombre de usuario no debe tener más de 8 caracteres"),
     body("email").notEmpty().withMessage("El email es obligatorio").bail().isEmail().withMessage("Debes escribir el email en un formato válido"),
     body("password").notEmpty().withMessage("La contraseña es obligatoria").bail().isLength({ min: 6 }).withMessage("La contraseña debe tener al menos 6 caracteres"),
@@ -12,6 +13,7 @@ const validations = [
         }
         return true;
     }),
+    body("category_id").notEmpty().withMessage("La categoría es obligatoria"),
     body("image").custom((value, { req }) => {
         let file = req.file;
         let acceptedExtensions = [".jpg", ".jpeg", ".png", ".JPG", ".JPEG", ".PNG"];

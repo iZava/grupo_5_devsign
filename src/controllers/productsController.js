@@ -1,62 +1,63 @@
 const fs = require("fs");
 const path = require("path");
+const db = require("../../database/models/index.js");
+const sequelize = db.sequelize;
 
-const productsFilePath = path.join(__dirname, "../data/products.json");
-
-function readDB() {
-  return JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-};
+const Product = db.product;
+const Color = db.color;
+const Size = db.size;
+const Product_category = db.product_category;
 
 const controller = {
-  products: (req, res) => {
+  products: async function(req, res){
     const product = req.params.product;
     let products;
     let category;
-    const productsDB = readDB();
+    const productsDB = await Product.findAll();
     switch (product) {
       case "camisetas":
         const tshirts = productsDB.filter(
-          (product) => product.category == "camisetas"
+          (product) => product.category_id == 1
         );
         products = tshirts;
         category = "camisetas";
         break;
       case "hoddies":
         const hoddies = productsDB.filter(
-          (product) => product.category == "hoddies"
+          (product) => product.category_id == "4"
         );
         products = hoddies;
         category = "hoddies";
         break;
       case "mugs":
-        const mugs = productsDB.filter((product) => product.category == "mugs");
+        const mugs = productsDB.filter((product) => product.category_id == "2");
         products = mugs;
         category = "mugs";
         break;
       case "cojines":
         const cojines = productsDB.filter(
-          (product) => product.category == "cojines"
+          (product) => product.category_id == "7"
         );
         products = cojines;
         category = "cojines";
         break;
       case "stickers":
         const stickers = productsDB.filter(
-          (product) => product.category == "stickers"
+          (product) => product.category_id == "5"
         );
         products = stickers;
         category = "stickers";
         break;
       case "gorras":
         const gorras = productsDB.filter(
-          (product) => product.category == "gorras"
+          (product) => product.category_id == "6"
         );
         products = gorras;
         category = "gorras";
         break;
       case "botellas":
         const botellas = productsDB.filter(
-          (product) => product.category == "botellas"
+          (product) => product.category_id == "3"
         );
         products = botellas;
         category = "botellas";
@@ -65,75 +66,106 @@ const controller = {
 
     res.render("products/products", { products, category });
   },
-  detail: (req, res) => {
-    const id = req.params.id;
-    const products = readDB();
-    const product = products.find((product) => product.id == id);
-    res.render("products/productDetail", { product });
-  },
-
+  detail: async function(req, res){
+    try {
+      const id = req.params.id;
+      const products = await Product.findAll();
+      const product = products.find((product) => product.id == id);      
+      return res.render("products/productDetail", { product });
+  } catch(err) {
+  console.error(err);
+  }
+},
   cart: (req, res) => {
     res.render("products/productCart");
   },
-  addEditProduct: (req, res) => {
-    const products = readDB();
-    res.render("products/add-edit-Product", { products });
+  adminProductUser: (req, res) => {
+    res.render("products/adminProductUser");
   },
-  addProduct: (req, res) => {
-    res.render("products/addProduct");
+  addEditProduct: async function(req, res){
+    try {
+      const allColor = await Color.findAll();
+      const allSize = await Size.findAll();
+      const allCategory = await Product_category.findAll();
+      const Products = await Product.findAll(
+          {include:["fkcolor","fksize","fkproduct_category"]});
+        return res.render("products/add-edit-Product", {Products, allColor, allSize, allCategory})
+      } catch(err) {
+        console.error(err);
+      }
+    }, 
+
+  addProduct: async function(req, res){
+    try {
+        const allColor = await Color.findAll();
+        const allSize = await Size.findAll();
+        const allCategory = await Product_category.findAll();      
+        return res.render("products/addProduct", {allColor, allSize, allCategory})
+      } catch(err) {
+        console.error(err);
+      }
+      
   },
-  create: (req, res) => {
-    const products = readDB();
-    const newProduct = {
-      id: products.length > 0 ? products[products.length - 1].id + 1 : 1,
+  create: async function(req, res){
+    try {
+      await Product.create({
       name: req.body.name,
       image: req.file?.filename ?? "default_image.png",
-      category: req.body.category,
+      category_id: req.body.category_id,
       description: req.body.description,
-      color: req.body.color,
-      price: req.body.price
-    }
-
-    products.push(newProduct);
-    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2))
-
-    return res.redirect("/products/addeditProduct")
-  },
-  editProduct: (req, res) => {
-    const id = req.params.id;
-    const products = readDB();
-    const product = products.find((product) => product.id == id);
-    res.render("products/editProduct", { product });
-  },
-
-  update: (req,res) => {
-    const id = req.params.id;
-		const products = readDB();
-		const productsMap = products.map(product => {
-			if(product.id == id){
-				product.name = req.body.name,
-				product.description = req.body.description,
-				product.price = req.body.price,
-				product.category = req.body.category,
-				product.color = req.body.color,
-				product.image = req.file?.filename ?? "default_image.png"
-			}
-			return product;
-		});
-		fs.writeFileSync(productsFilePath, JSON.stringify(productsMap, null, 2))
-		return res.redirect("/products/addeditProduct");
-  },
-
-  delete: (req, res) => {
-		const id = req.params.id;
-		let products = readDB();
-		const productDelete = products.findIndex(product => product.id == id);
-    
-    products.splice(productDelete,1);
-
-    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2))
-		return res.redirect("/products/addeditProduct");
+      price: req.body.price,
+      color_id: req.body.color_id,
+      size_id: req.body.size_id
+      });
+      return res.redirect("/products/addeditProduct")
+  } catch (err){
+    console.error(err)
   }
-}
+},
+  editProduct: async function(req, res){
+    try {
+    const id = req.params.id;
+    const allColor = await Color.findAll();
+    const allSize = await Size.findAll();
+    const allCategory = await Product_category.findAll();
+    const product = await Product.findByPk(id, {include:["fkcolor","fksize","fkproduct_category"]});
+    return res.render("products/editProduct", {allColor, allSize, allCategory, product });
+  } catch (err){
+    console.error(err)
+  }
+  },
+
+  update: async function(req, res){
+    try {
+		  await Product.update({		
+        name: req.body.name,
+        image: req.file?.filename ?? "default_image.png",
+        category_id: req.body.category_id,
+        description: req.body.description,
+        price: req.body.price,
+        color_id: req.body.color_id,
+        size_id: req.body.size_id
+			},
+      {
+        where : {id: req.params.id}
+      });
+        return res.redirect("/products/addeditProduct");
+      }catch (err){
+          console.error(err)
+      }				
+  },
+
+  delete: async function(req, res){
+    try {
+    const id = req.params.id;
+    await Product.destroy({
+      where: { id: id }
+    });
+    return res.redirect("/products/addeditProduct");
+  } catch (err){
+    console.error(err)
+  } 
+  }
+  }
 
 module.exports = controller;

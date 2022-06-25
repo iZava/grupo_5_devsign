@@ -1,7 +1,7 @@
 module.exports ={
   "development": {
     "username": "root",
-    "password": "devsign2022",
+    "password": "0000",
     "database": "devsign_db",
     "host": "127.0.0.1",
     "dialect": "mysql"

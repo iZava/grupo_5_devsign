@@ -124,5 +124,14 @@
   "password": "$2a$10$u49vL7.BLGrkEr7MV0EZ0udyfA0bn8E.c55iLtYVQ..dkwe6GUw9S",
   "repeat_password": "$2a$10$lngnN0UdLKRedZiOcQCW2OJ8fMFZwIaI0M0V1XnjrA2rnt7pw.HkK",
   "image": "user_01.png"
+ },
+ {
+  "id": 15,
+  "nombre": "jose",
+  "logUser": "deymerep",
+  "email": "ortegamorlando@gmail.com",
+  "password": "$2a$10$xA3AWzKUQecN503YgCYN9OrSbTXIQxGpFWycRGvqWZ93dLZKybg5u",
+  "repeat_password": "$2a$10$VessmETBmaM.cBcsPUF0ZuqVLF8ahzxy31wDxrwy147x3uEFQ7MyK",
+  "image": "image-1654824208395-336355222.jpg"
  }
 ]

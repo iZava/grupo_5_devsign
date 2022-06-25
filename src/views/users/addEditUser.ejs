@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head', {webtitle: "Editar / Crear producto" }) %>
+  </head>
+  <%- include('../partials/header') %>
+    <body>
+      
+      <div class="container-edit-products">
+        <table class="tableProducts">
+          <thead class="head-editProduct">
+            <tr>
+              <th>ID</th>
+              <th>NOMBRE</th>
+              <th>APELLIDO</th>
+              <th>USUARIO</th>
+              <th>EMAIL</th>
+              <th>ROL</th>
+             <!--<th>IMAGEN</th> -->
+              <th>ACCIONES</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% for(let i=0; i < users.length; i++) {%>
+            <form method="POST" action="/users/delete/<%= users[i].id %>?_method=DELETE">
+              <tr>
+                <td data-label="ID">
+                  <%= users[i].id %>
+                </td>
+                <td data-label="NOMBRE DEL PRODUCTO">
+                  <%= users[i].firstName %>
+                </td>
+                <td data-label="DESCRIPCIÓN">
+                  <%= users[i].lastName %>
+                </td>
+                <td data-label="PRECIO">
+                  <%= users[i].logUser %>
+                </td>
+                <td data-label="CATEGORIA">
+                  <%= users[i].email %>
+                </td>
+                <td data-label="COLOR">
+                  <% allCategory.forEach(category => { %>
+                    <% if (users[i].category_id == category.id) { %><%= category.name_category %><% }; %>
+                  <% }); %>
+                  
+                <!--<td data-label="IMAGEN">imagen1</td> -->
+                <td data-label="ACCIONES">
+                  <div class="btnEdit">
+                    <a href="/users/editUser/<%= users[i].id %>">
+                      <i class="fa-solid fa-pencil"></i>
+                    </a>
+                  </div>
+                  <button type="submit" class="btnDelete" onclick="confirm('¿Está seguro que desea eliminar el usuario?')">
+                    <i class="fa-solid fa-trash-can"></i>
+                  </button>
+                </td>
+              </tr>
+            </form>
+              <% } %>
+          </tbody>
+        </table>
+      </div>
+      <%- include('../partials/footer') %>
+    </body>
+
+</html>

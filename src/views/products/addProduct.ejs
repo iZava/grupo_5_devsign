@@ -23,36 +23,40 @@
               <div class="edit-log-price">
                 <input type="number" name="price" id="price" placeholder="Precio">
               </div>
-              <div class="edit-log-category">
-                <select name="category" id="category" class="form-input" required>
-                  <option value="">Elige una categoría</option>
-                  <option value="camisetas">Camisetas</option>
-                  <option value="hoddies">Hoddies</option>
-                  <option value="mugs">Mugs</option>
-                  <option value="cojines">Cojines</option>
-                  <option value="botellas">Botellas</option>
-                  <option value="stickers">Stickers</option>
-                  <option value="gorras">Gorras</option>
+              
+              <div class="edit-log-color">
+                <select name="category_id" id="category_id" class="form-input" required>
+                  <option value ="" disabled selected>- Select Category -</option>
+                  <% allCategory.forEach(category => { %>
+                  <option value="<%= category.id %>"><%= category.name_product_category %></option>
+                  <% }); %>
                 </select>
               </div>
+              
               <div class="edit-log-color">
-                <select name="color" id="color" class="form-input" required>
-                  <option value="">Elige un color</option>
-                  <option value="Blanco">Blanco</option>
-                  <option value="Gris">Gris</option>
-                  <option value="Negro">Negro</option>
-                  <option value="Rojo">Rojo</option>
-                  <option value="Azul">Azul</option>
-                  <option value="Amarillo">Amarillo</option>
-                  <option value="Rosa">Rosa</option>
+                <select name="color_id" id="color_id" class="form-input" required>
+                  <option value ="" disabled selected>- Select Color -</option>
+                  <% allColor.forEach(color => { %>
+                  <option value="<%= color.id %>"><%= color.name_color %></option>
+                  <% }); %>
                 </select>
+
+              </div>
+              <div class="edit-log-color">
+                <select name="size_id" id="size_id" class="form-input" required>
+                  <option value ="" disabled selected>- Select Size -</option>
+                  <% allSize.forEach(size => { %>
+                  <option value="<%= size.id %>"><%= size.name_size %></option>
+                  <% }); %>
+                </select>
+
               </div>
               <div class="edit-log-image">
                 <label for="productImage" class="form-label"></label>
-                <input type="file" name="image" id="productImage" class="form-input">
+                <input type="file" name="image" id="productImage" class="form-input" onchange="myFunction()">
               </div>
               <div class="edit-buttonSave">
-                <button type="submit">Guardar</button>
+                <button type="submit">Guardar</button>          
               </div>
             </form>
             <div class="edit-back-product">
@@ -71,6 +75,12 @@
         <a class="cart" href="/products/cart"><i class="fas fa-solid fa-cart-shopping"></i></a>
       </div>
       <%- include('../partials/footer') %>
+      <script> function myFunction(){
+        let file = document.getElementById('productImage')
+        let color = document.getElementById('color_id')
+        let size = document.getElementById('size_id')
+        console.log('value', file.value, color.value, size.value)}
+      </script>
   </body>
 
 </html>

@@ -1,45 +1,66 @@
 module.exports = (sequelize, DataTypes) => {
-  const User = sequelize.define("user", {
+    let alias = 'user'
+    
+    let cols = {
+    id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement:true,
+        allowNull: false,
+        
+    },
     firstName: {
-      type: DataTypes.VARCHAR(50),
-      allowNull: false,
+        type: DataTypes.STRING(50),
+        allowNull: false,
+        validate: {
+            notNull: {
+                msg: 'tu nombre'
+            }
+        }
+
     },
     lastName: {
-      type: DataTypes.VARCHAR(50),
-      allowNull: false,
+        type: DataTypes.STRING(50),
+        allowNull: false,
     },
     logUser: {
-      type: DataTypes.VARCHAR(50),
-      allowNull: false,
+        type: DataTypes.STRING(50),
+        allowNull: false,
     },
     email: {
-      type: DataTypes.VARCHAR(20),
-      allowNull: false,
+        type: DataTypes.STRING(50),
+        allowNull: false,
     },
     password: {
-      type: DataTypes.VARCHAR(10),
-      allowNull: false,
+        type: DataTypes.STRING(200),
+        allowNull: false,
     },
     repeat_password: {
-      type: DataTypes.VARCHAR(10),
-      allowNull: false,
+        type: DataTypes.STRING(200),
+        allowNull: false,
     },
     category_id: {
-      type: DataTypes.INTEGER(FK),
-      allowNull: false,
+        type: DataTypes.INTEGER,
+        allowNull: false,
     },
     image: {
-      type: DataTypes.BLOB,
-      allowNull: false,
-    },
+        type: DataTypes.BLOB,
+        allowNull: false,
+    }
+    }
 
-    createdAt: {
-      type: DataTypes.DATE,
-    },
-    updatedAt: {
-      type: DataTypes.DATE,
-    },
-  });
-
-  return User;
-};
+    let config = {
+        tableName: 'user',
+        timestamps: false
+    }
+    
+    let user = sequelize.define(alias, cols, config);
+    
+    user.associate = function(models){
+        user.belongsTo(models.user_category,{
+            as: "categories",
+            foreignKey: "category_id"
+        });
+    }
+    return user;
+    };

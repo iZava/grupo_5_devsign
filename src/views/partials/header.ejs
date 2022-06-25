@@ -1,8 +1,8 @@
 <header>
   <% if (locals.isLogged) { %>
     <div class="locals">
-      <a href="/users/profile"> <h3>¡Hola <%= locals.user.logUser %>! </h3> </a>
-      <img class="image-locals" src="/images/users/<%= locals.user.image %>" alt="imágen de perfil">
+      <a href="/users/profile"> <h3>¡Hola <%= locals.isLogged.logUser %>! </h3> </a>
+      <img class="image-locals" src="/images/users/<%= locals.isLogged.image %>" alt="imágen de perfil">
   </div>
       <% } %>
   <nav>
@@ -24,11 +24,11 @@
           <% if (locals.isLogged) { %>
             <li><a href="/">Inicio</a></li>
             <li><a href="/products/products-list/camisetas">Tienda</a></li>
-            <a class = "btn-adminProduct2" href="/addeditProduct">
+            <a class = "btn-adminProduct2" href="/adminProductUser">
               <input type="button" value="Administrar">
               <li><a href="/users/logout">Cerrar sesión</a></li> 
               <a class="cart" href="/products/cart"><i class="fas fa-solid fa-cart-shopping"></i></a>
-              <a class = "btn-adminProduct1" href="/products/addeditProduct">
+              <a class = "btn-adminProduct1" href="/products/adminProductUser">
                 <input type="button" value="Administrar">
               </a>
           <% } else { %>
@@ -45,4 +45,7 @@
     </div>
 
   </nav>
+  <script>
+    console.log('locals', locals);
+  </script>
 </header>

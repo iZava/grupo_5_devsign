@@ -19,50 +19,62 @@
               <th>PRECIO</th>
               <th>CATEGORIA</th>
               <th>COLOR</th>
+              <th>TALLA</th>
              <!--<th>IMAGEN</th> -->
               <th>ACCIONES</th>
             </tr>
           </thead>
           <tbody>
-            <% for(let i=0; i < products.length; i++) {%>
-            <form method="POST" action="/products/delete/<%= products[i].id %>?_method=DELETE">
+            <% for(let i=0; i < Products.length; i++){ %>
+            <form method="POST" action="/products/delete/<%= Products[i].id %>?_method=DELETE">
               <tr>
                 <td data-label="ID">
-                  <%= products[i].id %>
+                  <%= Products[i].id %>
                 </td>
                 <td data-label="NOMBRE DEL PRODUCTO">
-                  <%= products[i].name %>
+                  <%= Products[i].name %>
                 </td>
                 <td data-label="DESCRIPCIÓN">
-                  <%= products[i].description %>
+                  <%= Products[i].description %>
                 </td>
                 <td data-label="PRECIO">
-                  <%= products[i].price %>
+                  <%= Products[i].price %>
                 </td>
                 <td data-label="CATEGORIA">
-                  <%= products[i].category %>
+                  <!-- <%= Products[i].category_id %> -->
+                  <% allCategory.forEach(category => { %>
+                    <% if (Products[i].category_id == category.id) { %><%= category.name_product_category %><% };%>
+                  <% }); %>
                 </td>
                 <td data-label="COLOR">
-                  <%= products[i].color %>
+                  <% allColor.forEach(color => { %>
+                    <% if (Products[i].color_id == color.id) { %><%= color.name_color %><% }; %>
+                  <% }); %>
+                </td>
+                <td data-label="TALLA">
+                  <% allSize.forEach(size => { %>
+                    <% if (Products[i].size_id == size.id) { %><%= size.name_size %><% }; %>
+                  <% }); %>
                 </td>
                 <!--<td data-label="IMAGEN">imagen1</td> -->
                 <td data-label="ACCIONES">
                   <div class="btnEdit">
-                    <a href="/products/editProduct/<%= products[i].id %>">
+                    <a href="/products/editProduct/<%= Products[i].id %>">
                       <i class="fa-solid fa-pencil"></i>
                     </a>
                   </div>
-                  <button type="submit" class="btnDelete">
+                  <button type="submit" class="btnDelete" onclick="confirm('¿Está seguro que desea eliminar el registro?')">
                     <i class="fa-solid fa-trash-can"></i>
                   </button>
                 </td>
               </tr>
             </form>
-              <% } %>
+            <% } %>
           </tbody>
         </table>
       </div>
       <%- include('../partials/footer') %>
+      
     </body>
 
 </html>

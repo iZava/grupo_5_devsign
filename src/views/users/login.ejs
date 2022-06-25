@@ -44,16 +44,18 @@
                         <div class="register-button">
                             <button type="submit">Iniciar sesión</button>
                         </div>
-                        <div class="recuerdame">
-                            <input type="checkbox" name="remember" value="on">
-                            <label for="remember">Recuérdame</label>
-                        </div>
-                        <div class="olvidoContraseña">
-                            <p>¿Olvido su contraseña?</p>
-                        </div>
                 </form>
                 <a href="/users/register"> <p class="back-login"><u>Ir a registro</u></p></a> 
-                
+                <div class="boton-recuerdame">
+                    <form class="form-recuerdame" action="resultado.html" method="POST">
+                        <label for="recuerdame">
+                            <input type="checkbox" name="recuerdame" value>
+                            <p>recuerdame</p></label>
+                    </form>
+                    <div class="olvidoContraseña">
+                        <p>¿Olvido su contraseña?</p>
+                    </div>
+                </div>
     </main>
   <%- include('../partials/footer') %>
 </body>
