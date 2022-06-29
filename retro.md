@@ -115,3 +115,25 @@ Dilatar los tiempos (no dejar todo para último momento)
 
 ## 5 Dejar de hacer
 - Posponer el inicio de las actividades 
+
+## SPRINT 7
+
+## 1 Comenzar a hacer
+- Organizar mejor los tiempos para cumplir con las entregas.
+- Tomar notas de ajustes pendientes u observaciones para la entrega final
+
+## 2 Hacer más
+-Practicar y ampliar temas vistos en clases.
+
+## 3. Continuar haciendo.
+- Ponerse al día con las temáticas vistas en clase
+- Comunicacarnos entre nosotros fuera de las reuniones.
+- Preguntar cómo venimos con los temas nuevos.
+- Apoyarnos con las temáticas del curso.
+
+## 4 Hacer menos
+- Posponer reuniones
+- Posponer tareas pendientes
+
+## 5 Dejar de hacer
+- Dilatar los tiempos por más que veamos que no es posible cumplir con el plazo establecido.
