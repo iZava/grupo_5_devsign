@@ -42,8 +42,7 @@
                             <i class="fa-solid fa-pencil"></i>
                             <input type="text" name="lastName" id="lastName" placeholder="Apelido" value="<%= locals.oldData ? oldData.lastName : null%>" > 
                         </div> 
-                        <% if (locals.errors && errors.lastName
-                        ) { %>
+                        <% if (locals.errors && errors.lastName) { %>
                             <div class="text-danger">
                                 <%= errors.lastName.msg %>
                             </div>

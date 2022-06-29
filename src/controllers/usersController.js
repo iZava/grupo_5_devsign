@@ -29,27 +29,33 @@ const controller = {
   },
   update: async function(req, res){
     try {
-    const validation = validationResult(req);
-          if (validation.errors.length > 0) {
-          return res.render("users/register", {
-            errors: validation.mapped(),
+      const users = await User.findAll();
+      const allCategory = await User_category.findAll();
+      const validation = validationResult(req);
+          
+      if (validation.errors.length > 0) {
+          return res.render("users/editUser", {
             oldData: req.body,
+            users: users,
+            allCategory: allCategory,
+            errors: validation.mapped(),
           });
         }
-          await User.update({
-              firstName: req.body.firstName,
-              lastName: req.body.lastName,
-              logUser: req.body.logUser,
-              email: req.body.email,
-              password: bcryptjs.hashSync(req.body.password, 10),
-              repeat_password: bcryptjs.hashSync(req.body.repeat_password, 10),
-              category_id: req.body.category_id,
-              image: req.file?.filename ?? "user_01.png"
-              },{
+          const userEdit= {
+            firstName: req.body.firstName,
+            lastName: req.body.lastName,
+            logUser: req.body.logUser,
+            email: req.body.email,
+            password: bcryptjs.hashSync(req.body.password, 10),
+            repeat_password: bcryptjs.hashSync(req.body.repeat_password, 10),
+            category_id: req.body.category_id,
+            image: req.file?.filename ?? "user_01.png"} 
+          
+          await User.update(userEdit,{
                 where : {id: req.params.id}
               });
         
-              return res.redirect("users/addEditUser");      
+          return res.redirect('/users/addEditUser');      
     } catch (err){
       console.error(err)
     }
@@ -146,7 +152,9 @@ const controller = {
               category_id: req.body.category_id,
               image: req.file?.filename ?? "user_01.png"
         };        
-        let usercreated = await User.create(userToCreate);
+        
+        await User.create(userToCreate);
+
         return res.redirect("/users/login");
       
     } catch (err){
