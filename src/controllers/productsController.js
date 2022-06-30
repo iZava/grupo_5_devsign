@@ -174,9 +174,12 @@ const controller = {
     },
 
     update: async function (req, res) {
-        try {
-            await Product.update(
-                {
+      let errors = validationResult(req);
+        if (errors.isEmpty()) {
+            try {
+                const id = req.params.id;
+                const product = await Product.findByPk(id);
+                await product.update({
                     name: req.body.name,
                     image: req.file?.filename ?? 'default_image.png',
                     category_id: req.body.category_id,
@@ -184,14 +187,30 @@ const controller = {
                     price: req.body.price,
                     color_id: req.body.color_id,
                     size_id: req.body.size_id,
-                },
-                {
-                    where: { id: req.params.id },
-                }
-            );
-            return res.redirect('/products/addeditProduct');
-        } catch (err) {
-            console.error(err);
+                });
+                res.redirect('/products/addEditProduct');
+            }
+            catch (err) {
+                console.error(err);
+            }
+        }
+        else {
+            const id = req.params.id;
+            const allColor = await Color.findAll();
+            const allSize = await Size.findAll();
+            const allCategory = await Product_category.findAll();
+            const product = await Product.findByPk(id, {
+                include: ['fkcolor', 'fksize', 'fkproduct_category'],
+            });
+            const oldData = req.body;
+            return res.render('products/editProduct', {
+                allColor,
+                allSize,
+                allCategory,
+                product,
+                errors: errors.mapped(),
+                oldData,
+            });
         }
     },
 

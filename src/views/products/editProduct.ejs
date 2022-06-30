@@ -16,20 +16,40 @@
                     <form action="/products/editProduct/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="form-editProduct">
                         <div class="edit-log-nameProduct">
                         <input type="text" name="name" id="name" placeholder="Nombre del producto" value="<%= product.name %>">
+                    </div>
+                    <% if (locals.errors && errors.name) { %>
+                        <div class="text-danger">
+                          <div><%= errors.name.msg %></div>
                         </div>
+                      <% } %>
                         <div class="edit-log-description">
                         <input type="text" name="description" id="description" placeholder="Descripción" value="<%= product.description %>">
                         </div>
+                        <% if (locals.errors && errors.description) { %>
+                            <div class="text-danger">
+                              <div><%= errors.description.msg %></div>
+                            </div>
+                          <% } %>
                         <div class="edit-log-price">
-                        <input type="number" name="price" id="price" placeholder="Precio" value="<%= product.price %>">
-                        </div>                        
-                        <div class="edit-log-color">
+                        <input type="text" name="price" id="price" placeholder="Precio" value="<%= product.price %>">
+                        </div>      
+                        <% if (locals.errors && errors.price) { %>
+                            <div class="text-danger">
+                              <div><%= errors.price.msg %></div>
+                            </div>
+                          <% } %>                  
+                        <div class="edit-log-category">
                             <select name="category_id" id="" class="form-input" required>
                                 <% allCategory.forEach(category => { %>
                                 <option value="<%= category.id %>"<% if (product.category_id == category.id) { %><%= 'selected' %><% }; %>><%= category.name_product_category %></option>
                                 <% }); %>
                             </select>
                           </div>
+                          <% if (locals.errors && errors.category_id) { %>
+                            <div class="text-danger">
+                              <div><%= errors.category_id.msg %></div>
+                            </div>
+                          <% } %>
                           <div class="edit-log-color">
                             <select name="color_id" id="" class="form-input" required>
                                 <% allColor.forEach(color => { %>
@@ -37,6 +57,11 @@
                                 <% }); %>
                             </select>
                           </div>
+                          <% if (locals.errors && errors.color_id) { %>
+                            <div class="text-danger">
+                              <div><%= errors.color_id.msg %></div>
+                            </div>
+                          <% } %>
                           <div class="edit-log-color">
                             <select name="size_id" id="" class="form-input" required>
                                 <% allSize.forEach(size => {  %>
@@ -44,11 +69,21 @@
                                 <% }); %>
                             </select>
                           </div>
+                          <% if (locals.errors && errors.size_id) { %>
+                            <div class="text-danger">
+                              <div><%= errors.size_id.msg %></div>
+                            </div>
+                          <% } %>
 
                         <div class="edit-log-image">
                             <label for="productImage" class="form-label"></label>
                             <input type="file" name="image" id="productImage" class="form-input">
                           </div>
+                          <% if (locals.errors && errors.image) { %>
+                            <div class="text-danger">
+                              <div><%= errors.image.msg %></div>
+                            </div>
+                          <% } %>
                         <div class="edit-buttonSave">
                         <button type="submit">Guardar</button>
                         </div>
