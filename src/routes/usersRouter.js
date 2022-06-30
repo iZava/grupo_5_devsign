@@ -16,13 +16,13 @@ const authMiddleware = require("../middlewares/auth");
 router.get("/login", guestMiddleware, usersController.login);
 
 //Edit user
-router.get("/addEditUser", usersController.addEditUser);
+router.get("/addEditUser", authMiddleware, usersController.addEditUser);
 router.get("/editUser/:id", authMiddleware, usersController.editUser);
-router.put("/editUser/:id",uploadFile.single("image"), validations, usersController.update);
+router.put("/editUser/:id", authMiddleware,uploadFile.single("image"), validations, usersController.update);
 
 //Delete User
 
-router.delete("/delete/:id", usersController.delete);
+router.delete("/delete/:id", authMiddleware, usersController.delete);
 
 //login process
 router.post("/login", usersController.loginProcess);
