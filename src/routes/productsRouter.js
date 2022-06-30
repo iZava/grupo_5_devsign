@@ -4,6 +4,9 @@ const multer  = require('multer');
 const router = express.Router();
 const productsController = require("../controllers/productsController");
 
+//******Middlewares******
+const validations = require("../middlewares/validateProducts");
+
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, path.resolve(__dirname, "../../public/images/products"));
@@ -21,11 +24,11 @@ router.get("/adminProductUser", productsController.adminProductUser);
 router.get("/addeditProduct", productsController.addEditProduct);
 // ruta de creación de producto
 router.get("/addProduct", productsController.addProduct);
-router.post("/createProduct", upload.single("image"), productsController.create);
+router.post("/createProduct", upload.single("image"), validations, productsController.create);
 
 // rutas de edición de productos
 router.get("/editProduct/:id", productsController.editProduct);
-router.put("/editProduct/:id", upload.single("image"), productsController.update);
+router.put("/editProduct/:id", upload.single("image"), validations, productsController.update);
 
 //ruta para eliminar producto
 router.delete("/delete/:id", productsController.delete);

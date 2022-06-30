@@ -15,46 +15,80 @@
             </div>
             <form action="/products/createProduct" method="POST" enctype="multipart/form-data" class="form-editProduct">
               <div class="edit-log-nameProduct">
-                <input type="text" name="name" id="name" placeholder="Nombre del producto">
+                <input type="text" name="name" id="name" placeholder="Nombre del producto" value="<%= locals.oldData ? oldData.name: null%>">
               </div>
+              <% if (locals.errors && errors.name) { %>
+                <div class="text-danger">
+                  <div><%= errors.name.msg %></div>
+                </div>
+              <% } %>
+                
               <div class="edit-log-description">
-                <input type="text" name="description" id="description" placeholder="Descripción">
+                <input type="text" name="description" id="description" placeholder="Descripción" value="<%= locals.oldData ? oldData.description: null%>">
               </div>
+              <% if (locals.errors && errors.description) { %>
+                <div class="text-danger">
+                  <div><%= errors.description.msg %></div>
+                </div>
+              <% } %>
               <div class="edit-log-price">
-                <input type="number" name="price" id="price" placeholder="Precio">
+                <input type="text" name="price" id="price" placeholder="Precio" value="<%= locals.oldData ? oldData.price: null%>">
               </div>
+              <% if (locals.errors && errors.price) { %>
+                <div class="text-danger">
+                  <div><%= errors.price.msg %></div>
+                </div>
+              <% } %>
               
-              <div class="edit-log-color">
-                <select name="category_id" id="category_id" class="form-input" required>
+              <div class="edit-log-category">
+                <select name="category_id" id="category_id" class="form-input">
                   <option value ="" disabled selected>- Select Category -</option>
                   <% allCategory.forEach(category => { %>
                   <option value="<%= category.id %>"><%= category.name_product_category %></option>
                   <% }); %>
                 </select>
               </div>
+              <% if (locals.errors && errors.category_id) { %>
+                <div class="text-danger">
+                  <div><%= errors.category_id.msg %></div>
+                </div>
+              <% } %>
               
               <div class="edit-log-color">
-                <select name="color_id" id="color_id" class="form-input" required>
+                <select name="color_id" id="color_id" class="form-input">
                   <option value ="" disabled selected>- Select Color -</option>
                   <% allColor.forEach(color => { %>
                   <option value="<%= color.id %>"><%= color.name_color %></option>
                   <% }); %>
                 </select>
-
               </div>
+              <% if (locals.errors && errors.color_id) { %>
+                <div class="text-danger">
+                  <div><%= errors.color_id.msg %></div>
+                </div>
+              <% } %>
               <div class="edit-log-color">
-                <select name="size_id" id="size_id" class="form-input" required>
+                <select name="size_id" id="size_id" class="form-input">
                   <option value ="" disabled selected>- Select Size -</option>
                   <% allSize.forEach(size => { %>
                   <option value="<%= size.id %>"><%= size.name_size %></option>
                   <% }); %>
                 </select>
-
               </div>
+              <% if (locals.errors && errors.size_id) { %>
+                <div class="text-danger">
+                  <div><%= errors.size_id.msg %></div>
+                </div>
+              <% } %>
               <div class="edit-log-image">
                 <label for="productImage" class="form-label"></label>
                 <input type="file" name="image" id="productImage" class="form-input" onchange="myFunction()">
               </div>
+              <% if (locals.errors && errors.image) { %>
+                <div class="text-danger">
+                  <div><%= errors.image.msg %></div>
+                </div>
+              <% } %>
               <div class="edit-buttonSave">
                 <button type="submit">Guardar</button>          
               </div>
