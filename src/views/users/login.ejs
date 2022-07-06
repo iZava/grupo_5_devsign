@@ -22,7 +22,7 @@
                     <p>Crea una cuenta para agilizar el proceso de pago en el futuro, realizar un seguimiento del
                         historial de pedidos y recibir correos electrónicos, descuentos y ofertas especiales.</p>
                 </div>
-                <form action="/users/login" method="POST">
+                <form action="/users/login" method="POST" class="login-form">
                     <div class="log-user">
                         <i class="fa-solid fa-user"></i>
                         <input type="text" name="logUser" id="log-user" placeholder="Nombre de usuario">
@@ -42,7 +42,7 @@
                         </div>
                         <% } %>
                         <div class="register-button">
-                            <button type="submit">Iniciar sesión</button>
+                            <button type="submit" onclick="login()">Iniciar sesión</button>
                         </div>
                 </form>
                 <a href="/users/register"> <p class="back-login"><u>Ir a registro</u></p></a> 
@@ -58,5 +58,63 @@
                 </div>
     </main>
   <%- include('../partials/footer') %>
+  <script>
+
+    const removeChild = (div, id) => {
+      for (var i = 0; i < div.children.length; i++) {
+        if (div.children[i].id == id) {
+          div.removeChild(div.lastChild)
+        }
+      }
+    }
+
+    const removeError = (errors, deleteItem) => {
+      for (var i = 0; i < errors.length; i++) {
+        if (errors[i] == deleteItem) {
+          errors.splice(i, 1);
+        }
+      }
+    }
+
+    const createErrorMessage = (text, div, id) => {
+      let span = document.createElement("span");
+      span.setAttribute('id', id);
+      span.innerText = '';
+      span.innerText = text;
+      span.className = 'text-danger';
+      span.style = 'width:20%';
+      div.appendChild(span);
+    }
+
+    const login = () => {
+      let form = document.querySelector('form.login-form');
+      let emailDiv = document.querySelector('div.log-user');
+      let passwordDiv = document.querySelector('div.log-password');
+      let email = document.getElementById('log-user');
+      let password = document.getElementById('password');
+      let errors = [];
+      form.addEventListener('submit', (event) => {
+        if (email.value == '') {
+          errors.push('emailRequired');
+          removeChild(emailDiv, 'emailRequired');
+          createErrorMessage('Campo requerido', emailDiv, 'emailRequired');
+        } else {
+          removeError(errors, 'emailRequired');
+          removeChild(emailDiv, 'emailRequired');
+        }
+        if (password.value == '') {
+          errors.push('passwordRequired');
+          removeChild(passwordDiv, 'passwordRequired');
+          createErrorMessage('Campo requerido', passwordDiv, 'passwordRequired');
+        } else {
+          removeError(errors, 'passwordRequired');
+          removeChild(passwordDiv, 'passwordRequired');
+        }
+        if (errors.length > 0) {
+          event.preventDefault();
+        }
+      })
+    }
+  </script>
 </body>
 </html>

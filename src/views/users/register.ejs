@@ -1,149 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../partials/head', {webtitle: "Registrarse"}) %>
-<body>
-  <%- include('../partials/header') %>
-    <main>
+<%- include('../partials/head', {webtitle: "Registrarse" }) %>
+
+  <body>
+    <%- include('../partials/header') %>
+      <main>
         <div class="register">
-            <div class="container-login-register">
-                <div class="tab-login">
-                    <a href="/users/login"><button type="button">Iniciar sesión</button></a>
-                </div>
-                <div class="tab-register">
-                    <a href="/users/register"><button type="button">Registro</button></a>
-                </div>
+          <div class="container-login-register">
+            <div class="tab-login">
+              <a href="/users/login"><button type="button">Iniciar sesión</button></a>
             </div>
+            <div class="tab-register">
+              <a href="/users/register"><button type="button">Registro</button></a>
+            </div>
+          </div>
 
-            <div class="card-register">
-                <section>
+          <div class="card-register">
+            <section>
 
-                    <div class="logo-login">
-                        <i class="fa-solid fa-user"></i>
+              <div class="logo-login">
+                <i class="fa-solid fa-user"></i>
+              </div>
+
+              <div class="log-text">
+                <p>Crea una cuenta para agilizar el proceso de pago en el futuro, realizar un seguimiento del
+                  historial de pedidos y recibir correos electrónicos, descuentos y ofertas especiales.</p>
+              </div>
+
+              <form action="/users/register" method="POST" class="form-register" enctype="multipart/form-data">
+
+                <div class="register-log-name">
+                  <i class="fa-solid fa-pencil"></i>
+                  <input type="text" name="firstName" id="firstName" placeholder="Nombre"
+                    value="<%= locals.oldData ? oldData.firstName: null%>">
+                </div>
+                <% if (locals.errors && errors.firstName) { %>
+                  <div class="text-danger">
+                    <%= errors.firstName.msg %>
+                  </div>
+                  <% } %>
+
+                    <div class="register-log-name">
+                      <i class="fa-solid fa-pencil"></i>
+                      <input type="text" name="lastName" id="lastName" placeholder="Apelido"
+                        value="<%= locals.oldData ? oldData.lastName : null%>">
                     </div>
-
-                    <div class="log-text">
-                        <p>Crea una cuenta para agilizar el proceso de pago en el futuro, realizar un seguimiento del
-                            historial de pedidos y recibir correos electrónicos, descuentos y ofertas especiales.</p>
-                    </div>
-                    
-                    <form action="/users/register" method="POST" class="form-register" enctype="multipart/form-data"> 
-
-                        <div class="register-log-name">
-                            <i class="fa-solid fa-pencil"></i>
-                            <input type="text" name="firstName" id="firstName" placeholder="Nombre" value="<%= locals.oldData ? oldData.firstName: null%>" > 
-                        </div> 
-                        <% if (locals.errors && errors.firstName) { %>
-                            <div class="text-danger">
-                                <%= errors.firstName.msg %>
-                            </div>
-                            <% } %>
-
-                        <div class="register-log-name">
-                            <i class="fa-solid fa-pencil"></i>
-                            <input type="text" name="lastName" id="lastName" placeholder="Apelido" value="<%= locals.oldData ? oldData.lastName : null%>" > 
-                        </div> 
-                        <% if (locals.errors && errors.lastName) { %>
-                            <div class="text-danger">
-                                <%= errors.lastName.msg %>
-                            </div>
-                            <% } %>
+                    <% if (locals.errors && errors.lastName) { %>
+                      <div class="text-danger">
+                        <%= errors.lastName.msg %>
+                      </div>
+                      <% } %>
 
                         <div class="register-log-user">
-                            <i class="fa-solid fa-user"></i>
-                            <input type="text" name="logUser" id="logUser" placeholder="Nombre de usuario" value="<%= locals.oldData ? oldData.logUser : null%>" > 
-                        </div> 
+                          <i class="fa-solid fa-user"></i>
+                          <input type="text" name="logUser" id="logUser" placeholder="Nombre de usuario"
+                            value="<%= locals.oldData ? oldData.logUser : null%>">
+                        </div>
                         <% if (locals.errors && errors.logUser) { %>
-                            <div class="text-danger">
-                                <%= errors.logUser.msg %>
-                            </div>
-                            <% } %>
-                        
+                          <div class="text-danger">
+                            <%= errors.logUser.msg %>
+                          </div>
+                          <% } %>
 
-                        <div class="register-log-email">
-                            <i class="fa-solid fa-envelope"></i>
-                            <input type="text" name="email" id="email" placeholder="Correo Electrónico" value="<%= locals.oldData ? oldData.email : null%>" > 
-                        </div> 
-                        <% if (locals.errors && errors.email) { %>
-                            <div class="text-danger">
+
+                            <div class="register-log-email">
+                              <i class="fa-solid fa-envelope"></i>
+                              <input type="text" name="email" id="email" placeholder="Correo Electrónico"
+                                value="<%= locals.oldData ? oldData.email : null%>">
+                            </div>
+                            <% if (locals.errors && errors.email) { %>
+                              <div class="text-danger">
                                 <%= errors.email.msg %>
-                            </div>
-                            <% } %>
+                              </div>
+                              <% } %>
 
-                        <div class="register-log-password">
-                            <i class="fa-solid fa-key"></i>
-                            <input type="password" name="password" id="password" placeholder="Contraseña">
-                        </div>
-                        <% if (locals.errors && errors.password) { %>
-                            <div class="text-danger">
-                                <%= errors.password.msg %>
-                            </div>
-                            <% } %>
+                                <div class="register-log-password">
+                                  <i class="fa-solid fa-key"></i>
+                                  <input type="password" name="password" id="password" placeholder="Contraseña">
+                                </div>
+                                <% if (locals.errors && errors.password) { %>
+                                  <div class="text-danger">
+                                    <%= errors.password.msg %>
+                                  </div>
+                                  <% } %>
 
-                        <div class="register-log-password">
-                            <i class="fa-solid fa-key"></i>
-                            <input type="password" name="repeat_password" id="repeat_password"
-                            placeholder="Repita la Contraseña">
-                        </div>
-                        <% if (locals.errors && errors.repeat_password) { %>
-                            <div class="text-danger">
-                                <%= errors.repeat_password.msg %>
-                            </div>
-                            <% } %>
+                                    <div class="register-log-password">
+                                      <i class="fa-solid fa-key"></i>
+                                      <input type="password" name="repeat_password" id="repeat_password"
+                                        placeholder="Repita la Contraseña">
+                                    </div>
+                                    <% if (locals.errors && errors.repeat_password) { %>
+                                      <div class="text-danger">
+                                        <%= errors.repeat_password.msg %>
+                                      </div>
+                                      <% } %>
 
-                        <div class="register-log-password">
-                            <i class="fa-solid fa-key"></i>
-                            <select name="category_id" id="category_id" class="form-input">
-                                <option value="" selected>- Select Category -</option>
-                                <% if (locals.allCategory) { %>
-                                    <% allCategory.forEach(category => { %>
-                                    <option value="<%= category.id %>"><%= category.name_category %></option>
-                                    <% }); %>
-                                <% }; %>
-                            </select>
-                        </div>
+                                        <div class="register-log-password">
+                                          <i class="fa-solid fa-key"></i>
+                                          <select name="category_id" id="category_id" class="form-input">
+                                            <option value="" selected>- Select Category -</option>
+                                            <% if (locals.allCategory) { %>
+                                              <% allCategory.forEach(category=> { %>
+                                                <option value="<%= category.id %>">
+                                                  <%= category.name_category %>
+                                                </option>
+                                                <% }); %>
+                                                  <% }; %>
+                                          </select>
+                                        </div>
 
-                        <% if (locals.errors && errors.category_id) { %>
-                            <div class="text-danger">
-                                <%= errors.category_id.msg %>
-                            </div>
-                            <% } %>
+                                        <% if (locals.errors && errors.category_id) { %>
+                                          <div class="text-danger">
+                                            <%= errors.category_id.msg %>
+                                          </div>
+                                          <% } %>
 
 
-                        <div class="register-log-image">
-                            <label for="userImage" class="form-label"></label>
-                            <input type="file" name="image" id="image" class="form-input"> 
-                        </div>
-                        <% if (locals.errors && errors.image) { %>
-                            <div class="text-danger">
-                                <%= errors.image.msg %>
-                            </div>
-                            <% } %>
-                            <div class="register-button">
-                                <button type="submit">Registrarse</button>
-                            </div>
-                    </form>
+                                            <div class="register-log-image">
+                                              <label for="userImage" class="form-label"></label>
+                                              <input type="file" name="image" id="image" class="form-input">
+                                            </div>
+                                            <% if (locals.errors && errors.image) { %>
+                                              <div class="text-danger">
+                                                <%= errors.image.msg %>
+                                              </div>
+                                              <% } %>
+                                                <div class="register-button">
+                                                  <button type="submit" onclick="register()">Registrarse</button>
+                                                </div>
+              </form>
 
-                    <div class="Privacy-Policy">
-                        <p>Sus datos personales se utilizarán para respaldar su experiencia en este sitio web, para
-                            administrar el acceso a su cuenta y para otros fines descritos en nuestra <u>política de
-                                privacidad</u></p>
-                    </div>
+              <div class="Privacy-Policy">
+                <p>Sus datos personales se utilizarán para respaldar su experiencia en este sitio web, para
+                  administrar el acceso a su cuenta y para otros fines descritos en nuestra <u>política de
+                    privacidad</u></p>
+              </div>
 
-                    <a href="/users/login"><p class="back-login"><u>Volver a inicio de sesión</u></p></a> 
+              <a href="/users/login">
+                <p class="back-login"><u>Volver a inicio de sesión</u></p>
+              </a>
 
-                </section>
-            </div>
+            </section>
+          </div>
         </div>
-    </main>
-    <div id="modal-menu" class="modal">
+      </main>
+      <div id="modal-menu" class="modal">
         <a class="close" href="#">X</a>
         <li><a href="/">Inicio</a></li>
         <li><a href="/tshirts">Tienda</a></li>
         <li><a class="red" href="/users/login">Iniciar sesión</a></li>
         <li><a href="/users/register">Registrate</a></li>
         <a class="cart" href="/products/cart"><i class="fas fa-solid fa-cart-shopping"></i></a>
-    </div>
-    <%- include('../partials/footer') %>
-</body>
- 
+      </div>
+      <%- include('../partials/footer') %>
+        <script>
+
+          const removeChild = (div, id) => {
+            for (var i = 0; i < div.children.length; i++) {
+              if (div.children[i].id == id) {
+                div.removeChild(div.lastChild)
+              }
+            }
+          }
+
+          const removeError = (errors, deleteItem) => {
+            for (var i = 0; i < errors.length; i++) {
+              if (errors[i] == deleteItem) {
+                errors.splice(i, 1);
+              }
+            }
+          }
+
+          const createErrorMessage = (text, div, id) => {
+            let span = document.createElement("span");
+            span.setAttribute('id', id);
+            span.innerText = '';
+            span.innerText = text;
+            span.className = 'text-danger';
+            span.style = 'width:50%';
+            div.appendChild(span);
+          }
+
+          const register = () => {
+            let form = document.querySelector('form.form-register');
+            let listItem = document.querySelector('div.register-log-name:nth-child(1)');
+            let lastNameDiv = document.querySelector('div.register-log-name:nth-child(2)');
+            let emailDiv = document.querySelector('div.register-log-email');
+            let passwordDiv = document.querySelector('div.register-log-password');
+            let imageDiv = document.querySelector('div.register-log-image');
+            let firstName = document.getElementById('firstName');
+            let lastName = document.getElementById('lastName');
+            let email = document.getElementById('email');
+            let password = document.getElementById('password');
+            let image = document.getElementById('image');
+            let errors = [];
+            form.addEventListener('submit', (event) => {
+              if (firstName.value == '') {
+                removeError(errors, 'invalidName');
+                errors.push('nameRequired');
+                removeChild(listItem, 'nameRequired');
+                removeChild(listItem, 'invalidName');
+                createErrorMessage('Campo requerido', listItem, 'nameRequired');
+              } else {
+                removeError(errors, 'nameRequired');
+                removeChild(listItem, 'nameRequired');
+                if (firstName.value.length < 3) {
+                  errors.push('invalidName');
+                  removeChild(listItem, 'invalidName');
+                  createErrorMessage('Escribe más de dos letras', listItem, 'invalidName');
+                } else {
+                  removeChild(listItem, 'invalidName');
+                  removeError(errors, 'invalidName');
+                }
+              }
+              if (lastName.value == '') {
+                removeError(errors, 'invalidLastName');
+                errors.push('lastNameRequired');
+                removeChild(lastNameDiv, 'lastNameRequired');
+                removeChild(lastNameDiv, 'invalidLastName');
+                createErrorMessage('Campo requerido', lastNameDiv, 'lastNameRequired');
+              } else {
+                removeError(errors, 'lastNameRequired');
+                removeChild(lastNameDiv, 'lastNameRequired');
+                if (lastName.value.length < 3) {
+                  errors.push('invalidLastName');
+                  removeChild(lastNameDiv, 'invalidLastName');
+                  createErrorMessage('Escribe más de dos letras', lastNameDiv, 'invalidLastName');
+                } else {
+                  removeChild(lastNameDiv, 'invalidLastName');
+                  removeError(errors, 'invalidLastName');
+                }
+              }
+              if (email.value == '') {
+                removeError(errors, 'invalidEmail');
+                errors.push('emailRequired');
+                removeChild(emailDiv, 'emailRequired');
+                removeChild(emailDiv, 'invalidEmail');
+                createErrorMessage('Campo requerido', emailDiv, 'emailRequired');
+              } else {
+                removeError(errors, 'emailRequired');
+                removeChild(emailDiv, 'emailRequired');
+                let re = /^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+                if (!re.exec(email.value)) {
+                  errors.push('invalidEmail');
+                  removeChild(emailDiv, 'invalidEmail');
+                  createErrorMessage('Debe ser un correo válido', emailDiv, 'invalidEmail');
+                } else {
+                  removeChild(emailDiv, 'invalidEmail');
+                  removeError(errors, 'invalidEmail');
+                }
+              }
+              if (password.value == '') {
+                removeError(errors, 'invalidPassword');
+                errors.push('passwordRequired');
+                removeChild(passwordDiv, 'passwordRequired');
+                removeChild(passwordDiv, 'invalidPassword');
+                createErrorMessage('Campo requerido', passwordDiv, 'passwordRequired');
+              } else {
+                removeError(errors, 'passwordRequired');
+                removeChild(passwordDiv, 'passwordRequired');
+                if (password.value.length < 8) {
+                  errors.push('invalidPassword');
+                  removeChild(passwordDiv, 'invalidPassword');
+                  createErrorMessage('Escribe 8 o más caracteres', passwordDiv, 'invalidPassword');
+                } else {
+                  removeChild(passwordDiv, 'invalidPassword');
+                  removeError(errors, 'invalidPassword');
+                }
+              }
+              if (image.value == '') {
+                removeError(errors, 'invalidImage');
+                errors.push('imageRequired');
+                removeChild(imageDiv, 'imageRequired');
+                removeChild(imageDiv, 'invalidImage');
+                createErrorMessage('Campo requerido', imageDiv, 'imageRequired');
+              } else {
+                let route = image.value;
+                let validExtensions = ".png, .gif, .jpeg, .jpg";
+                let extension = route.substring(route.lastIndexOf('.') + 1).toLowerCase();
+                let validExtension = validExtensions.indexOf(extension);
+                removeError(errors, 'imageRequired');
+                removeChild(imageDiv, 'imageRequired');
+                 if (validExtension < 0) { 
+                   errors.push('invalidImage');
+                   removeChild(imageDiv, 'invalidImage');
+                   createErrorMessage('Formatos permitidos: .png, .gif, .jpeg, .jpg ', imageDiv, 'invalidImage');
+                 } else {
+                   removeChild(imageDiv, 'invalidImage');
+                   removeError(errors, 'invalidImage');
+                 } 
+              }
+              if (errors.length > 0) {
+                event.preventDefault();
+              }
+            })
+          }
+        </script>
+  </body>
+
 </html>

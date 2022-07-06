@@ -85,7 +85,7 @@
                             </div>
                           <% } %>
                         <div class="edit-buttonSave">
-                        <button type="submit">Guardar</button>
+                        <button type="submit" onclick="editProduct()">Guardar</button>
                         </div>
                     </form>
                     <div class="edit-back-product">
@@ -104,6 +104,92 @@
         <a class="cart" href="/products/cart"><i class="fas fa-solid fa-cart-shopping"></i></a>
     </div>
     <%- include('../partials/footer') %>
+    <script>
+      const removeChild = (div, id) => {
+        for (var i = 0; i < div.children.length; i++) {
+          if (div.children[i].id == id) {
+            div.removeChild(div.lastChild)
+          }
+        }
+      }
+
+      const removeError = (errors, deleteItem) => {
+        for (var i = 0; i < errors.length; i++) {
+          if (errors[i] == deleteItem) {
+            errors.splice(i, 1);
+          }
+        }
+      }
+
+      const createErrorMessage = (text, div, id) => {
+        let span = document.createElement("span");
+        span.setAttribute('id', id);
+        span.innerText = '';
+        span.innerText = text;
+        span.className = 'text-danger';
+        span.style = 'width:70%';
+        div.appendChild(span);
+      }
+
+      const editProduct = () => {
+        
+        let form = document.querySelector('form.form-editProduct');
+        let productDiv = document.querySelector('div.edit-log-nameProduct');
+        let descriptionDiv = document.querySelector('div.edit-log-description');
+        let imageDiv = document.querySelector('div.edit-log-image');
+        let product = document.getElementById('name');
+        let description = document.getElementById('description');
+        let image = document.getElementById('productImage');
+        let errors = [];
+        form.addEventListener('submit', (event) => {
+          if (product.value == '') {
+            removeError(errors, 'invalidName');
+            errors.push('nameRequired');
+            removeChild(productDiv, 'nameRequired');
+            removeChild(productDiv, 'invalidName');
+            createErrorMessage('Campo requerido', productDiv, 'nameRequired');
+          } else {
+            removeError(errors, 'nameRequired');
+            removeChild(productDiv, 'nameRequired');
+            if (product.value.length < 5) {
+              errors.push('invalidName');
+              removeChild(productDiv, 'invalidName');
+              createErrorMessage('Escribe más de 5 letras', productDiv, 'invalidName');
+            } else {
+              removeChild(productDiv, 'invalidName');
+              removeError(errors, 'invalidName');
+            }
+          }
+
+          if (description.value.length < 20) {
+            errors.push('invalidDescription');
+            removeChild(descriptionDiv, 'invalidDescription');
+            createErrorMessage('Escribe más de 20 caracteres', descriptionDiv, 'invalidDescription');
+          } else {
+            removeChild(descriptionDiv, 'invalidDescription');
+            removeError(errors, 'invalidDescription');
+          }
+
+          let route = image.value;
+          let validExtensions = ".png, .gif, .jpeg, .jpg";
+          let extension = route.substring(route.lastIndexOf('.') + 1).toLowerCase();
+          let validExtension = validExtensions.indexOf(extension);
+          removeError(errors, 'imageRequired');
+          removeChild(imageDiv, 'imageRequired');
+          if (validExtension < 0) {
+            errors.push('invalidImage');
+            removeChild(imageDiv, 'invalidImage');
+            createErrorMessage('Debe ser: .png, .gif, .jpeg, .jpg ', imageDiv, 'invalidImage');
+          } else {
+            removeChild(imageDiv, 'invalidImage');
+            removeError(errors, 'invalidImage');
+          }
+          if (errors.length > 0) {
+            event.preventDefault();
+          }
+        })
+      }
+    </script>
 </body>
  
 </html>

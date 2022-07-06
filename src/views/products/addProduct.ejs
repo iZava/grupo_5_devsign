@@ -15,82 +15,105 @@
             </div>
             <form action="/products/createProduct" method="POST" enctype="multipart/form-data" class="form-editProduct">
               <div class="edit-log-nameProduct">
-                <input type="text" name="name" id="name" placeholder="Nombre del producto" value="<%= locals.oldData ? oldData.name: null%>">
+                <input type="text" name="name" id="name" placeholder="Nombre del producto"
+                  value="<%= locals.oldData ? oldData.name: null%>">
               </div>
               <% if (locals.errors && errors.name) { %>
                 <div class="text-danger">
-                  <div><%= errors.name.msg %></div>
+                  <div>
+                    <%= errors.name.msg %>
+                  </div>
                 </div>
-              <% } %>
-                
-              <div class="edit-log-description">
-                <input type="text" name="description" id="description" placeholder="Descripción" value="<%= locals.oldData ? oldData.description: null%>">
-              </div>
-              <% if (locals.errors && errors.description) { %>
-                <div class="text-danger">
-                  <div><%= errors.description.msg %></div>
-                </div>
-              <% } %>
-              <div class="edit-log-price">
-                <input type="text" name="price" id="price" placeholder="Precio" value="<%= locals.oldData ? oldData.price: null%>">
-              </div>
-              <% if (locals.errors && errors.price) { %>
-                <div class="text-danger">
-                  <div><%= errors.price.msg %></div>
-                </div>
-              <% } %>
-              
-              <div class="edit-log-category">
-                <select name="category_id" id="category_id" class="form-input">
-                  <option value ="" disabled selected>- Select Category -</option>
-                  <% allCategory.forEach(category => { %>
-                  <option value="<%= category.id %>"><%= category.name_product_category %></option>
-                  <% }); %>
-                </select>
-              </div>
-              <% if (locals.errors && errors.category_id) { %>
-                <div class="text-danger">
-                  <div><%= errors.category_id.msg %></div>
-                </div>
-              <% } %>
-              <div class="edit-log-color">
-                <select name="color_id" id="color_id" class="form-input">
-                  <option value ="" disabled selected>- Select Color -</option>
-                  <% allColor.forEach(color => { %>
-                  <option value="<%= color.id %>"><%= color.name_color %></option>
-                  <% }); %>
-                </select>
-              </div>
-              <% if (locals.errors && errors.color_id) { %>
-                <div class="text-danger">
-                  <div><%= errors.color_id.msg %></div>
-                </div>
-              <% } %>
-              <div class="edit-log-color">
-                <select name="size_id" id="size_id" class="form-input">
-                  <option value ="" disabled selected>- Select Size -</option>
-                  <% allSize.forEach(size => { %>
-                  <option value="<%= size.id %>"><%= size.name_size %></option>
-                  <% }); %>
-                </select>
-              </div>
-              <% if (locals.errors && errors.size_id) { %>
-                <div class="text-danger">
-                  <div><%= errors.size_id.msg %></div>
-                </div>
-              <% } %>
-              <div class="edit-log-image">
-                <label for="productImage" class="form-label"></label>
-                <input type="file" name="image" id="productImage" class="form-input" onchange="myFunction()">
-              </div>
-              <% if (locals.errors && errors.image) { %>
-                <div class="text-danger">
-                  <div><%= errors.image.msg %></div>
-                </div>
-              <% } %>
-              <div class="edit-buttonSave">
-                <button type="submit">Guardar</button>          
-              </div>
+                <% } %>
+
+                  <div class="edit-log-description">
+                    <input type="text" name="description" id="description" placeholder="Descripción"
+                      value="<%= locals.oldData ? oldData.description: null%>">
+                  </div>
+                  <% if (locals.errors && errors.description) { %>
+                    <div class="text-danger">
+                      <div>
+                        <%= errors.description.msg %>
+                      </div>
+                    </div>
+                    <% } %>
+                      <div class="edit-log-price">
+                        <input type="text" name="price" id="price" placeholder="Precio"
+                          value="<%= locals.oldData ? oldData.price: null%>">
+                      </div>
+                      <% if (locals.errors && errors.price) { %>
+                        <div class="text-danger">
+                          <div>
+                            <%= errors.price.msg %>
+                          </div>
+                        </div>
+                        <% } %>
+
+                          <div class="edit-log-category">
+                            <select name="category_id" id="category_id" class="form-input">
+                              <option value="" disabled selected>- Select Category -</option>
+                              <% allCategory.forEach(category=> { %>
+                                <option value="<%= category.id %>">
+                                  <%= category.name_product_category %>
+                                </option>
+                                <% }); %>
+                            </select>
+                          </div>
+                          <% if (locals.errors && errors.category_id) { %>
+                            <div class="text-danger">
+                              <div>
+                                <%= errors.category_id.msg %>
+                              </div>
+                            </div>
+                            <% } %>
+                              <div class="edit-log-color">
+                                <select name="color_id" id="color_id" class="form-input">
+                                  <option value="" disabled selected>- Select Color -</option>
+                                  <% allColor.forEach(color=> { %>
+                                    <option value="<%= color.id %>">
+                                      <%= color.name_color %>
+                                    </option>
+                                    <% }); %>
+                                </select>
+                              </div>
+                              <% if (locals.errors && errors.color_id) { %>
+                                <div class="text-danger">
+                                  <div>
+                                    <%= errors.color_id.msg %>
+                                  </div>
+                                </div>
+                                <% } %>
+                                  <div class="edit-log-color">
+                                    <select name="size_id" id="size_id" class="form-input">
+                                      <option value="" disabled selected>- Select Size -</option>
+                                      <% allSize.forEach(size=> { %>
+                                        <option value="<%= size.id %>">
+                                          <%= size.name_size %>
+                                        </option>
+                                        <% }); %>
+                                    </select>
+                                  </div>
+                                  <% if (locals.errors && errors.size_id) { %>
+                                    <div class="text-danger">
+                                      <div>
+                                        <%= errors.size_id.msg %>
+                                      </div>
+                                    </div>
+                                    <% } %>
+                                      <div class="edit-log-image">
+                                        <label for="productImage" class="form-label"></label>
+                                        <input type="file" name="image" id="productImage" class="form-input">
+                                      </div>
+                                      <% if (locals.errors && errors.image) { %>
+                                        <div class="text-danger">
+                                          <div>
+                                            <%= errors.image.msg %>
+                                          </div>
+                                        </div>
+                                        <% } %>
+                                          <div class="edit-buttonSave">
+                                            <button type="submit" onclick="createProduct()">Guardar</button>
+                                          </div>
             </form>
             <div class="edit-back-product">
               <a href="/products/addEditProduct">Volver a productos</a>
@@ -108,7 +131,92 @@
         <a class="cart" href="/products/cart"><i class="fas fa-solid fa-cart-shopping"></i></a>
       </div>
       <%- include('../partials/footer') %>
-      
+        <script>
+          const removeChild = (div, id) => {
+            for (var i = 0; i < div.children.length; i++) {
+              if (div.children[i].id == id) {
+                div.removeChild(div.lastChild)
+              }
+            }
+          }
+
+          const removeError = (errors, deleteItem) => {
+            for (var i = 0; i < errors.length; i++) {
+              if (errors[i] == deleteItem) {
+                errors.splice(i, 1);
+              }
+            }
+          }
+
+          const createErrorMessage = (text, div, id) => {
+            let span = document.createElement("span");
+            span.setAttribute('id', id);
+            span.innerText = '';
+            span.innerText = text;
+            span.className = 'text-danger';
+            span.style = 'width:70%';
+            div.appendChild(span);
+          }
+
+          const createProduct = () => {
+            
+            let form = document.querySelector('form.form-editProduct');
+            let productDiv = document.querySelector('div.edit-log-nameProduct');
+            let descriptionDiv = document.querySelector('div.edit-log-description');
+            let imageDiv = document.querySelector('div.edit-log-image');
+            let product = document.getElementById('name');
+            let description = document.getElementById('description');
+            let image = document.getElementById('productImage');
+            let errors = [];
+            form.addEventListener('submit', (event) => {
+              if (product.value == '') {
+                removeError(errors, 'invalidName');
+                errors.push('nameRequired');
+                removeChild(productDiv, 'nameRequired');
+                removeChild(productDiv, 'invalidName');
+                createErrorMessage('Campo requerido', productDiv, 'nameRequired');
+              } else {
+                removeError(errors, 'nameRequired');
+                removeChild(productDiv, 'nameRequired');
+                if (product.value.length < 5) {
+                  errors.push('invalidName');
+                  removeChild(productDiv, 'invalidName');
+                  createErrorMessage('Escribe más de 5 letras', productDiv, 'invalidName');
+                } else {
+                  removeChild(productDiv, 'invalidName');
+                  removeError(errors, 'invalidName');
+                }
+              }
+
+              if (description.value.length < 20) {
+                errors.push('invalidDescription');
+                removeChild(descriptionDiv, 'invalidDescription');
+                createErrorMessage('Escribe más de 20 caracteres', descriptionDiv, 'invalidDescription');
+              } else {
+                removeChild(descriptionDiv, 'invalidDescription');
+                removeError(errors, 'invalidDescription');
+              }
+
+              let route = image.value;
+              let validExtensions = ".png, .gif, .jpeg, .jpg";
+              let extension = route.substring(route.lastIndexOf('.') + 1).toLowerCase();
+              let validExtension = validExtensions.indexOf(extension);
+              removeError(errors, 'imageRequired');
+              removeChild(imageDiv, 'imageRequired');
+              if (validExtension < 0) {
+                errors.push('invalidImage');
+                removeChild(imageDiv, 'invalidImage');
+                createErrorMessage('Debe ser: .png, .gif, .jpeg, .jpg ', imageDiv, 'invalidImage');
+              } else {
+                removeChild(imageDiv, 'invalidImage');
+                removeError(errors, 'invalidImage');
+              }
+              if (errors.length > 0) {
+                event.preventDefault();
+              }
+            })
+          }
+        </script>
   </body>
 
 </html>
