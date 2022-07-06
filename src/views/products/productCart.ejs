@@ -4,59 +4,60 @@
   <body>
     <%- include('../partials/header') %>
       <main>
-        <section class="cart-complete">
-          <section class="cart-articles">
-            <section class="cart11">
-              <section class="cart-detail">
+        <div class="cart-complete">
+          <div class="cart-articles">
+            <div class="cart11">
+              <div class="cart-detail">
                 <div class="cart-image">
-                  <img src="images/products/t-shirt1.jpg" alt="camiseta">
+                  <img src="/images/products/t-shirt1.jpg" alt="camiseta">
                 </div>
                 <div class="container-value-cant-remove">
-                  <div class="item-value">
-                    <p>$45.000</p>
-                  </div>
-                  <div class="N-objects">
-                    <label for="cant">Cantidad</label>
-                    <input type="number" name="cant" min="0" step="1" value="1">
-                  </div>
-                </div <div class="cart-description">
-                <p>Camiseta estampada slayer tipo1</p>
-                <p>Color: negro</p>
-                <p>Talla: S</p>
-                </div>
-                <div class="remove-object">
-                  <i class="fa-solid fa-trash-can"></i>
-                </div>
-              </section>
-            </section>
-            <!--------------------------SEGUNDO ARTICULO---------------------->
-            <section class="cart11">
-              <section class="cart-detail">
-                <div class="cart-image">
-                  <img src="images/products/t-shirt1.jpg" alt="camiseta">
-                </div>
-                <div class="container-value-cant-remove">
-                  <div class="item-value">
-                    <p>$45.000</p>
-                  </div>
-                  <div class="N-objects">
-                    <label for="cant">Cantidad</label>
-                    <input type="number" name="cant" min="0" step="1" value="1">
-                  </div>
-                </div>
-                <div class="cart-description">
-                  <p>Camiseta estampada slayer tipo1</p>
+                  <div class="cart-description">
+                    <div class="item-value">
+                      <p>$45.000</p>
+                    </div>
+                  <h4>Camiseta estampada Angular</h4>
                   <p>Color: negro</p>
                   <p>Talla: S</p>
+                  <div class="N-objects">
+                    <label for="cant">Cantidad</label>
+                    <input type="number" name="cant" min="0" step="1" value="1">
+                  </div>
+                  <div class="remove-object">
+                    <i class="fa-solid fa-trash-can"></i>
+                  </div>
+                  </div>
+                </div> 
+              </div>
+            </div>
+            <!--------------------------SEGUNDO ARTICULO---------------------->
+            <div class="cart11">
+              <div class="cart-detail">
+                <div class="cart-image">
+                  <img src="/images/products/t-shirt3.jpg" alt="camiseta">
                 </div>
-                <div class="remove-object">
-                  <i class="fa-solid fa-trash-can"></i>
-                </div>
-              </section>
-            </section>
-          </section>
+                <div class="container-value-cant-remove">
+                  <div class="cart-description">
+                    <div class="item-value">
+                      <p>$45.000</p>
+                    </div>
+                  <h4>Camiseta estampada Phyton</h4>
+                  <p>Color: negro</p>
+                  <p>Talla: S</p>
+                  <div class="N-objects">
+                    <label for="cant">Cantidad</label>
+                    <input type="number" name="cant" min="0" step="1" value="1">
+                  </div>
+                  <div class="remove-object">
+                    <i class="fa-solid fa-trash-can"></i>
+                  </div>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </div>
           <!------------------------RESUMEN DE ARTICULOS----------------------------->
-          <section class="cart-summary-articles">
+          <div class="cart-summary-articles">
             <div class="summary-articles">
               <p>2 Artículos</p>
               <p>$90.000</p>
@@ -64,14 +65,14 @@
               <p>$12.000</p>
             </div>
             <div class="total-items">
-              <p>Total(impuestos incluidos)</p>
+              <p><i>Total (impuestos incluidos)</i></p>
               <p>$102.000</p>
             </div>
             <div class="checkout">
               <button type="button">COMPRAR</button>
             </div>
-          </section>
-        </section>
+          </div>
+        </div>
       </main>
       <%- include('../partials/footer') %>
         <div id="modal-menu" class="modal">
