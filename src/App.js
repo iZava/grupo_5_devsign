@@ -29,10 +29,14 @@ app.set("views", path.join(__dirname, "views"));
 // *******Routes*******
 const productsRouter = require("./routes/productsRouter");
 const usersRouter = require("./routes/usersRouter");
+const apiProductsRouter = require("./routes/api/apiProductsRouter");
+const apiUsersRouter = require("./routes/api/apiUsersRouter");
 const indexRouter = require("./routes/indexRouter");
 
 app.use("/products", productsRouter);
 app.use("/users", usersRouter);
+app.use("/products", apiProductsRouter);
+app.use("/users", apiUsersRouter);
 app.use("/", indexRouter);
 
 // ******Start server******

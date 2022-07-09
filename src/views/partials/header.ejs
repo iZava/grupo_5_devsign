@@ -2,7 +2,7 @@
   <% if (locals.isLogged) { %>
     <div class="locals">
       <a href="/users/profile"> <h3>¡Hola <%= locals.isLogged.logUser %>! </h3> </a>
-      <img class="image-locals" src="/images/users/<%= locals.isLogged.image %>" alt="imágen de perfil">
+      <img class="image-locals" src="/images/users/<%= isLogged.image %>" alt="imágen de perfil">
   </div>
       <% } %>
   <nav>
