@@ -20,6 +20,10 @@
 body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--light-gray);
+  position: relative;
+  padding-bottom: 5rem;
+  min-height: 100vh;
+
 }
 
 .locals img {
@@ -129,6 +133,10 @@ nav form.search input[type=search] {
 
 footer {
   margin-top: 3rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  
 }
 
 .footer-container {

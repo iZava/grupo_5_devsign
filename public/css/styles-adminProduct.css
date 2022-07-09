@@ -2,16 +2,45 @@
         padding: 20px 0 10px 20px   ;
     }
 
+    .buttons-container {
+        display: flex;
+        justify-content: center;
+        margin: 100px 0 0 0;
+        
+    }
+
+    .btnNew .admin-button {
+        background-color:var(--red);
+        color: rgba(255, 255, 255, 0.788);
+        border-radius: 20px;
+        padding: 30px 40px;
+        border: none;
+        box-shadow: -2px -2px 1px 2px rgba(255, 255, 255, 0.5), 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        margin: 40px;
+        font-size: 30px;
+        text-align: center;
+
+    }
+
+    .btnNew {
+        color: rgba(255, 255, 255, 0.788);
+        text-decoration: none;
+    }
+
     .btnNew input{
         background-color:var(--red);
         color: var(--white);
-        border-radius: 20px;
-        padding: 5px 20px;
+        border-radius: 10px;
+        padding: 5px 10px;
         border: none;
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
         box-shadow: -2px -2px 1px 2px rgba(255, 255, 255, 0.5), 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
         cursor: pointer;
+       
     }
+
+    
     .container-edit-products{
         margin: 10px;
         box-shadow: -2px -2px 1px 2px rgba(255, 255, 255, 0.5), 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
@@ -101,6 +130,14 @@
         .tableProducts td::before {
             content: attr(data-label);
             float: left;
+        }
+
+        .buttons-container {
+            display: block;
+            width: 100%;
+            margin: auto;
+
+            
         }
     
     }
