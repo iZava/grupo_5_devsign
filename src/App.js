@@ -1,12 +1,14 @@
 const express = require("express");
 const session = require("express-session");
+const cors = require("cors");
 const path = require("path");
 const methodOverride =  require('method-override');
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 // ******Static files******
 app.use(express.static(path.join(__dirname, "../", "public")));
+app.use(cors());
 
 // ******Middlewares******
 app.use(express.urlencoded({ extended: false }));
