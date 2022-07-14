@@ -12,7 +12,7 @@ const controller = {
                         [sequelize.col('name_product_category'),'name_product_category'],
                         [sequelize.col('name_color'),'name_color'],
                         [sequelize.col('name_size'),'name_size']
-                ],
+                ]
             })
            
             const countCategory = await Product.findAll({
@@ -21,16 +21,22 @@ const controller = {
                 group: ["name_product_category"]
                 
             })
-            const detail = await Product.findAll({
-
-            })
-
+            
+            const latProduct = await Product.findAll({
+                attributes: [[sequelize.fn('max', sequelize.col('id')), 'ultimo']]
+            });
+            const idLatest = latProduct[0].dataValues.ultimo
+            const latestProduct = await Product.findOne({ where: { id: idLatest } })
+            
             return res.json({
                 count: productsList.length,
                 countByCategory: countCategory,
                 products: productsList,
+                countCategory: countCategory,
+                latestProduct: latestProduct,
                 status: 200
             });
+
         } catch (err) {
             console.error(err);
         }

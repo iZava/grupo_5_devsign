@@ -14,10 +14,17 @@ const controller = {
             const detail = await User.findAll({
 
             })
+            const latUser = await User.findAll({
+                attributes: [[sequelize.fn('max', sequelize.col('id')), 'ultimo']]
+            });
+            const idLatest = latUser[0].dataValues.ultimo
+            const latestUser = await User.findOne({ where: { id: idLatest } })
+            
 
             return res.json({
                 count: usersList.length,
                 users: usersList,
+                latestUser: latestUser,
                 status: 200
             });
         } catch (err) {
