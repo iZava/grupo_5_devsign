@@ -15,7 +15,6 @@ const get = async (url) => {
 
 const post = async (url, body) => {
   const response = await fetch(url, {
-    mode: 'no-cors',
     method: "POST",
     headers: headers(),
     body,
@@ -25,7 +24,6 @@ const post = async (url, body) => {
 
 const put = async (url, body) => {
   const response = await fetch(url, {
-    mode: 'no-cors',
     method: "PUT",
     headers: headers(),
     body,
@@ -35,7 +33,6 @@ const put = async (url, body) => {
 
 const _delete = async (url) => {
   const response = await fetch(url, {
-    mode: 'no-cors',
     method: "DELETE",
     headers: headers(),
   });
