@@ -2,6 +2,7 @@ const { sequelize } = require('../../../database/models/index');
 const db = require('../../../database/models/index');
 
 const Product = db.product;
+const ProductCategory = db.product_category;
 
 const controller = {
     productList: async function (req, res) {
@@ -11,29 +12,24 @@ const controller = {
                 attributes: ['id','name','description',
                         [sequelize.col('name_product_category'),'name_product_category'],
                         [sequelize.col('name_color'),'name_color'],
-                        [sequelize.col('name_size'),'name_size']
+                        [sequelize.col('name_size'),'name_size'], 'url'
                 ]
             })
            
-            const countCategory = await Product.findAll({
+            const countByCategory = await Product.findAll({
                 include: ['fkproduct_category'],
                 attributes: [[sequelize.col('name_product_category'),'name_product_category'],[sequelize.fn("COUNT", sequelize.col("category_id")), "Cantidad"]],
                 group: ["name_product_category"]
                 
             })
-            
-            const latProduct = await Product.findAll({
-                attributes: [[sequelize.fn('max', sequelize.col('id')), 'ultimo']]
-            });
-            const idLatest = latProduct[0].dataValues.ultimo
-            const latestProduct = await Product.findOne({ where: { id: idLatest } })
+            const countCategory = await ProductCategory.findAll({                               
+            })         
             
             return res.json({
                 count: productsList.length,
-                countByCategory: countCategory,
+                countByCategory: countByCategory,
                 products: productsList,
-                countCategory: countCategory,
-                latestProduct: latestProduct,
+                countCategory: countCategory.length,                
                 status: 200
             });
 
@@ -52,6 +48,22 @@ const controller = {
             detail: product
         })
         }catch (err) {
+            console.error(err);
+        }
+    },
+    latestproduct: async function (req, res) {
+        try {                      
+            const latProduct = await Product.findAll({
+                attributes: [[sequelize.fn('max', sequelize.col('id')), 'ultimo']]
+            });
+            const idLatest = latProduct[0].dataValues.ultimo
+            const latestProduct = await Product.findOne({ where: { id: idLatest } })
+            
+            return res.json({                
+                latestProduct: latestProduct,
+                status: 200
+            });
+        } catch (err) {
             console.error(err);
         }
     }

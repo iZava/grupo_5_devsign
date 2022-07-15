@@ -11,6 +11,7 @@ const productsController = require("../../controllers/api/apiProductsController"
 //******Routes******
 
 router.get("/", productsController.productList);
+router.get("/latestproduct", productsController.latestproduct);
 router.get("/:id", productsController.productDetail);
 
 
