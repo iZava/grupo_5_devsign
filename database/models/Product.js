@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         image: {
-            type: DataTypes.BLOB,
+            type: DataTypes.STRING(250),
             allowNull: false
         },
         category_id: {
@@ -36,7 +36,16 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             allowNull: false
             
-        }
+        },
+        url: {
+            type: DataTypes.VIRTUAL,
+            get() {
+              return `http://localhost:3001/products/${this.id}`;
+            },
+            set(value) {
+              throw new Error('Do not try to set the `fullName` value!');
+            }
+          }
    
 }
     let config = {

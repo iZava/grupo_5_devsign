@@ -5,6 +5,7 @@ const usersController = require("../../controllers/api/apiUsersController");
 
 
 router.get("/", usersController.UserList);
+router.get("/latestUser", usersController.latestUser);
 router.get("/:id", usersController.UserDetail);
 
 
