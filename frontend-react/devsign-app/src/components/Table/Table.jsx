@@ -1,24 +1,31 @@
 import React from "react";
-import { DashboardService } from "../../services/dashboardServices";
-import './table.css';
 
-const Table = () => {
-  const [users, setUsers] = React.useState([]);
-  React.useEffect(() => {
-    const getUsers = async () => {
-      const usersData = await DashboardService.getUsers();
-      setUsers(usersData);
-      console.log(users)
-    }
-    getUsers();
+const Table = ({columns = [] }) => {
+return (
+  <>
+  <table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Categoría</th>
+      <th>Color</th>
+      <th>Precio</th>
+    </tr>
+  </thead>
+    <tbody>
+        { columns.map((item, index) => 
+        <tr key={item + index}>
+          <td>{item.name}</td>
+          <td>{item.name_product_category}</td>
+          <td>{item.name_color}</td>
+          <td>{item.price}</td> 
+        </tr>
+        ) }
 
-  }, []);
-
-  return(
-    <>
-    <h1>users</h1>
-    </>
-  )
+    </tbody>
+  </table>
+  </>
+);
 }
 
 export default Table;

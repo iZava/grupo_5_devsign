@@ -1,0 +1,56 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.multiple-panels {
+    padding: 2rem;
+    width: 50%;
+}
+
+.table-panel {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.top-tab {
+    width: 25%;
+}
+
+.details {
+    width: 100%;
+    gap: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+table {
+    margin: 2rem 0 0 0;
+    border-spacing: 3rem 0.5rem;
+    background: rgba( 255, 255, 255, 0 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 1rem;
+}
+
+table thead th {
+    font-weight: bold;
+}
+
+table tbody {
+    font-weight: 400;
+}

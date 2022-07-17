@@ -5,7 +5,6 @@ const headers = () => ({
 });
 
 const get = async (url) => {
-  console.log('url', url)
   const response = await fetch(url, {
     method: "GET",
     headers: headers(),
