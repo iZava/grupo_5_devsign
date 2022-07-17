@@ -20,7 +20,12 @@
         margin: 40px;
         font-size: 30px;
         text-align: center;
+        transition: all 0.3s ease-in-out;
+    }
 
+    .btnNew .admin-button:hover {
+        box-shadow: -5px -5px 2px 3px rgba(255, 255, 255, 0.5), 5px 5px 5px 2px rgba(0, 0, 0, 0.2);
+        font-size: 35px;
     }
 
     .btnNew {

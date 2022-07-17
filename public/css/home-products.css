@@ -28,14 +28,22 @@
     color: var(--red);
 }
 
-.intermediate button {
+.intermediate a {
     background-color: var(--red);
-    border-radius: .5rem;
+    border-radius: .8rem;
     padding: .8rem;
     color: var(--white);
     cursor: pointer;
     border: none;
     margin: .8rem;
+}
+
+.intermediate input {
+    background: var(--red);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    font-size: var(--medium);
 }
 
 
