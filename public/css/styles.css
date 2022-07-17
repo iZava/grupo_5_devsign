@@ -71,6 +71,11 @@ nav .nav-items ul li a {
   color: var(--black);
 }
 
+nav .nav-items ul li .image-locals {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
 .nav-items a.cart,
 .responsive-menu a.cart,
 .nav-items ul li a.red,
