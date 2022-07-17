@@ -1,30 +1,19 @@
 import React from "react";
 import './InfoTab.css';
 
-const InfoTab = () => {
+const InfoTab = (props) => {
 
-  React.useEffect(() => {
-    const getTransactionData = async () => {
-      const transactionData = await PagosPseWService.getTransaction(id);
-      if (transactionData.statusCode === 200 && transactionData.data.data) {
-        if (typeof transactionData.data.data !== 'undefined') {
-          setIsOpen(false)
-        }
-        setTransaction(transactionData);
-      } else {
-        setIsOpenReqError(true);
-      }
+  return (
+    <>
+      <div className="panel-container">
+        <h3>{props.title}</h3>
+        <p>{props.total}</p>
+        <p>{props.name}</p>
+        <p>{props.lastName}</p>
+        <p>{props.price}</p>
+      </div>
 
-    }
-    if (id) {
-      getTransactionData(id);
-    }
-  }, []);
-
-  return(
-    <nav className="topbar">
-      <li>Inicio</li>
-    </nav>
+    </>
   )
 }
 

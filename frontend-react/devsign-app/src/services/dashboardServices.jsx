@@ -44,12 +44,12 @@ export const DashboardService = {
     }
   },
 
-  getLastProductId: async () => {
+  getLastProduct: async () => {
     try {
       
       return await http
       
-        .get('http://localhost:3001/products/')
+        .get('http://localhost:3001/products/latestproduct')
         .then((res) => {
           return res;
           
@@ -65,7 +65,7 @@ export const DashboardService = {
     }
   },
 
-  getLastProductDetail: async (id) => {
+  getProductDetail: async (id) => {
     try {
       
       return await http
@@ -84,12 +84,13 @@ export const DashboardService = {
       throw Error("Error al obtener productos");
     }
   },
-  getLastUserId: async () => {
+
+  getLastUser: async () => {
     try {
       
       return await http
       
-        .get('http://localhost:3001/users/')
+        .get('http://localhost:3001/users/latestuser')
         .then((res) => {
           return res;
           
@@ -105,7 +106,7 @@ export const DashboardService = {
     }
   },
 
-  getLastUserDetail: async (id) => {
+  getUserDetail: async (id) => {
     try {
       
       return await http

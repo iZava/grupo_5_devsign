@@ -12,7 +12,7 @@ const controller = {
                 attributes: ['id','name','description',
                         [sequelize.col('name_product_category'),'name_product_category'],
                         [sequelize.col('name_color'),'name_color'],
-                        [sequelize.col('name_size'),'name_size'], 'url'
+                        [sequelize.col('name_size'),'name_size'],'price', 'url'
                 ]
             })
            
