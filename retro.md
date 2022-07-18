@@ -170,3 +170,27 @@ Dilatar los tiempos (no dejar todo para último momento)
 ## 5 Dejar de hacer
 
 -   Dilatar los tiempos por más que veamos que no es posible cumplir con el plazo establecido.
+
+## SPRINT 8 (en vigencia 24/06)
+
+## 1 Comenzar a hacer
+
+-   Practicar sobre el proyecto (detectar fallas y mejoras).
+
+## 2 Hacer más
+
+-   Repasar conceptos vistos en clase.
+
+## 3. Continuar haciendo.
+
+-   Comunicacarnos entre nosotros fuera de las reuniones.
+-   Preguntar cómo venimos con las tareas.
+
+## 4 Hacer menos
+
+-   Dilatar los tiempos para cumplir con los pendientes.
+-   Posponer reuniones.
+
+## 5 Dejar de hacer
+
+-   Querer mejorarlo todo (en este punto, si anda, es lo adecuado).
