@@ -74,6 +74,7 @@ nav .nav-items ul li a {
 nav .nav-items ul li .image-locals {
   width: 1.8rem;
   height: 1.8rem;
+  border-radius: 50%;
 }
 
 .nav-items a.cart,
