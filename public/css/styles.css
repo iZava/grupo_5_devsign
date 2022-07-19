@@ -23,36 +23,26 @@ body {
   position: relative;
   padding-bottom: 5rem;
   min-height: 100vh;
-
 }
 
-.locals img {
-  width: 1.6%;
-  box-shadow: #8D99AE 0 0 0.8rem;
-  border-radius: 20%;
-  margin:.3rem 0 ;
-} 
-
-.locals {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  
+.nav-items ul li img {
+  margin-left: 1rem;
+  display:flex;
+  width: 1.8rem;
+  border-radius: 30%;
 }
-.locals h3 {
-  display: inline-block;
-  color: var(--red);
-  padding-right: 0.5rem;
-  text-transform: capitalize ;
-
+.nav-items ul li .locals p{
+  color: var(--black);
 }
 
 nav {
+  background: linear-gradient(to top, var(--light-gray), var(--dark-gray));
   justify-content: space-between;
-  padding: 2rem 2rem;
-  -webkit-box-shadow: 0px 7px 16px -8px var(--black);
-  box-shadow: 0px 7px 16px -8px var(--black);
+  padding: 2rem;
+  
+  border-bottom: none;
+  -webkit-box-shadow: 0px 7px 16px -8px var(--light-gray);
+  box-shadow: 0px 7px 16px -8px var(--light-gray);
 }
 
 nav,
@@ -79,6 +69,12 @@ nav img {
 nav .nav-items ul li a {
   text-decoration: none;
   color: var(--black);
+}
+
+nav .nav-items ul li .image-locals {
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
 }
 
 .nav-items a.cart,

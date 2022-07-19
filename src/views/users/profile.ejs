@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('../partials/head', {webtitle: "Usuario"}) %>
-  <body>
-    <%- include('../partials/header') %>
-    <div class="title">
-    <h2>Tu usuario:</h2>
-    </div>
-    <div class="user">
-      <h3><%= user.logUser %></h3>
-      <p><%= user.email %></p> <br>
-      <img
-        src="/images/users/<%= user.image %>"
-        alt="imágen de perfil"
-        width="200px"
-      />
-    </div>
-      <%- include('../partials/footer') %>
-  </body>
+    <%- include('../partials/head', {webtitle: "Usuario"}) %>
+    <body>
+        <%- include('../partials/header') %>
+
+        <div class="title">
+            <h2>¡Bienvenido <%= user.firstName %>!</h2>
+        </div>
+        <div class="user">
+          <div class="profile-image">
+            <img
+                src="/images/users/<%= user.image %>"
+                alt="imágen de perfil"
+                width="200px"
+            />
+          </div>
+          <div class="user-description">
+            <div class="description-dates">
+            <p><span>Nombre:</span> <%= user.firstName %></p>
+            <p><span>Apellido:</span> <%= user.lastName %></p>
+            <p><span>Email:</span> <%= user.email %></p>
+            <p><span>Usuario:</span> <%= user.logUser %></p>
+          </div>
+        </div>
+        </div>
+        <%- include('../partials/footer') %>
+    </body>
 </html>

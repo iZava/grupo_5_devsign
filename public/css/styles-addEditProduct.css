@@ -58,8 +58,8 @@ select.form-input {
 
 .edit-log-id, .edit-log-nameProduct, .edit-log-description, .edit-log-price, .edit-log-category, .edit-log-color, .edit-log-image {
   margin: 5px;
-  border: 1px solid var(--red);
-  border-radius: 20px;
+  border: 1px solid var(--dark-gray);
+  border-radius: 10px;
   padding: 8px;
   display: flex;
   width: 100%;

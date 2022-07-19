@@ -1,10 +1,4 @@
 <header>
-  <% if (locals.isLogged) { %>
-    <div class="locals">
-      <a href="/users/profile"> <h3>¡Hola <%= locals.isLogged.logUser %>! </h3> </a>
-      <img class="image-locals" src="/images/users/<%= isLogged.image %>" alt="imágen de perfil">
-  </div>
-      <% } %>
   <nav>
     <div class="left-section">
       <a href="/"><img src="/images/Logo-proyecto.png" alt="logo"></a>
@@ -26,11 +20,21 @@
             <li><a href="/products/products-list/camisetas">Tienda</a></li>
             <a class = "btn-adminProduct2" href="/adminProductUser">
               <input type="button" value="Administrar">
-              <li><a href="/users/logout">Cerrar sesión</a></li> 
+              
               <a class="cart" href="/products/cart"><i class="fas fa-solid fa-cart-shopping"></i></a>
               <a class = "btn-adminProduct1" href="/products/adminProductUser">
                 <input type="button" value="Administrar">
               </a>
+              <li>
+                <a href="/users/profile"> <img class="image-locals" src="/images/users/<%= isLogged.image %>" alt="img perfil"></a>
+              </li>
+            </a>
+            <li>
+              <div class="locals">
+                <a href="/users/profile"> <p>¡Hola <%= locals.isLogged.firstName %>! </p> </a>
+              </div>
+              <li><a href="/users/logout">Cerrar sesión</a></li> 
+            </li>
           <% } else { %>
             <li><a href="/">Inicio</a></li>
         <li><a href="/products/products-list/camisetas">Tienda</a></li>
