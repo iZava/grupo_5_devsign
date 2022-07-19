@@ -10,6 +10,11 @@ const InfoTab = (props) => {
         <p>{props.total}</p>
         <p>{props.name}</p>
         <p>{props.lastName}</p>
+        <p>{props.user}</p>
+        <p>{props.email}</p>
+        <p>{props.description}</p>
+        <p>{props.color}</p>
+        <p>{props.category}</p>
         <p>{props.price}</p>
       </div>
 

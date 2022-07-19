@@ -15,6 +15,7 @@ const Dashboard = () => {
     const [totalCategories, setTotalCategories] = React.useState(0);
     const [lastUser, setLastUser] = React.useState({});
     const [lastProduct, setLastProduct] = React.useState({});
+    const [colorLastProd, setLastProdColor] = React.useState('');
     React.useEffect(() => {
         const getUsers = async () => {
             const usersData = await DashboardService.getUsers();
@@ -36,12 +37,13 @@ const Dashboard = () => {
             const lastProductData = await DashboardService.getLastProduct();
             const lastProductDetail = await DashboardService.getProductDetail(lastProductData.latestProduct.id);
             setLastProduct(lastProductDetail.detail);
+            setLastProdColor(lastProductDetail.detail.fkcolor.name_color)
         }
         getUsers();
         getProducts();
         getLastProductId();
         getLastUserId();
-
+        console.log('color', colorLastProd)
     }, []);
 
     return (
@@ -75,21 +77,31 @@ const Dashboard = () => {
                     <h3>Detalles</h3>
                     <div className="details">
                         <InfoTab
-                            title='Deatlle último producto'
-                            name={lastProduct.name}
-                            price={lastProduct.price}
+                            title='Detalle último producto'
+                            name={'Nombre:   ' + lastProduct.name}
+                            description={'Descripción:   ' + lastProduct.description}
+                           
+                            price={'Precio:  ' + lastProduct.price}
                         />
                         <InfoTab
                             title='Detalle último usuario'
                             name={'Primer nombre: ' + lastUser.firstName}
-                            lastName={lastUser.lastName}
+                            lastName={'Apellido: ' + lastUser.lastName}
+                            user={'Usuario: ' + lastUser.logUser}
+                            email={'Email: ' + lastUser.email}
+                            
                         />
                     </div>
 
+                    <div className="categories">
+                        <h3>Categorias</h3>
+                        <CardList list={categories} />
+                    </div>
 
-                    <CardList list={categories} />
                 </div>
+
                 <div className="table-panel">
+                    <h3>Listado de productos</h3>
                     <Table columns={products} />
                 </div>
 
